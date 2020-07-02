@@ -168,7 +168,7 @@ class PageFilterSpells extends PageFilter {
 	}
 
 	static getFltrSpellLevelStr (level) {
-		return level === 0 ? Parser.spLevelToFull(level) : `${Parser.spLevelToFull(level)} level`;
+		return level === 0 ? Parser.spLevelToFull(level) : `${Parser.spLevelToFull(level)}`;
 	}
 
 	static getRangeType (range) {
@@ -595,7 +595,7 @@ class ModalFilterSpells extends ModalFilter {
 
 		const hash = UrlUtil.URL_TO_HASH_BUILDER[UrlUtil.PG_SPELLS](spell);
 		const source = Parser.sourceJsonToAbv(spell.source);
-		const levelText = `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (rit.)" : ""}${spell.meta && spell.meta.technomagic ? " (tec.)" : ""}`;
+		const levelText = `${Parser.spLevelToFull(spell.level)}${spell.meta && spell.meta.ritual ? " (仪.)" : ""}${spell.meta && spell.meta.technomagic ? " (技.)" : ""}`;
 		const time = PageFilterSpells.getTblTimeStr(spell.time[0]);
 		const school = Parser.spSchoolAndSubschoolsAbvsShort(spell.school, spell.subschools);
 		const concentration = spell._isConc ? "×" : "";

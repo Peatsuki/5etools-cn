@@ -807,13 +807,13 @@ function Renderer () {
 			for (let lvl = 0; lvl < 10; ++lvl) {
 				const spells = entry.spells[lvl];
 				if (spells) {
-					let levelCantrip = `${Parser.spLevelToFull(lvl)}${(lvl === 0 ? "s" : " level")}`;
+					let levelCantrip = `${Parser.spLevelToFull(lvl)}`;
 					let slotsAtWill = ` (at will)`;
 					const slots = spells.slots;
-					if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots} slot${slots > 1 ? "s" : ""})` : ``;
+					if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots} 法术位)` : ``;
 					if (spells.lower && spells.lower !== lvl) {
 						levelCantrip = `${Parser.spLevelToFull(spells.lower)}-${levelCantrip}`;
-						if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots} ${Parser.spLevelToFull(lvl)}-level slot${slots > 1 ? "s" : ""})` : ``;
+						if (slots >= 0) slotsAtWill = slots > 0 ? ` (${slots} ${Parser.spLevelToFull(lvl)} 法术位)` : ``;
 					}
 					tempList.items.push({type: "itemSpell", name: `${levelCantrip}${slotsAtWill}:`, entry: spells.spells.join(", ")})
 				}
@@ -2920,10 +2920,10 @@ Renderer.spell = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th colspan="1">Level</th>
-						<th colspan="1">School</th>
-						<th colspan="2">Casting Time</th>
-						<th colspan="2">Range</th>
+						<th colspan="1">环位</th>
+						<th colspan="1">学派</th>
+						<th colspan="2">施法时间</th>
+						<th colspan="2">射程</th>
 					</tr>
 					<tr>
 						<td colspan="1">${Parser.spLevelToFull(spell.level)}${Parser.spMetaToFull(spell.meta)}</td>
@@ -2932,8 +2932,8 @@ Renderer.spell = {
 						<td colspan="2">${Parser.spRangeToFull(spell.range)}</td>
 					</tr>
 					<tr>
-						<th colspan="4">Components</th>
-						<th colspan="2">Duration</th>
+						<th colspan="4">构材</th>
+						<th colspan="2">持续时间</th>
 					</tr>
 					<tr>
 						<td colspan="4">${Parser.spComponentsToFull(spell.components, spell.level)}</td>

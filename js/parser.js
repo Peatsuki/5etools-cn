@@ -35,34 +35,34 @@ Parser.numberToText = function (number) {
 	function getAsText (num) {
 		const abs = Math.abs(num);
 		switch (abs) {
-			case 0: return "zero";
-			case 1: return "one";
-			case 2: return "two";
-			case 3: return "three";
-			case 4: return "four";
-			case 5: return "five";
-			case 6: return "six";
-			case 7: return "seven";
-			case 8: return "eight";
-			case 9: return "nine";
-			case 10: return "ten";
-			case 11: return "eleven";
-			case 12: return "twelve";
-			case 13: return "thirteen";
-			case 14: return "fourteen";
-			case 15: return "fifteen";
-			case 16: return "sixteen";
-			case 17: return "seventeen";
-			case 18: return "eighteen";
-			case 19: return "nineteen";
-			case 20: return "twenty";
-			case 30: return "thirty";
-			case 40: return "forty";
-			case 50: return "fiddy"; // :^)
-			case 60: return "sixty";
-			case 70: return "seventy";
-			case 80: return "eighty";
-			case 90: return "ninety";
+			case 0: return "零";
+			case 1: return "一";
+			case 2: return "二";
+			case 3: return "三";
+			case 4: return "四";
+			case 5: return "五";
+			case 6: return "六";
+			case 7: return "七";
+			case 8: return "八";
+			case 9: return "九";
+			case 10: return "十";
+			case 11: return "十一";
+			case 12: return "十二";
+			case 13: return "十三";
+			case 14: return "十四";
+			case 15: return "十五";
+			case 16: return "十六";
+			case 17: return "十七";
+			case 18: return "十八";
+			case 19: return "十九";
+			case 20: return "二十";
+			case 30: return "三十";
+			case 40: return "四十";
+			case 50: return "五十"; // :^)
+			case 60: return "六十";
+			case 70: return "七十";
+			case 80: return "八十";
+			case 90: return "九十";
 			default: {
 				const str = String(abs);
 				return `${getAsText(Number(`${str[0]}0`))}-${getAsText(Number(str[1]))}`;
@@ -168,11 +168,11 @@ Parser.getSpeedString = (it) => {
 		procSpeed("swim");
 		if (it.speed.choose) {
 			joiner = "; ";
-			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " or ")} ${it.speed.choose.amount} ft.${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
+			stack.push(`${it.speed.choose.from.sort().joinConjunct(", ", " 或 ")} ${it.speed.choose.amount} 呎${it.speed.choose.note ? ` ${it.speed.choose.note}` : ""}`);
 		}
 		return stack.join(joiner);
 	} else {
-		return it.speed + (it.speed === "Varies" ? "" : " ft. ");
+		return it.speed + (it.speed === "Varies" ? "" : " 尺 ");
 	}
 };
 
@@ -711,16 +711,12 @@ Parser.spSchoolAbvToStyle = function (school) { // For homebrew
 Parser.getOrdinalForm = function (i) {
 	i = Number(i);
 	if (isNaN(i)) return "";
-	const j = i % 10; const k = i % 100;
-	if (j === 1 && k !== 11) return `${i}st`;
-	if (j === 2 && k !== 12) return `${i}nd`;
-	if (j === 3 && k !== 13) return `${i}rd`;
-	return `${i}th`;
+	return `${i}`;
 };
 
 Parser.spLevelToFull = function (level) {
-	if (level === 0) return "Cantrip";
-	else return Parser.getOrdinalForm(level);
+	if (level === 0) return "戏法";
+	else return Parser.getOrdinalForm(level) + "环";
 };
 
 Parser.getArticle = function (str) {
@@ -730,7 +726,17 @@ Parser.getArticle = function (str) {
 };
 
 Parser.spLevelToFullLevelText = function (level, dash) {
-	return `${Parser.spLevelToFull(level)}${(level === 0 ? "s" : `${dash ? "-" : " "}level`)}`;
+	return `${Parser.spLevelToFull(level)}${(level === 0 ? "s" : `${dash ? "-" : " "}`)}`;
+};
+
+META_RITUAL = "ritual";
+
+Parser.SP_META_TAG_TO_FULL = {};
+Parser.SP_META_TAG_TO_FULL[META_RITUAL] = "仪式";
+
+Parser.spMetaTagToFull = function (tag) {
+	if (tag === "ritual") tag = META_RITUAL;
+	return Parser._parse_aToB(Parser.SP_META_TAG_TO_FULL, tag);
 };
 
 Parser.spMetaToArr = function (meta) {
@@ -738,7 +744,7 @@ Parser.spMetaToArr = function (meta) {
 	return Object.entries(meta)
 		.filter(([_, v]) => v)
 		.sort(SortUtil.ascSort)
-		.map(([k]) => k);
+		.map(([k]) => Parser.spMetaTagToFull(k));
 };
 
 Parser.spMetaToFull = function (meta) {
@@ -749,7 +755,7 @@ Parser.spMetaToFull = function (meta) {
 };
 
 Parser.spLevelSchoolMetaToFull = function (level, school, meta, subschools) {
-	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}-level`;
+	const levelPart = level === 0 ? Parser.spLevelToFull(level).toLowerCase() : `${Parser.spLevelToFull(level)}`;
 	const levelSchoolStr = level === 0 ? `${Parser.spSchoolAbvToFull(school)} ${levelPart}` : `${levelPart} ${Parser.spSchoolAbvToFull(school).toLowerCase()}`;
 
 	const metaArr = Parser.spMetaToArr(meta);
@@ -768,7 +774,7 @@ Parser.spTimeListToFull = function (times, isStripTags) {
 };
 
 Parser.getTimeToFull = function (time) {
-	return `${time.number} ${time.unit === "bonus" ? "bonus action" : time.unit}${time.number > 1 ? "s" : ""}`;
+	return `${time.number}${Parser.spTimeUnitToFull(time.unit)}`;
 };
 
 RNG_SPECIAL = "special";
@@ -786,20 +792,20 @@ RNG_UNLIMITED = "unlimited";
 RNG_UNLIMITED_SAME_PLANE = "plane";
 RNG_TOUCH = "touch";
 Parser.SP_RANGE_TYPE_TO_FULL = {
-	[RNG_SPECIAL]: "Special",
-	[RNG_POINT]: "Point",
-	[RNG_LINE]: "Line",
-	[RNG_CUBE]: "Cube",
-	[RNG_CONE]: "Cone",
-	[RNG_RADIUS]: "Radius",
-	[RNG_SPHERE]: "Sphere",
-	[RNG_HEMISPHERE]: "Hemisphere",
-	[RNG_CYLINDER]: "Cylinder",
-	[RNG_SELF]: "Self",
-	[RNG_SIGHT]: "Sight",
-	[RNG_UNLIMITED]: "Unlimited",
-	[RNG_UNLIMITED_SAME_PLANE]: "Unlimited on the same plane",
-	[RNG_TOUCH]: "Touch"
+	[RNG_SPECIAL]: "特殊",
+	[RNG_POINT]: "点",
+	[RNG_LINE]: "直线",
+	[RNG_CUBE]: "立方体",
+	[RNG_CONE]: "锥形",
+	[RNG_RADIUS]: "半径",
+	[RNG_SPHERE]: "球体",
+	[RNG_HEMISPHERE]: "半球体",
+	[RNG_CYLINDER]: "圆柱体",
+	[RNG_SELF]: "自身",
+	[RNG_SIGHT]: "视野",
+	[RNG_UNLIMITED]: "无限",
+	[RNG_UNLIMITED_SAME_PLANE]: "同一位面",
+	[RNG_TOUCH]: "触及"
 };
 
 Parser.spRangeTypeToFull = function (range) {
@@ -809,8 +815,8 @@ Parser.spRangeTypeToFull = function (range) {
 UNT_FEET = "feet";
 UNT_MILES = "miles";
 Parser.SP_DIST_TYPE_TO_FULL = {
-	[UNT_FEET]: "Feet",
-	[UNT_MILES]: "Miles",
+	[UNT_FEET]: "呎",
+	[UNT_MILES]: "哩",
 	[RNG_SELF]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_SELF],
 	[RNG_TOUCH]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_TOUCH],
 	[RNG_SIGHT]: Parser.SP_RANGE_TYPE_TO_FULL[RNG_SIGHT],
@@ -915,9 +921,9 @@ Parser.spRangeToFull._renderArea = function (range) {
 };
 Parser.spRangeToFull._getAreaStyleString = function (range) {
 	switch (range.type) {
-		case RNG_SPHERE: return " radius";
-		case RNG_HEMISPHERE: return `-radius ${range.type}`;
-		case RNG_CYLINDER: return "-radius";
+		case RNG_SPHERE: return " 半径";
+		case RNG_HEMISPHERE: return `半径 ${range.type}`;
+		case RNG_CYLINDER: return "半径";
 		default: return ` ${range.type}`;
 	}
 };
@@ -925,9 +931,9 @@ Parser.spRangeToFull._getAreaStyleString = function (range) {
 Parser.getSingletonUnit = function (unit, isShort) {
 	switch (unit) {
 		case UNT_FEET:
-			return isShort ? "ft." : "foot";
+			return isShort ? "呎" : "呎";
 		case UNT_MILES:
-			return isShort ? "mi." : "mile";
+			return isShort ? "哩" : "哩";
 		default: {
 			const fromBrew = MiscUtil.get(BrewUtil.homebrewMeta, "spellDistanceUnits", unit, "singular");
 			if (fromBrew) return fromBrew;
@@ -987,23 +993,23 @@ Parser.spDurationToFull = function (dur) {
 	const outParts = dur.map(d => {
 		switch (d.type) {
 			case "special":
-				return "Special";
+				return "特殊";
 			case "instant":
-				return `Instantaneous${d.condition ? ` (${d.condition})` : ""}`;
+				return `即效${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "Concentration, " : ""}${d.concentration ? "u" : d.duration.upTo ? "U" : ""}${d.concentration || d.duration.upTo ? "p to " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
+				return `${d.concentration ? "专注, " : ""}${d.concentration ? "至" : d.duration.upTo ? "至" : ""}${d.concentration || d.duration.upTo ? "多 " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
 			case "permanent": {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
 					hasSubOr = hasSubOr || endsToJoin.length > 1;
-					return `Until ${endsToJoin.joinConjunct(", ", " or ")}`;
+					return `直到 ${endsToJoin.joinConjunct(", ", " 或 ")}`;
 				} else {
-					return "Permanent";
+					return "永久";
 				}
 			}
 		}
 	});
-	return `${outParts.joinConjunct(hasSubOr ? "; " : ", ", " or ")}${dur.length > 1 ? " (see below)" : ""}`;
+	return `${outParts.joinConjunct(hasSubOr ? "; " : ", ", " 或 ")}${dur.length > 1 ? " (see below)" : ""}`;
 };
 
 Parser.DURATION_TYPES = [
@@ -1069,26 +1075,26 @@ Parser._spSubclassItem = function (fromSubclass, textOnly, subclassLookup) {
 };
 
 Parser.SPELL_ATTACK_TYPE_TO_FULL = {};
-Parser.SPELL_ATTACK_TYPE_TO_FULL["M"] = "Melee";
-Parser.SPELL_ATTACK_TYPE_TO_FULL["R"] = "Ranged";
-Parser.SPELL_ATTACK_TYPE_TO_FULL["O"] = "Other/Unknown";
+Parser.SPELL_ATTACK_TYPE_TO_FULL["M"] = "近战";
+Parser.SPELL_ATTACK_TYPE_TO_FULL["R"] = "远程";
+Parser.SPELL_ATTACK_TYPE_TO_FULL["O"] = "其他/未知";
 
 Parser.spAttackTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SPELL_ATTACK_TYPE_TO_FULL, type);
 };
 
 Parser.SPELL_AREA_TYPE_TO_FULL = {
-	ST: "Single Target",
-	MT: "Multiple Targets",
-	C: "Cube",
-	N: "Cone",
-	Y: "Cylinder",
-	S: "Sphere",
-	R: "Circle",
-	Q: "Square",
-	L: "Line",
-	H: "Hemisphere",
-	W: "Wall"
+	ST: "单体目标",
+	MT: "多目标",
+	C: "立方体",
+	N: "锥形",
+	Y: "圆柱体",
+	S: "球体",
+	R: "圆圈",
+	Q: "方形",
+	L: "直线",
+	H: "半球体",
+	W: "墙壁"
 };
 Parser.spAreaTypeToFull = function (type) {
 	return Parser._parse_aToB(Parser.SPELL_AREA_TYPE_TO_FULL, type);
@@ -1182,10 +1188,10 @@ Parser.monImmResToFull = function (toParse) {
 			return it.special;
 		} else {
 			let stack = it.preNote ? `${it.preNote} ` : "";
-			const prop = it.immune ? "immune" : it.resist ? "resist" : it.vulnerable ? "vulnerable" : null;
+			const prop = it.immune ? "免疫" : it.resist ? "抗性" : it.vulnerable ? "易伤" : null;
 			if (prop) {
 				const toJoin = it[prop].map(nxt => toString(nxt, depth + 1));
-				stack += depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct(", ", " and ");
+				stack += depth ? toJoin.join(maxDepth ? "; " : ", ") : toJoin.joinConjunct(", ", " 和 ");
 			}
 			if (it.note) stack += ` ${it.note}`;
 			return stack;
@@ -1747,8 +1753,8 @@ Parser.TRAP_INIT_TO_FULL[2] = "initiative count 20";
 Parser.TRAP_INIT_TO_FULL[3] = "initiative count 20 and initiative count 10";
 
 Parser.ATK_TYPE_TO_FULL = {};
-Parser.ATK_TYPE_TO_FULL["MW"] = "Melee Weapon Attack";
-Parser.ATK_TYPE_TO_FULL["RW"] = "Ranged Weapon Attack";
+Parser.ATK_TYPE_TO_FULL["MW"] = "近战武器攻击";
+Parser.ATK_TYPE_TO_FULL["RW"] = "远程武器攻击";
 
 Parser.bookOrdinalToAbv = (ordinal, preNoSuff) => {
 	if (ordinal === undefined) return "";
@@ -1799,24 +1805,26 @@ Parser.SP_TM_MINS = "minute";
 Parser.SP_TM_HRS = "hour";
 Parser.SP_TIME_SINGLETONS = [Parser.SP_TM_ACTION, Parser.SP_TM_B_ACTION, Parser.SP_TM_REACTION, Parser.SP_TM_ROUND];
 Parser.SP_TIME_TO_FULL = {
-	[Parser.SP_TM_ACTION]: "Action",
-	[Parser.SP_TM_B_ACTION]: "Bonus Action",
-	[Parser.SP_TM_REACTION]: "Reaction",
-	[Parser.SP_TM_ROUND]: "Rounds",
-	[Parser.SP_TM_MINS]: "Minutes",
-	[Parser.SP_TM_HRS]: "Hours"
+	[Parser.SP_TM_ACTION]: "动作",
+	[Parser.SP_TM_B_ACTION]: "附赠动作",
+	[Parser.SP_TM_REACTION]: "反应",
+	[Parser.SP_TM_ROUND]: "轮",
+	[Parser.SP_TM_MINS]: "分钟",
+	[Parser.SP_TM_HRS]: "小时"
 };
 Parser.spTimeUnitToFull = function (timeUnit) {
-	return Parser._parse_aToB(Parser.SP_TIME_TO_FULL, timeUnit);
+	let quan = "";
+	if (timeUnit === Parser.SP_TM_ACTION || timeUnit === Parser.SP_TM_B_ACTION || timeUnit === Parser.SP_TM_REACTION) quan = "个";
+	return quan + Parser._parse_aToB(Parser.SP_TIME_TO_FULL, timeUnit);
 };
 
 Parser.SP_TIME_TO_ABV = {
-	[Parser.SP_TM_ACTION]: "A",
-	[Parser.SP_TM_B_ACTION]: "BA",
-	[Parser.SP_TM_REACTION]: "R",
-	[Parser.SP_TM_ROUND]: "rnd",
-	[Parser.SP_TM_MINS]: "min",
-	[Parser.SP_TM_HRS]: "hr"
+	[Parser.SP_TM_ACTION]: "动作",
+	[Parser.SP_TM_B_ACTION]: "附赠",
+	[Parser.SP_TM_REACTION]: "反应",
+	[Parser.SP_TM_ROUND]: "轮",
+	[Parser.SP_TM_MINS]: "分钟",
+	[Parser.SP_TM_HRS]: "小时"
 };
 Parser.spTimeUnitToAbv = function (timeUnit) {
 	return Parser._parse_aToB(Parser.SP_TIME_TO_ABV, timeUnit);
@@ -1840,26 +1848,26 @@ SKL_CON = "Conjuration";
 SKL_PSI = "Psionic";
 
 Parser.SP_SCHOOL_ABV_TO_FULL = {};
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ABJ] = SKL_ABJ;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_EVO] = SKL_EVO;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ENC] = SKL_ENC;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ILL] = SKL_ILL;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_DIV] = SKL_DIV;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_NEC] = SKL_NEC;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_TRA] = SKL_TRA;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_CON] = SKL_CON;
-Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_PSI] = SKL_PSI;
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ABJ] = "防护";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_EVO] = "塑能";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ENC] = "惑控";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_ILL] = "幻术";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_DIV] = "预言";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_NEC] = "死灵";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_TRA] = "变化";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_CON] = "咒法";
+Parser.SP_SCHOOL_ABV_TO_FULL[SKL_ABV_PSI] = "灵能";
 
 Parser.SP_SCHOOL_ABV_TO_SHORT = {};
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ABJ] = "Abj.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_EVO] = "Evoc.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ENC] = "Ench.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ILL] = "Illu.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_DIV] = "Divin.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_NEC] = "Necro.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_TRA] = "Trans.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_CON] = "Conj.";
-Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_PSI] = "Psi.";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ABJ] = "防护";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_EVO] = "塑能";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ENC] = "惑控";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_ILL] = "幻术";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_DIV] = "预言";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_NEC] = "死灵";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_TRA] = "变化";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_CON] = "咒法";
+Parser.SP_SCHOOL_ABV_TO_SHORT[SKL_ABV_PSI] = "灵能";
 
 Parser.ATB_ABV_TO_FULL = {
 	"str": "Strength",

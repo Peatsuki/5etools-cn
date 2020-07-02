@@ -1,309 +1,309 @@
 {
-	"spell": [
-		{
-			"name": "Booming Blade",
-			"source": "SCAG",
-			"page": 142,
-			"level": 0,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 5
-				}
-			},
-			"components": {
-				"v": true,
-				"m": "a weapon"
-			},
-			"duration": [
-				{
-					"type": "timed",
-					"duration": {
-						"type": "round",
-						"amount": 1
-					}
-				}
-			],
-			"entries": [
-				"As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and it becomes sheathed in booming energy until the start of your next turn. If the target willingly moves before then, it immediately takes {@damage 1d8} thunder damage, and the spell ends.",
-				"This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} thunder damage to the target, and the damage the target takes for moving increases to {@damage 2d8}. Both damage rolls increase by {@dice 1d8} at 11th level and 17th level."
-			],
-			"scalingLevelDice": [
-				{
-					"label": "thunder damage on moving",
-					"scaling": {
-						"1": "1d8",
-						"5": "2d8",
-						"11": "3d8",
-						"17": "4d8"
-					}
-				},
-				{
-					"label": "thunder damage on hit",
-					"scaling": {
-						"5": "1d8",
-						"11": "2d8",
-						"17": "3d8"
-					}
-				}
-			],
-			"damageInflict": [
-				"thunder"
-			],
-			"spellAttack": [
-				"M"
-			],
-			"miscTags": [
-				"SCL"
-			],
-			"areaTags": [
-				"ST"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Green-Flame Blade",
-			"source": "SCAG",
-			"page": 143,
-			"level": 0,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 5
-				}
-			},
-			"components": {
-				"v": true,
-				"m": "a weapon"
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell's range, otherwise the spell fails. On a hit, the target suffers the attack's normal effects, and green fire leaps from the target to a different creature of your choice that you can see within 5 feet of it. The second creature takes fire damage equal to your spellcasting ability modifier.",
-				"This spell's damage increases when you reach higher levels. At 5th level, the melee attack deals an extra {@damage 1d8} fire damage to the target, and the fire damage to the second creature increases to {@damage 1d8} + your spellcasting ability modifier. Both damage rolls increase by {@dice 1d8} at 11th level and 17th level."
-			],
-			"scalingLevelDice": [
-				{
-					"label": "fire damage to secondary creature",
-					"scaling": {
-						"1": "{{spellcasting_mod}}",
-						"5": "1d8 + {{spellcasting_mod}}",
-						"11": "2d8 + {{spellcasting_mod}}",
-						"17": "3d8 + {{spellcasting_mod}}"
-					}
-				},
-				{
-					"label": "fire damage on hit",
-					"scaling": {
-						"5": "1d8",
-						"11": "2d8",
-						"17": "3d8"
-					}
-				}
-			],
-			"damageInflict": [
-				"fire"
-			],
-			"spellAttack": [
-				"M"
-			],
-			"miscTags": [
-				"SCL",
-				"SGT"
-			],
-			"areaTags": [
-				"ST",
-				"MT"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Lightning Lure",
-			"source": "SCAG",
-			"page": 143,
-			"level": 0,
-			"school": "V",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 15
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"You create a lash of lightning energy that strikes at one creature of your choice that you can see within range. The target must succeed on a Strength saving throw or be pulled up to 10 feet in a straight line toward you and then take {@damage 1d8} lightning damage if it is within 5 feet of you.",
-				"This spell's damage increases by {@dice 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
-			],
-			"scalingLevelDice": {
-				"label": "lightning damage",
-				"scaling": {
-					"1": "1d8",
-					"5": "2d8",
-					"11": "3d8",
-					"17": "4d8"
-				}
-			},
-			"damageInflict": [
-				"lightning"
-			],
-			"savingThrow": [
-				"strength"
-			],
-			"miscTags": [
-				"SCL",
-				"SGT"
-			],
-			"areaTags": [
-				"ST"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		},
-		{
-			"name": "Sword Burst",
-			"source": "SCAG",
-			"page": 143,
-			"level": 0,
-			"school": "C",
-			"time": [
-				{
-					"number": 1,
-					"unit": "action"
-				}
-			],
-			"range": {
-				"type": "point",
-				"distance": {
-					"type": "feet",
-					"amount": 5
-				}
-			},
-			"components": {
-				"v": true
-			},
-			"duration": [
-				{
-					"type": "instant"
-				}
-			],
-			"entries": [
-				"You create a momentary circle of spectral blades that sweep around you. Each creature within range, other than you, must succeed on a Dexterity saving throw or take {@damage 1d6} force damage.",
-				"This spell's damage increases by {@dice 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
-			],
-			"scalingLevelDice": {
-				"label": "force damage",
-				"scaling": {
-					"1": "1d6",
-					"5": "2d6",
-					"11": "3d6",
-					"17": "4d6"
-				}
-			},
-			"damageInflict": [
-				"force"
-			],
-			"savingThrow": [
-				"dexterity"
-			],
-			"miscTags": [
-				"SCL"
-			],
-			"areaTags": [
-				"S"
-			],
-			"classes": {
-				"fromClassList": [
-					{
-						"name": "Sorcerer",
-						"source": "PHB"
-					},
-					{
-						"name": "Warlock",
-						"source": "PHB"
-					},
-					{
-						"name": "Wizard",
-						"source": "PHB"
-					}
-				]
-			}
-		}
-	]
+  "spell": [
+    {
+      "name": "轰雷剑",
+      "source": "SCAG",
+      "page": 142,
+      "level": 0,
+      "school": "V",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 5
+        }
+      },
+      "components": {
+        "v": true,
+        "m": "一把武器"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "round",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "作为用来施展此法术动作的一部分，你必须使用一把武器对法术射程内的一名生物进行一次近战攻击，否则法术失败。若命中，目标受到该攻击的正常影响，且目标将被包覆在一团爆发性的能量之中，持续直到你的下个回合开始。如果目标在这之前自愿进行了一次移动，他将立即受到{@dice 1d8}雷鸣伤害，并结束法术效果。",
+        "此法术的伤害将随着你的等级越高而增加。在5级的时候，近战攻击将对目标造成额外的{@dice 1d8}雷鸣伤害，且目标移动时所受到的伤害将提升至{@dice 2d8}。这两个伤害骰都将在11级和17级时各增加{@dice 1d8}。"
+      ],
+      "scalingLevelDice": [
+        {
+          "label": "thunder damage on moving",
+          "scaling": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+          }
+        },
+        {
+          "label": "thunder damage on hit",
+          "scaling": {
+            "5": "1d8",
+            "11": "2d8",
+            "17": "3d8"
+          }
+        }
+      ],
+      "damageInflict": [
+        "thunder"
+      ],
+      "spellAttack": [
+        "M"
+      ],
+      "miscTags": [
+        "SCL"
+      ],
+      "areaTags": [
+        "ST"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Sorcerer",
+            "source": "PHB"
+          },
+          {
+            "name": "Warlock",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "翠炎剑",
+      "source": "SCAG",
+      "page": 143,
+      "level": 0,
+      "school": "V",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 5
+        }
+      },
+      "components": {
+        "v": true,
+        "m": "一把武器"
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "作为用来施展此法术动作的一部分，你必须使用一把武器对法术射程内的一名生物进行一次近战攻击，否则法术失败。若命中，目标受到该攻击的正常影响，且翠绿色的火焰将从目标身上跳到另一个你所选择的，位于5呎内你所能看见的生物。第二个生物将受到等同你施法属性调整值的火焰伤害。",
+        "此法术的伤害将随着你的等级越高而增加。在5级的时候，近战攻击将对目标造成额外的{@dice 1d8}火焰伤害，且对第二个生物造成的伤害将提升至{@dice 1d8}+你的施法属性调整值。这两个伤害骰都将在11级和17级时各增加{@dice 1d8}。"
+      ],
+      "scalingLevelDice": [
+        {
+          "label": "fire damage to secondary creature",
+          "scaling": {
+            "1": "{{spellcasting_mod}}",
+            "5": "1d8 + {{spellcasting_mod}}",
+            "11": "2d8 + {{spellcasting_mod}}",
+            "17": "3d8 + {{spellcasting_mod}}"
+          }
+        },
+        {
+          "label": "fire damage on hit",
+          "scaling": {
+            "5": "1d8",
+            "11": "2d8",
+            "17": "3d8"
+          }
+        }
+      ],
+      "damageInflict": [
+        "fire"
+      ],
+      "spellAttack": [
+        "M"
+      ],
+      "miscTags": [
+        "SCL",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST",
+        "MT"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Sorcerer",
+            "source": "PHB"
+          },
+          {
+            "name": "Warlock",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "闪电牵引",
+      "source": "SCAG",
+      "page": 143,
+      "level": 0,
+      "school": "V",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 15
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "你创造出一道鞭状的闪电能量，击向射程内你所能看见的一个生物。目标必须成功通过一次力量豁免，否则将被以直线向你拉近最多10尺，如果目标被拉近以后位于你周遭5呎内，那么他将受到{@dice 1d8}闪电伤害。",
+        "此法术的伤害将在你的等级升至5级时增加至{@dice 2d8}，11级时{@dice 3d8}，17级时{@dice 4d8}。"
+      ],
+      "scalingLevelDice": {
+        "label": "lightning damage",
+        "scaling": {
+          "1": "1d8",
+          "5": "2d8",
+          "11": "3d8",
+          "17": "4d8"
+        }
+      },
+      "damageInflict": [
+        "lightning"
+      ],
+      "savingThrow": [
+        "strength"
+      ],
+      "miscTags": [
+        "SCL",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Sorcerer",
+            "source": "PHB"
+          },
+          {
+            "name": "Warlock",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    },
+    {
+      "name": "剑刃爆发",
+      "source": "SCAG",
+      "page": 143,
+      "level": 0,
+      "school": "C",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 5
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "你瞬间制造出一圈幽灵似的利刃清扫你的周围。法术范围内除你以外的每一个生物都必须成功通过一次敏捷豁免，否则将受到{@dice 1d6}的力场伤害。",
+        "此法术的伤害将在你的等级升至5级时增加至{@dice 2d8}，11级时{@dice 3d8}，17级时{@dice 4d8}。"
+      ],
+      "scalingLevelDice": {
+        "label": "force damage",
+        "scaling": {
+          "1": "1d6",
+          "5": "2d6",
+          "11": "3d6",
+          "17": "4d6"
+        }
+      },
+      "damageInflict": [
+        "force"
+      ],
+      "savingThrow": [
+        "dexterity"
+      ],
+      "miscTags": [
+        "SCL"
+      ],
+      "areaTags": [
+        "S"
+      ],
+      "classes": {
+        "fromClassList": [
+          {
+            "name": "Sorcerer",
+            "source": "PHB"
+          },
+          {
+            "name": "Warlock",
+            "source": "PHB"
+          },
+          {
+            "name": "Wizard",
+            "source": "PHB"
+          }
+        ]
+      }
+    }
+  ]
 }
