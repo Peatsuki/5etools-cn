@@ -2920,7 +2920,7 @@ Renderer.spell = {
 			<tr><td colspan="6">
 				<table class="summary striped-even">
 					<tr>
-						<th colspan="1">环位</th>
+						<th colspan="1">环阶</th>
 						<th colspan="1">学派</th>
 						<th colspan="2">施法时间</th>
 						<th colspan="2">射程</th>
@@ -2952,7 +2952,7 @@ Renderer.spell = {
 		}
 		if (spell.classes && spell.classes.fromClassList) {
 			const [current] = Parser.spClassesToCurrentAndLegacy(spell.classes);
-			renderStack.push(`<div><span class="bold">Classes: </span>${Parser.spMainClassesToFull({fromClassList: current})}</div>`);
+			renderStack.push(`<div><span class="bold">职业: </span>${Parser.spMainClassesToFull({fromClassList: current})}</div>`);
 		}
 		renderStack.push(`</td></tr>`);
 

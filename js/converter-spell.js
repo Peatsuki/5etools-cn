@@ -144,7 +144,7 @@ class SpellParser extends BaseParser {
 		}
 
 		if (!spell.entriesHigherLevel.length) delete spell.entriesHigherLevel;
-		else spell.entriesHigherLevel = [{type: "entries", name: "At Higher Levels", entries: spell.entriesHigherLevel}];
+		else spell.entriesHigherLevel = [{type: "entries", name: "升环施法效果", entries: spell.entriesHigherLevel}];
 
 		this._doSpellPostProcess(spell, options);
 		const statsOut = PropOrder.getOrdered(spell, "spell");

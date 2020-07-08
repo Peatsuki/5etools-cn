@@ -774,7 +774,9 @@ Parser.spTimeListToFull = function (times, isStripTags) {
 };
 
 Parser.getTimeToFull = function (time) {
-	return `${time.number}${Parser.spTimeUnitToFull(time.unit)}`;
+	let quan = "";
+	if (time.unit === Parser.SP_TM_ACTION || time.unit === Parser.SP_TM_B_ACTION || time.unit === Parser.SP_TM_REACTION) quan = "个";
+	return `${time.number}${quan}${Parser.spTimeUnitToFull(time.unit)}`;
 };
 
 RNG_SPECIAL = "special";
@@ -912,19 +914,19 @@ Parser.spRangeToFull._renderPoint = function (range) {
 		case UNT_FEET:
 		case UNT_MILES:
 		default:
-			return `${dist.amount} ${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : dist.type}`;
+			return `${dist.amount}${dist.amount === 1 ? Parser.getSingletonUnit(dist.type) : Parser.spDistanceTypeToFull(dist.type)}`;
 	}
 };
 Parser.spRangeToFull._renderArea = function (range) {
 	const size = range.distance;
-	return `Self (${size.amount}-${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}-high` : ""} cylinder` : ""})`;
+	return `自身(${size.amount}${Parser.getSingletonUnit(size.type)}${Parser.spRangeToFull._getAreaStyleString(range)}${range.type === RNG_CYLINDER ? `${size.amountSecondary != null && size.typeSecondary != null ? `, ${size.amountSecondary}-${Parser.getSingletonUnit(size.typeSecondary)}高` : ""} 圆柱体` : ""})`;
 };
 Parser.spRangeToFull._getAreaStyleString = function (range) {
 	switch (range.type) {
-		case RNG_SPHERE: return " 半径";
-		case RNG_HEMISPHERE: return `半径 ${range.type}`;
+		case RNG_SPHERE: return "半径";
+		case RNG_HEMISPHERE: return `半径${Parser.spRangeTypeToFull(range.type)}`;
 		case RNG_CYLINDER: return "半径";
-		default: return ` ${range.type}`;
+		default: return `${Parser.spRangeTypeToFull(range.type)}`;
 	}
 };
 
@@ -997,7 +999,7 @@ Parser.spDurationToFull = function (dur) {
 			case "instant":
 				return `即效${d.condition ? ` (${d.condition})` : ""}`;
 			case "timed":
-				return `${d.concentration ? "专注, " : ""}${d.concentration ? "至" : d.duration.upTo ? "至" : ""}${d.concentration || d.duration.upTo ? "多 " : ""}${d.duration.amount} ${d.duration.amount === 1 ? d.duration.type : `${d.duration.type}s`}`;
+				return `${d.concentration ? "专注, " : ""}${d.concentration ? "至" : d.duration.upTo ? "至" : ""}${d.concentration || d.duration.upTo ? "多" : ""}${d.duration.amount}${Parser.spTimeUnitToFull(d.duration.type)}`;
 			case "permanent": {
 				if (d.ends) {
 					const endsToJoin = d.ends.map(m => Parser.spEndTypeToFull(m));
@@ -1513,51 +1515,51 @@ Parser.CAT_ID_LANGUAGE = 43;
 Parser.CAT_ID_BOOK = 44;
 
 Parser.CAT_ID_TO_FULL = {};
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CREATURE] = "Bestiary";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SPELL] = "Spell";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BACKGROUND] = "Background";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ITEM] = "Item";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS] = "Class";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CONDITION] = "Condition";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FEAT] = "Feat";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELDRITCH_INVOCATION] = "Eldritch Invocation";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PSIONIC] = "Psionic";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_RACE] = "Race";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OTHER_REWARD] = "Other Reward";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_VARIANT_OPTIONAL_RULE] = "Variant/Optional Rule";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ADVENTURE] = "Adventure";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_DEITY] = "Deity";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CREATURE] = "怪物图鉴";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SPELL] = "法术";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BACKGROUND] = "背景";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ITEM] = "物品";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS] = "职业";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CONDITION] = "状态";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FEAT] = "专长";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELDRITCH_INVOCATION] = "魔能爆";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PSIONIC] = "灵能";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_RACE] = "种族";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OTHER_REWARD] = "其他奖励";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_VARIANT_OPTIONAL_RULE] = "变体/可选规则";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ADVENTURE] = "冒险";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_DEITY] = "神祗";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OBJECT] = "Object";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TRAP] = "Trap";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TRAP] = "陷阱";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_HAZARD] = "Hazard";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_QUICKREF] = "Quick Reference";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_QUICKREF] = "快速参考";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CULT] = "Cult";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BOON] = "Boon";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_DISEASE] = "Disease";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_METAMAGIC] = "Metamagic";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER_BATTLEMASTER] = "Maneuver; Battlemaster";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_DISEASE] = "疾病";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_METAMAGIC] = "超魔法";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER_BATTLEMASTER] = "战技; 战斗大师";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TABLE] = "Table";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_TABLE_GROUP] = "Table";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER_CAVALIER] = "Maneuver; Cavalier";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARCANE_SHOT] = "Arcane Shot";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER_CAVALIER] = "战技; 骑兵";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARCANE_SHOT] = "秘法射击";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_OPTIONAL_FEATURE_OTHER] = "Optional Feature";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FIGHTING_STYLE] = "Fighting Style";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS_FEATURE] = "Class Feature";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_VEHICLE] = "Vehicle";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PACT_BOON] = "Pact Boon";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELEMENTAL_DISCIPLINE] = "Elemental Discipline";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARTIFICER_INFUSION] = "Infusion";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_FIGHTING_STYLE] = "战斗风格";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_CLASS_FEATURE] = "职业能力";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_VEHICLE] = "载具";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_PACT_BOON] = "契约恩赐";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ELEMENTAL_DISCIPLINE] = "四象法门";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ARTIFICER_INFUSION] = "奇械师注法";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SHIP_UPGRADE] = "Ship Upgrade";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_INFERNAL_WAR_MACHINE_UPGRADE] = "Infernal War Machine Upgrade";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ONOMANCY_RESONANT] = "Onomancy Resonant";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_RUNE_KNIGHT_RUNE] = "Rune Knight Rune";
 Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ALCHEMICAL_FORMULA] = "Alchemical Formula";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER] = "Maneuver";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SUBCLASS] = "Subclass";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SUBCLASS_FEATURE] = "Subclass Feature";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ACTION] = "Action";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_LANGUAGE] = "Language";
-Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BOOK] = "Book";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_MANEUVER] = "战技";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SUBCLASS] = "子职";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_SUBCLASS_FEATURE] = "子职能力";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_ACTION] = "动作";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_LANGUAGE] = "语言";
+Parser.CAT_ID_TO_FULL[Parser.CAT_ID_BOOK] = "书籍";
 
 Parser.pageCategoryToFull = function (catId) {
 	return Parser._parse_aToB(Parser.CAT_ID_TO_FULL, catId);
@@ -1813,9 +1815,7 @@ Parser.SP_TIME_TO_FULL = {
 	[Parser.SP_TM_HRS]: "小时"
 };
 Parser.spTimeUnitToFull = function (timeUnit) {
-	let quan = "";
-	if (timeUnit === Parser.SP_TM_ACTION || timeUnit === Parser.SP_TM_B_ACTION || timeUnit === Parser.SP_TM_REACTION) quan = "个";
-	return quan + Parser._parse_aToB(Parser.SP_TIME_TO_FULL, timeUnit);
+	return Parser._parse_aToB(Parser.SP_TIME_TO_FULL, timeUnit);
 };
 
 Parser.SP_TIME_TO_ABV = {

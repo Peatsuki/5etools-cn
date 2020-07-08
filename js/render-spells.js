@@ -28,30 +28,30 @@ class RenderSpells {
 
 		if (sp.classes && sp.classes.fromClassList) {
 			const [current, legacy] = Parser.spClassesToCurrentAndLegacy(sp.classes);
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">Classes: </span>${Parser.spMainClassesToFull({fromClassList: current})}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">职业: </span>${Parser.spMainClassesToFull({fromClassList: current})}</td></tr>`);
 			if (legacy.length) renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted"><span class="bold">Classes (legacy): </span>${Parser.spMainClassesToFull({fromClassList: legacy})}</section></td></tr>`);
 		}
 
 		if (sp.classes && sp.classes.fromSubclass) {
 			const [current, legacy] = Parser.spSubclassesToCurrentAndLegacyFull(sp.classes, subclassLookup);
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">Subclasses: </span>${current}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">子职: </span>${current}</td></tr>`);
 			if (legacy.length) {
-				renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted"><span class="bold">Subclasses (legacy): </span>${legacy}</section></td></tr>`);
+				renderStack.push(`<tr class="text"><td colspan="6"><section class="text-muted"><span class="bold">子职 (legacy): </span>${legacy}</section></td></tr>`);
 			}
 		}
 
 		if (sp.classes && sp.classes.fromClassListVariant) {
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold" title="Source: ${Parser.sourceJsonToFull(SRC_UACFV)}">Variant Classes: </span>${Parser.spMainClassesToFull(sp.classes, false, "fromClassListVariant")}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold" title="Source: ${Parser.sourceJsonToFull(SRC_UACFV)}">变种职业: </span>${Parser.spMainClassesToFull(sp.classes, false, "fromClassListVariant")}</td></tr>`);
 		}
 
 		if (sp.races) {
 			sp.races.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">Races: </span>${sp.races.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@race ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">种族: </span>${sp.races.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@race ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</td></tr>`);
 		}
 
 		if (sp.backgrounds) {
 			sp.backgrounds.sort((a, b) => SortUtil.ascSortLower(a.name, b.name) || SortUtil.ascSortLower(a.source, b.source));
-			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">Backgrounds: </span>${sp.backgrounds.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@background ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</td></tr>`);
+			renderStack.push(`<tr class="text"><td colspan="6"><span class="bold">背景: </span>${sp.backgrounds.map(r => `${SourceUtil.isNonstandardSource(r.source) ? `<span class="text-muted">` : ``}${renderer.render(`{@background ${r.name}|${r.source}}`)}${SourceUtil.isNonstandardSource(r.source) ? `</span>` : ``}`).join(", ")}</td></tr>`);
 		}
 
 		if (sp._scrollNote) {
