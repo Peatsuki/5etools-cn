@@ -27,7 +27,8 @@ class VehiclesPage extends ListPage {
 		const hash = UrlUtil.autoEncodeHash(it);
 
 		eleLi.innerHTML = `<a href="#${UrlUtil.autoEncodeHash(it)}" class="lst--border">
-			<span class="bold col-10 pl-0">${it.name}</span>
+			<span class="bold col-6 pl-0">${it.name}</span>
+			<span class="col-4 text-center">${Parser.vehicleTypeToFull(it.vehicleType)}</span>
 			<span class="col-2 text-center ${Parser.sourceJsonToColor(it.source)} pr-0" title="${Parser.sourceJsonToFull(it.source)}" ${BrewUtil.sourceJsonToStyle(it.source)}>${source}</span>
 		</a>`;
 
@@ -37,7 +38,8 @@ class VehiclesPage extends ListPage {
 			it.name,
 			{
 				hash,
-				source
+				source,
+				vehicleType: it.vehicleType
 			},
 			{
 				uniqueId: it.uniqueId ? it.uniqueId : vhI,
@@ -60,7 +62,10 @@ class VehiclesPage extends ListPage {
 	getSublistItem (it, pinId) {
 		const hash = UrlUtil.autoEncodeHash(it);
 
-		const $ele = $(`<li class="row"><a href="#${hash}" class="lst--border"><span class="name col-12 px-0">${it.name}</span></a></li>`)
+		const $ele = $(`<li class="row"><a href="#${hash}" class="lst--border">
+			<span class="bold col-8 pl-0">${it.name}</span>
+			<span class="col-4 pr-0 text-center">${Parser.vehicleTypeToFull(it.vehicleType)}</span>
+		</a></li>`)
 			.contextmenu(evt => ListUtil.openSubContextMenu(evt, listItem));
 
 		const listItem = new ListItem(
@@ -68,7 +73,8 @@ class VehiclesPage extends ListPage {
 			$ele,
 			it.name,
 			{
-				hash
+				hash,
+				vehicleType: it.vehicleType
 			}
 		);
 		return listItem;
@@ -83,7 +89,7 @@ class VehiclesPage extends ListPage {
 		function buildStatsTab () {
 			const hasToken = veh.tokenUrl || veh.hasToken;
 			if (hasToken) {
-				const imgLink = veh.tokenUrl || UrlUtil.link(`img/vehicles/tokens/${Parser.sourceJsonToAbv(veh.source)}/${veh.name.replace(/"/g, "")}.png`);
+				const imgLink = Renderer.vehicle.getTokenUrl(veh);
 				$floatToken.append(`<a href="${imgLink}" target="_blank" rel="noopener noreferrer"><img src="${imgLink}" id="token_image" class="token" alt="${veh.name}"></a>`);
 			}
 

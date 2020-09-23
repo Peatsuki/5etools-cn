@@ -4,7 +4,7 @@
 
 	"title": "Util",
 	"description": "Utility definitions to be used in other schemas.",
-	"version": "1.0.15",
+	"version": "1.0.17",
 
 	"definitions" : {
 		"metaBlock": {
@@ -496,6 +496,10 @@
 					"spellcasting": {
 						"type": "boolean"
 					},
+					"spellcasting2020": {
+						"description": "Renders with the updated text found in UA2020: Feats",
+						"type": "boolean"
+					},
 					"psionics": {
 						"type": "boolean"
 					},
@@ -507,9 +511,12 @@
 								"armor": {
 									"type": "string",
 									"enum": ["light", "medium", "heavy"]
+								},
+								"weapon": {
+									"type": "string",
+									"enum": ["simple", "martial"]
 								}
 							},
-							"required": ["armor"],
 							"additionalProperties": false
 						}
 					}
@@ -610,6 +617,9 @@
 									},
 									"note": {
 										"type": "string"
+									},
+									"cond": {
+										"type": "boolean"
 									}
 								},
 								"additionalProperties": false,
@@ -654,6 +664,9 @@
 									},
 									"note": {
 										"type": "string"
+									},
+									"cond": {
+										"type": "boolean"
 									}
 								},
 								"additionalProperties": false,
@@ -698,6 +711,9 @@
 									},
 									"note": {
 										"type": "string"
+									},
+									"cond": {
+										"type": "boolean"
 									}
 								},
 								"additionalProperties": false,

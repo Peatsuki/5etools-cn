@@ -65,7 +65,7 @@ class ClassesPage extends BaseComponent {
 
 		await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-input-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
 			$btnReset: $(`#reset`)
 		});
 
@@ -762,7 +762,35 @@ class ClassesPage extends BaseComponent {
 		this._addHookBase("isHideSidebar", hkSidebarHidden);
 		// (call the hook later)
 
-		// HP/hit dice
+		// region Requirements
+		const $getRenderedRequirements = (requirements, intro = null) => {
+			const renderPart = (obj, joiner = ", ") => Object.keys(obj).filter(k => Parser.ABIL_ABVS.includes(k)).sort(SortUtil.ascSortAtts).map(k => `${Parser.attAbvToFull(k)} ${obj[k]}`).join(joiner);
+			const orPart = requirements.or ? requirements.or.map(obj => renderPart(obj, " or ")).join("; ") : "";
+			const basePart = renderPart(requirements);
+			const abilityPart = [orPart, basePart].filter(Boolean).join("; ");
+
+			const allEntries = [
+				abilityPart ? `{@b Ability Score Minimum:} ${abilityPart}` : null,
+				...requirements.entries || []
+			].filter(Boolean);
+
+			return $$`<div>${Renderer.get().setFirstSection(true).render({type: "section", entries: allEntries})}</div>`
+		};
+
+		let $ptRequirements = null;
+		if (cls.requirements) {
+			const $ptPrereq = $getRenderedRequirements(cls.requirements);
+
+			$ptRequirements = $$`<tr class="cls-side__show-hide">
+				<td class="cls-side__section" colspan="6">
+					<h5 class="cls-side__section-head">Prerequisites</h5>
+					${$ptPrereq}
+				</td>
+			</tr>`;
+		}
+		// endregion
+
+		// region HP/hit dice
 		let $ptHp = null;
 		if (cls.hd) {
 			const hdEntry = {toRoll: `${cls.hd.number}d${cls.hd.faces}`, rollable: true};
@@ -771,21 +799,23 @@ class ClassesPage extends BaseComponent {
 				<td colspan="6" class="cls-side__section">
 					<h5 class="cls-side__section-head">Hit Points</h5>
 					<div><strong>Hit Dice:</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")}</div>
-					<div><strong>Hit Points at 1st Level:</strong> ${cls.hd.faces} + your Constitution modifier</div>
-					<div><strong>Hit Points at Higher Levels:</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${(cls.hd.faces / 2 + 1)}) + your Constitution modifier per ${cls.name} level after 1st</div>
+					<div><strong>Hit Points at 1st Level:</strong> ${cls.hd.number * cls.hd.faces} + your Constitution modifier</div>
+					<div><strong>Hit Points at Higher Levels:</strong> ${Renderer.getEntryDice(hdEntry, "Hit die")} (or ${((cls.hd.number * cls.hd.faces) / 2 + 1)}) + your Constitution modifier per ${cls.name} level after 1st</div>
 				</td>
 			</tr>`
 		}
+		// endregion
 
-		// starting proficiencies
+		// region Starting proficiencies
 		const renderArmorProfs = armorProfs => armorProfs.map(a => a.full ? a.full : a === "light" || a === "medium" || a === "heavy" ? `${a} armor` : a).join(", ");
 		const renderWeaponsProfs = weaponProfs => weaponProfs.map(w => w === "simple" || w === "martial" ? `${w} weapons` : w).join(", ");
 		const renderToolProfs = toolProfs => toolProfs.map(it => Renderer.get().render(it)).join(", ")
 		const renderSkillsProfs = skills => `${Parser.skillProficienciesToFull(skills).uppercaseFirst()}.`;
 
 		const profs = cls.startingProficiencies || {};
+		// endregion
 
-		// starting equipment
+		// region Starting equipment
 		let $ptEquipment = null;
 		if (cls.startingEquipment) {
 			const equip = cls.startingEquipment;
@@ -804,8 +834,9 @@ class ClassesPage extends BaseComponent {
 			</tr>`;
 			$dispRendered.fastSetHtml(rendered);
 		}
+		// endregion
 
-		// multiclassing
+		// region multiclassing
 		let $ptMulticlassing = null;
 		if (cls.multiclassing) {
 			const mc = cls.multiclassing;
@@ -813,14 +844,7 @@ class ClassesPage extends BaseComponent {
 			const htmlMCcPrereqPreText = mc.requirements || mc.requirementsSpecial ? `<div>To qualify for a new class, you must meet the ${mc.requirementsSpecial ? "" : "ability score "}prerequisites for both your current class and your new one.</div>` : "";
 			let $ptMcPrereq = null;
 			if (mc.requirements) {
-				const renderPart = (obj, joiner = ", ") => Object.keys(obj).filter(k => k !== "or").sort(SortUtil.ascSortAtts).map(k => `${Parser.attAbvToFull(k)} ${obj[k]}`).join(joiner);
-				const orPart = mc.requirements.or ? mc.requirements.or.map(obj => renderPart(obj, " or ")).join("; ") : "";
-				const basePart = renderPart(mc.requirements);
-
-				$ptMcPrereq = $$`<div>
-					${htmlMCcPrereqPreText}
-					<b>Ability Score Minimum:</b> ${[orPart, basePart].filter(Boolean).join("; ")}
-				</div>`
+				$ptMcPrereq = $getRenderedRequirements(mc.requirements, htmlMCcPrereqPreText);
 			}
 
 			let $ptMcPrereqSpecial = null;
@@ -848,11 +872,17 @@ class ClassesPage extends BaseComponent {
 				if (mc.proficienciesGained.skills) $ptMcProfsSkills = $(`<div><b>Skills:</b> ${renderSkillsProfs(mc.proficienciesGained.skills)}</div>`);
 			}
 
+			let $ptMcEntries = null;
+			if (mc.entries) {
+				$ptMcEntries = $(`<div></div>`).fastSetHtml(Renderer.get().setFirstSection(true).render({type: "section", entries: mc.entries}));
+			}
+
 			$ptMulticlassing = $$`<tr class="cls-side__show-hide">
 				<td class="cls-side__section" colspan="6">
 					<h5 class="cls-side__section-head">Multiclassing</h5>
 					${$ptMcPrereq}
 					${$ptMcPrereqSpecial}
+					${$ptMcEntries}
 					${$ptMcProfsIntro}
 					${$ptMcProfsArmor}
 					${$ptMcProfsWeapons}
@@ -861,11 +891,14 @@ class ClassesPage extends BaseComponent {
 				</td>
 			</tr>`;
 		}
+		// endregion
 
 		$$`<table class="stats shadow-big">
 			<tr><th class="border" colspan="6"></th></tr>
 			<tr><th colspan="6"><div class="split-v-center pr-1"><div class="cls-side__name">${cls.name}</div>${$btnToggleSidebar}</div></th></tr>
 			${cls.authors ? `<tr><th colspan="6">By ${cls.authors.join(", ")}</th></tr>` : ""}
+
+			${$ptRequirements}
 
 			${$ptHp}
 
@@ -1254,6 +1287,9 @@ class ClassesPage extends BaseComponent {
 				const renderStack = [];
 				const numScLvls = cls.subclasses[0].subclassFeatures.length;
 
+				const filterValues = this._pageFilter.filterBox.getValues();
+				const walker = MiscUtil.getWalker({keyBlacklist: MiscUtil.GENERIC_WALKER_ENTRIES_KEY_BLACKLIST, isAllowDeleteObjects: true});
+
 				for (let ixLevel = 0; ixLevel < numScLvls; ++ixLevel) {
 					const isLastRow = ixLevel === numScLvls - 1;
 
@@ -1263,7 +1299,24 @@ class ClassesPage extends BaseComponent {
 						.forEach((sc, ixSubclass) => {
 							const mod = ClassesPage.getSubclassCssMod(cls, sc);
 							renderStack.push(`<div class="mx-2 no-shrink cls-comp__wrp-features cls-main__sc-feature ${mod ? `cls-main__sc-feature--${mod}` : ""}" data-cls-comp-sc-ix="${ixSubclass}">`);
-							sc.subclassFeatures[ixLevel].forEach(f => Renderer.get().recursiveRender(f, renderStack));
+							sc.subclassFeatures[ixLevel].forEach(f => {
+								const cpy = MiscUtil.copy(f);
+
+								// Note that this won't affect the root feature, only those nested inside it. The root
+								//   feature is filtered out elsewhere.
+								walker.walk(
+									cpy,
+									{
+										object: (obj) => {
+											if (!obj.source) return obj;
+											if (this._pageFilter.filterBox.toDisplay(filterValues, obj)) return obj;
+											return undefined; // If it shouldn't be displayed, delete it
+										}
+									}
+								)
+
+								Renderer.get().recursiveRender(cpy, renderStack);
+							});
 							renderStack.push(`</div>`);
 						});
 					renderStack.push(`</div>`);
@@ -1382,8 +1435,17 @@ class ClassesPage extends BaseComponent {
 
 						scLvlFeatures.forEach((scFeature, ixScFeature) => {
 							const depthArr = [];
+
+							const ptDate = ixScLvl === 0 && SourceUtil.isNonstandardSource(sc.source) && Parser.sourceJsonToDate(sc.source)
+								? Renderer.get().render(`{@note This subclass was published on ${MiscUtil.dateToStr(new Date(Parser.sourceJsonToDate(sc.source)))}.}`)
+								: "";
+							const toRender = ptDate && scFeature.entries ? MiscUtil.copy(scFeature) : scFeature;
+							if (ptDate && toRender.entries) {
+								toRender.entries.unshift(ptDate);
+							}
+
 							const $trSubclassFeature = $(`<tr class="cls-main__sc-feature ${cssMod}" data-subclass-id="${UrlUtil.getStateKeySubclass(sc)}"><td colspan="6"/></tr>`)
-								.fastSetHtml(Renderer.get().setDepthTracker(depthArr).render(scFeature))
+								.fastSetHtml(Renderer.get().setDepthTracker(depthArr).render(toRender))
 								.appendTo($content);
 
 							this._$trsContent.push($trSubclassFeature);

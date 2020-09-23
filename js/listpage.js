@@ -57,7 +57,7 @@ class ListPage {
 
 		this._filterBox = await this._pageFilter.pInitFilterBox({
 			$iptSearch: $(`#lst__search`),
-			$wrpFormTop: $(`#filter-search-input-group`).title("Hotkey: f"),
+			$wrpFormTop: $(`#filter-search-group`).title("Hotkey: f"),
 			$btnReset: $(`#reset`)
 		});
 
@@ -128,6 +128,7 @@ class ListPage {
 		if (!this._dataProps.some(prop => data[prop] && data[prop].length)) return;
 
 		this._dataProps.forEach(prop => {
+			if (!data[prop]) return;
 			data[prop].forEach(it => it.__prop = prop);
 			this._dataList.push(...data[prop]);
 		});

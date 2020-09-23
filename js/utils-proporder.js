@@ -243,7 +243,8 @@ PropOrder._SPELL = [
 
 	"classes",
 	"races",
-	"backgrounds"
+	"backgrounds",
+	"eldritchInvocations"
 ];
 PropOrder._ACTION = [
 	"name",
@@ -356,6 +357,7 @@ PropOrder._CLASS = [
 	"srd",
 	"isReprinted",
 
+	"requirements",
 	"hd",
 	"proficiency",
 
@@ -455,6 +457,15 @@ PropOrder._CONDITION = [
 	"entries"
 ];
 PropOrder._DISEASE = [
+	"name",
+
+	"source",
+	"page",
+	"srd",
+
+	"entries"
+];
+PropOrder._STATUS = [
 	"name",
 
 	"source",
@@ -566,6 +577,7 @@ PropOrder._VEHICLE = [
 	"weight",
 
 	"type",
+	"terrain",
 
 	"capCreature",
 	"capCrew",
@@ -595,6 +607,7 @@ PropOrder._VEHICLE = [
 	"other",
 
 	"trait",
+	"actionThresholds",
 	"action",
 	"actionStation",
 	"reaction",
@@ -690,6 +703,7 @@ PropOrder._ITEM = [
 	"speed",
 
 	"ability",
+	"grantsProficiency",
 
 	"bonusWeapon",
 	"bonusWeaponAttack",
@@ -703,9 +717,17 @@ PropOrder._ITEM = [
 
 	"axe",
 	"armor",
+	"bow",
+	"club",
+	"crossbow",
+	"dagger",
 	"firearm",
 	"focus",
+	"hammer",
+	"mace",
+	"net",
 	"poison",
+	"spear",
 	"staff",
 	"stealth",
 	"sword",
@@ -716,6 +738,7 @@ PropOrder._ITEM = [
 	"items",
 
 	"ammoType",
+	"poisonTypes",
 
 	"packContents",
 	"containerCapacity",
@@ -828,6 +851,8 @@ PropOrder._VARIANTRULE = [
 	"source",
 	"page",
 	"srd",
+
+	"additionalSources",
 
 	"ruleType",
 
@@ -956,6 +981,7 @@ PropOrder._PROP_TO_LIST = {
 	"language": PropOrder._LANGUAGE,
 	"condition": PropOrder._CONDITION,
 	"disease": PropOrder._DISEASE,
+	"status": PropOrder._STATUS,
 	"cult": PropOrder._CULT,
 	"boon": PropOrder._BOON,
 	"deity": PropOrder._DEITY,

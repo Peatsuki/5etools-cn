@@ -545,6 +545,7 @@
 		},
 		{
 			"name": "Adult Black Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 88,
 			"srd": true,
@@ -929,6 +930,7 @@
 		},
 		{
 			"name": "Adult Blue Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 91,
 			"srd": true,
@@ -1114,6 +1116,7 @@
 		},
 		{
 			"name": "Adult Brass Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 105,
 			"srd": true,
@@ -1309,6 +1312,7 @@
 		},
 		{
 			"name": "Adult Bronze Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 108,
 			"srd": true,
@@ -1527,6 +1531,7 @@
 		},
 		{
 			"name": "Adult Copper Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 112,
 			"srd": true,
@@ -1716,6 +1721,7 @@
 		},
 		{
 			"name": "Adult Gold Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 114,
 			"srd": true,
@@ -1924,6 +1930,7 @@
 		},
 		{
 			"name": "Adult Green Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 94,
 			"srd": true,
@@ -2116,6 +2123,7 @@
 		},
 		{
 			"name": "Adult Red Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 98,
 			"srd": true,
@@ -2306,6 +2314,7 @@
 		},
 		{
 			"name": "Adult Silver Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 117,
 			"srd": true,
@@ -2507,6 +2516,7 @@
 		},
 		{
 			"name": "Adult White Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 101,
 			"srd": true,
@@ -2786,7 +2796,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -2953,6 +2964,7 @@
 		},
 		{
 			"name": "Ancient Black Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 87,
 			"srd": true,
@@ -3130,6 +3142,7 @@
 		},
 		{
 			"name": "Ancient Blue Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 90,
 			"srd": true,
@@ -3308,6 +3321,7 @@
 		},
 		{
 			"name": "Ancient Brass Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 104,
 			"srd": true,
@@ -3505,6 +3519,7 @@
 		},
 		{
 			"name": "Ancient Bronze Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 107,
 			"srd": true,
@@ -3711,6 +3726,7 @@
 		},
 		{
 			"name": "Ancient Copper Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 110,
 			"srd": true,
@@ -3907,6 +3923,7 @@
 		},
 		{
 			"name": "Ancient Gold Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 113,
 			"srd": true,
@@ -4107,6 +4124,7 @@
 		},
 		{
 			"name": "Ancient Green Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 93,
 			"srd": true,
@@ -4299,6 +4317,7 @@
 		},
 		{
 			"name": "Ancient Red Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 97,
 			"srd": true,
@@ -4480,6 +4499,7 @@
 		},
 		{
 			"name": "Ancient Silver Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 116,
 			"srd": true,
@@ -4673,6 +4693,7 @@
 		},
 		{
 			"name": "Ancient White Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 100,
 			"srd": true,
@@ -4917,7 +4938,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -5565,7 +5587,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -6722,7 +6745,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7191,7 +7215,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7357,7 +7382,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -7868,7 +7894,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -8592,6 +8619,7 @@
 		},
 		{
 			"name": "Black Dragon Wyrmling",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 88,
 			"srd": true,
@@ -9015,6 +9043,7 @@
 		},
 		{
 			"name": "Blue Dragon Wyrmling",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 91,
 			"srd": true,
@@ -9415,7 +9444,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -9772,6 +9802,7 @@
 		},
 		{
 			"name": "Brass Dragon Wyrmling",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 106,
 			"srd": true,
@@ -9882,6 +9913,7 @@
 		},
 		{
 			"name": "Bronze Dragon Wyrmling",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 109,
 			"srd": true,
@@ -10680,7 +10712,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -11374,7 +11407,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -11931,7 +11965,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -12663,6 +12698,7 @@
 		},
 		{
 			"name": "Copper Dragon Wyrmling",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 111,
 			"srd": true,
@@ -12838,7 +12874,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -14895,7 +14932,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from magic weapons"
+					"note": "from magic weapons",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -14908,7 +14946,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -15097,7 +15136,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -16370,7 +16410,7 @@
 							"type": "entries",
 							"entries": [
 								"Drow often wear magic armor and carry magic weapons that lose their enhancement bonuses permanently if they are exposed to sunlight for 1 hour or longer.",
-								"A {@creature drow} wearing a {@item chain shirt +1||+1 chain shirt} and carrying a {@item shortsword +1||+1 shortsword} has AC 16 and a +1 bonus on attack and damage rolls with shortsword attacks."
+								"A {@creature drow} wearing a {@item +1 chain shirt} and carrying a {@item +1 shortsword} has AC 16 and a +1 bonus on attack and damage rolls with shortsword attacks."
 							]
 						}
 					]
@@ -16555,7 +16595,7 @@
 							"type": "entries",
 							"entries": [
 								"Drow often wear magic armor and carry magic weapons that lose their enhancement bonuses permanently if they are exposed to sunlight for 1 hour or longer.",
-								"A {@creature drow elite warrior} wearing {@item studded leather armor +2||+2 studded leather} and carrying a {@item shortsword +2||+2 shortsword} has AC 20 and a +2 bonus on attack and damage rolls with shortsword attacks."
+								"A {@creature drow elite warrior} wearing {@item +2 Studded Leather Armor||+2 studded leather} and carrying a {@item +2 shortsword} has AC 20 and a +2 bonus on attack and damage rolls with shortsword attacks."
 							]
 						}
 					]
@@ -16995,7 +17035,7 @@
 							"type": "entries",
 							"entries": [
 								"Drow often wear magic armor and carry magic weapons that lose their enhancement bonuses permanently if they are exposed to sunlight for 1 hour or longer.",
-								"A {@creature drow priestess of lolth} wearing {@item scale mail +3||+3 scale mail} has AC 19."
+								"A {@creature drow priestess of lolth} wearing {@item +3 scale mail} has AC 19."
 							]
 						}
 					]
@@ -17861,7 +17901,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -18362,7 +18403,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -18548,7 +18590,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -19995,7 +20038,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -20279,7 +20323,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -20618,7 +20663,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -21399,7 +21445,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -21548,7 +21595,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -22068,7 +22116,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -25568,6 +25617,10 @@
 							"{@spell jump}",
 							"{@spell see invisibility}",
 							"{@spell shield}"
+						],
+						"1e": [
+							"{@spell phantasmal killer}",
+							"{@spell plane shift}"
 						]
 					},
 					"ability": "wis"
@@ -25692,7 +25745,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -26703,6 +26757,7 @@
 		},
 		{
 			"name": "Gold Dragon Wyrmling",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 115,
 			"srd": true,
@@ -26992,7 +27047,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -27422,6 +27478,7 @@
 		},
 		{
 			"name": "Green Dragon Wyrmling",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 95,
 			"srd": true,
@@ -28116,7 +28173,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"cr": "2",
@@ -28219,7 +28277,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"cr": "7",
@@ -28869,7 +28928,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -29128,6 +29188,7 @@
 		},
 		{
 			"name": "Half-Red Dragon Veteran",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 180,
 			"srd": true,
@@ -29651,7 +29712,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -29798,7 +29860,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -30802,7 +30865,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -31259,7 +31323,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -31600,7 +31665,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks not made with silvered weapons"
+					"note": "from nonmagical attacks not made with silvered weapons",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -31771,7 +31837,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -31905,7 +31972,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -31920,7 +31988,7 @@
 				{
 					"name": "Detect Sentience",
 					"entries": [
-						"The intellect devourer can sense the presence and location of any creature within 300 feet of it that has an Intelligence of 3 or higher, regardless of interposing barriers, unless the creature is protected by a mind blank spell."
+						"The intellect devourer can sense the presence and location of any creature within 300 feet of it that has an Intelligence of 3 or higher, regardless of interposing barriers, unless the creature is protected by a {@spell mind blank} spell."
 					]
 				}
 			],
@@ -32062,7 +32130,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -32201,7 +32270,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -32432,7 +32502,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -33085,7 +33156,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -33597,7 +33669,7 @@
 					"ac": 13,
 					"from": [
 						"natural armor",
-						"unarmored defense"
+						"Unarmored Defense"
 					]
 				}
 			],
@@ -34178,7 +34250,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -35077,7 +35150,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 7 ({@damage 1d10 + 2}) piercing damage in crocodile form. If the lizardfolk is in crocodile form and the target is a Large or smaller creature, the target is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the target is {@condition restrained}, and the lizardfolk can't bite another target. If the lizardfolk reverts to its true form, the grapple ends."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage, or 7 ({@damage 1d10 + 2}) piercing damage in {@creature crocodile} form. If the lizardfolk is in crocodile form and the target is a Large or smaller creature, the target is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the target is {@condition restrained}, and the lizardfolk can't bite another target. If the lizardfolk reverts to its true form, the grapple ends."
 					]
 				},
 				{
@@ -35089,7 +35162,7 @@
 				{
 					"name": "Change Shape (Recharges after a Short or Long Rest)",
 					"entries": [
-						"The lizardfolk magically polymorphs into a crocodile, remaining in that form for up to 1 hour. It can revert to its true form as a bonus action. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+						"The lizardfolk magically polymorphs into a {@creature crocodile}, remaining in that form for up to 1 hour. It can revert to its true form as a bonus action. Its statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
 					]
 				}
 			],
@@ -35532,7 +35605,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -36172,7 +36246,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -36799,7 +36874,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -38083,7 +38159,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -38216,7 +38293,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"vulnerable": [
@@ -38869,7 +38947,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -39133,7 +39212,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -39759,7 +39839,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -41813,7 +41894,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -42170,7 +42252,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -42470,7 +42553,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -42900,7 +42984,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -44066,7 +44151,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -44309,7 +44395,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"vulnerable": [
@@ -44317,7 +44404,8 @@
 					"vulnerable": [
 						"piercing"
 					],
-					"note": "from magic weapons wielded by good creatures"
+					"note": "from magic weapons wielded by good creatures",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -44568,6 +44656,7 @@
 		},
 		{
 			"name": "Red Dragon Wyrmling",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 98,
 			"srd": true,
@@ -46436,7 +46525,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -46710,7 +46800,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -47342,7 +47433,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -47497,7 +47589,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -47934,6 +48027,7 @@
 		},
 		{
 			"name": "Silver Dragon Wyrmling",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 118,
 			"srd": true,
@@ -48466,7 +48560,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -48851,7 +48946,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -49073,7 +49169,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -50100,7 +50197,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -50444,7 +50542,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -51716,7 +51815,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"conditionImmune": [
@@ -52382,7 +52482,7 @@
 				{
 					"name": "Animate Trees (1/Day)",
 					"entries": [
-						"The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a treant, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible."
+						"The treant magically animates one or two trees it can see within 60 feet of it. These trees have the same statistics as a {@creature treant}, except they have Intelligence and Charisma scores of 1, they can't speak, and they have only the Slam action option. An animated tree acts as an ally of the treant. The tree remains animate for 1 day or until it dies; until the treant dies or is more than 120 feet from the tree; or until the treant takes a bonus action to turn it back into an inanimate tree. The tree then takes root if possible."
 					]
 				}
 			],
@@ -53311,7 +53411,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -53856,7 +53957,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -54081,7 +54183,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -54225,7 +54328,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -54486,7 +54590,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -55075,7 +55180,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -55544,7 +55650,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -55684,7 +55791,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -55882,7 +55990,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -56045,7 +56154,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -56204,7 +56314,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -56348,7 +56459,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -56537,7 +56649,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -56622,6 +56735,7 @@
 		},
 		{
 			"name": "White Dragon Wyrmling",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 102,
 			"srd": true,
@@ -56806,7 +56920,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -56966,7 +57081,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -57591,7 +57707,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks that aren't silvered"
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -57832,9 +57949,11 @@
 			"resist": [
 				{
 					"resist": [
-						"piercing"
+						"piercing",
+						"slashing"
 					],
-					"note": "and slashing from nonmagical attacks that aren't adamantine"
+					"note": "from nonmagical attacks that aren't adamantine",
+					"cond": true
 				}
 			],
 			"languages": [
@@ -58106,7 +58225,8 @@
 						"piercing",
 						"slashing"
 					],
-					"note": "from nonmagical attacks"
+					"note": "from nonmagical attacks",
+					"cond": true
 				}
 			],
 			"immune": [
@@ -58242,6 +58362,7 @@
 		},
 		{
 			"name": "Young Black Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 88,
 			"srd": true,
@@ -58381,6 +58502,7 @@
 		},
 		{
 			"name": "Young Blue Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 91,
 			"srd": true,
@@ -58513,6 +58635,7 @@
 		},
 		{
 			"name": "Young Brass Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 105,
 			"srd": true,
@@ -58652,6 +58775,7 @@
 		},
 		{
 			"name": "Young Bronze Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 108,
 			"srd": true,
@@ -58802,6 +58926,7 @@
 		},
 		{
 			"name": "Young Copper Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 112,
 			"srd": true,
@@ -58938,6 +59063,7 @@
 		},
 		{
 			"name": "Young Gold Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 115,
 			"srd": true,
@@ -59082,6 +59208,7 @@
 		},
 		{
 			"name": "Young Green Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 94,
 			"srd": true,
@@ -59234,6 +59361,7 @@
 		},
 		{
 			"name": "Young Red Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 98,
 			"srd": true,
@@ -59587,6 +59715,7 @@
 		},
 		{
 			"name": "Young Silver Dragon",
+			"group": "Metallic Dragon",
 			"source": "MM",
 			"page": 118,
 			"srd": true,
@@ -59727,6 +59856,7 @@
 		},
 		{
 			"name": "Young White Dragon",
+			"group": "Chromatic Dragon",
 			"source": "MM",
 			"page": 101,
 			"srd": true,

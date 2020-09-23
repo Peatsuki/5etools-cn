@@ -120,7 +120,7 @@
 				{
 					"name": "Talons",
 					"entries": [
-						"You are proficient with your unarmed strikes, which deal {@dice 1d4} slashing damage on a hit."
+						"Your talons are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to {@damage 1d4} + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike."
 					],
 					"type": "entries"
 				},
@@ -1057,7 +1057,7 @@
 		{
 			"name": "Centaur",
 			"source": "MOT",
-			"page": 0,
+			"page": 18,
 			"_copy": {
 				"name": "Centaur",
 				"source": "GGR",
@@ -8207,7 +8207,7 @@
 						{
 							"name": "Feat",
 							"entries": [
-								"You gain one feat of your choice."
+								"You gain one {@5etools feat|feats.html} of your choice."
 							],
 							"type": "entries"
 						}
@@ -9319,7 +9319,7 @@
 		{
 			"name": "Leonin",
 			"source": "MOT",
-			"page": 0,
+			"page": 20,
 			"size": "M",
 			"speed": 35,
 			"ability": [
@@ -10336,7 +10336,7 @@
 		{
 			"name": "Minotaur",
 			"source": "MOT",
-			"page": 0,
+			"page": 22,
 			"_copy": {
 				"name": "Minotaur",
 				"source": "GGR",
@@ -10827,11 +10827,37 @@
 									"Orcs stand easily 8 feet tall and corded with powerful muscles, weighing up to 280 pounds. Your size is Medium."
 								]
 							}
+						},
+						{
+							"mode": "replaceArr",
+							"replace": "Primal Intuition",
+							"items": {
+								"type": "entries",
+								"name": "Primal Intuition",
+								"entries": [
+									"You have proficiency in two of the following skills of your choice: {@skill Animal Handling}, {@skill Insight}, {@skill Intimidation}, {@skill Medicine}, {@skill Perception}, and {@skill Survival}."
+								]
+							}
 						}
 					]
 				}
 			},
-			"heightAndWeight": null
+			"heightAndWeight": null,
+			"skillProficiencies": [
+				{
+					"choose": {
+						"from": [
+							"animal handling",
+							"insight",
+							"intimidation",
+							"medicine",
+							"perception",
+							"survival"
+						],
+						"count": 2
+					}
+				}
+			]
 		},
 		{
 			"name": "Orc",
@@ -11207,7 +11233,7 @@
 		{
 			"name": "Satyr",
 			"source": "MOT",
-			"page": 0,
+			"page": 24,
 			"size": "M",
 			"speed": 35,
 			"ability": [
@@ -13502,7 +13528,7 @@
 		{
 			"name": "Triton",
 			"source": "MOT",
-			"page": 0,
+			"page": 26,
 			"_copy": {
 				"name": "Triton",
 				"source": "VGM",

@@ -60,8 +60,10 @@ class PageFilterSpells extends PageFilter {
 		if ((s.miscTags && s.miscTags.includes("PRM")) || s.duration.filter(it => it.type === "permanent").length) out.push(Parser.spMiscTagToFull("PRM"));
 		if ((s.miscTags && s.miscTags.includes("SCL")) || s.entriesHigherLevel) out.push(Parser.spMiscTagToFull("SCL"));
 		if (s.miscTags && s.miscTags.includes("HL")) out.push(Parser.spMiscTagToFull("HL"));
+		if (s.miscTags && s.miscTags.includes("HL")) out.push(Parser.spMiscTagToFull("HL"));
 		if (s.miscTags && s.miscTags.includes("SMN")) out.push(Parser.spMiscTagToFull("SMN"));
 		if (s.miscTags && s.miscTags.includes("SGT")) out.push(Parser.spMiscTagToFull("SGT"));
+		if (s.miscTags && s.miscTags.includes("THP")) out.push(Parser.spMiscTagToFull("THP"));
 		if (s.srd) out.push("SRD");
 		return out;
 	}
@@ -223,8 +225,6 @@ class PageFilterSpells extends PageFilter {
 	constructor () {
 		super();
 
-		this._brewSpellClasses = {};
-
 		const levelFilter = new Filter({
 			header: "Level",
 			items: [
@@ -337,6 +337,7 @@ class PageFilterSpells extends PageFilter {
 		this._classAndSubclassFilter = classAndSubclassFilter;
 		this._raceFilter = raceFilter;
 		this._backgroundFilter = backgroundFilter;
+		this._eldritchInvocationFilter = new Filter({header: "Eldritch Invocation"});
 		this._metaFilter = metaFilter;
 		this._schoolFilter = schoolFilter;
 		this._subSchoolFilter = subSchoolFilter;
@@ -351,85 +352,8 @@ class PageFilterSpells extends PageFilter {
 		this._areaTypeFilter = areaTypeFilter;
 	}
 
-	populateHomebrewClassLookup (homebrew) {
-		// load homebrew class spell list addons
-		// Three formats are available. A string (shorthand for "spell" format with source "PHB"), "spell" format (object
-		//   with a `name` and a `source`), and "class" format (object with a `class` and a `source`).
-
-		const handleSpellListItem = (it, className, classSource, subclassShortName, subclassSource, subSubclassName) => {
-			const doAdd = (target) => {
-				if (subclassShortName) {
-					const toAdd = {
-						class: {name: className, source: classSource},
-						subclass: {name: subclassShortName, source: subclassSource}
-					};
-					if (subSubclassName) toAdd.subclass.subSubclass = subSubclassName;
-
-					target.fromSubclass = target.fromSubclass || [];
-					target.fromSubclass.push(toAdd);
-				} else {
-					const toAdd = {name: className, source: classSource};
-
-					target.fromClassList = target.fromClassList || [];
-					target.fromClassList.push(toAdd);
-				}
-			};
-
-			if (it.class) {
-				if (!it.class) return;
-
-				this._brewSpellClasses.class = this._brewSpellClasses.class || {};
-
-				const cls = it.class.toLowerCase();
-				const source = it.source || SRC_PHB;
-
-				this._brewSpellClasses.class[source] = this._brewSpellClasses.class[source] || {};
-				this._brewSpellClasses.class[source][cls] = this._brewSpellClasses.class[source][cls] || {};
-
-				doAdd(this._brewSpellClasses.class[source][cls]);
-			} else {
-				this._brewSpellClasses.spell = this._brewSpellClasses.spell || {};
-
-				const name = (typeof it === "string" ? it : it.name).toLowerCase();
-				const source = typeof it === "string" ? "PHB" : it.source;
-				this._brewSpellClasses.spell[source] = this._brewSpellClasses.spell[source] || {};
-				this._brewSpellClasses.spell[source][name] = this._brewSpellClasses.spell[source][name] || {fromClassList: [], fromSubclass: []};
-
-				doAdd(this._brewSpellClasses.spell[source][name]);
-			}
-		};
-
-		if (homebrew.class) {
-			homebrew.class.forEach(c => {
-				c.source = c.source || SRC_PHB;
-
-				if (c.classSpells) c.classSpells.forEach(it => handleSpellListItem(it, c.name, c.source));
-				if (c.subclasses) {
-					c.subclasses.forEach(sc => {
-						sc.shortName = sc.shortName || sc.name;
-						sc.source = sc.source || c.source;
-
-						if (sc.subclassSpells) sc.subclassSpells.forEach(it => handleSpellListItem(it, c.name, c.source, sc.shortName, sc.source));
-						if (sc.subSubclassSpells) Object.entries(sc.subSubclassSpells).forEach(([ssC, arr]) => arr.forEach(it => handleSpellListItem(it, c.name, c.source, sc.shortName, sc.source, ssC)));
-					});
-				}
-			})
-		}
-
-		if (homebrew.subclass) {
-			homebrew.subclass.forEach(sc => {
-				sc.classSource = sc.classSource || SRC_PHB;
-				sc.shortName = sc.shortName || sc.name;
-				sc.source = sc.source || sc.classSource;
-
-				if (sc.subclassSpells) sc.subclassSpells.forEach(it => handleSpellListItem(it, sc.className, sc.classSource, sc.shortName, sc.source));
-				if (sc.subSubclassSpells) Object.entries(sc.subSubclassSpells).forEach(([ssC, arr]) => arr.forEach(it => handleSpellListItem(it, sc.class, sc.classSource, sc.shortName, sc.source, ssC)));
-			});
-		}
-	}
-
 	mutateForFilters (spell) {
-		Renderer.spell.initClasses(spell, this._brewSpellClasses);
+		Renderer.spell.initClasses(spell);
 
 		// used for sorting
 		spell._normalisedTime = PageFilterSpells.getNormalisedTime(spell.time);
@@ -438,33 +362,35 @@ class PageFilterSpells extends PageFilter {
 		// used for filtering
 		spell._fSources = SourceFilter.getCompleteFilterSources(spell);
 		spell._fMeta = PageFilterSpells.getMetaFilterObj(spell);
-		spell._fClasses = spell.classes && spell.classes.fromClassList ? spell.classes.fromClassList.map(PageFilterSpells.getClassFilterItem) : [];
-		spell._fSubclasses = spell.classes && spell.classes.fromSubclass
-			? spell.classes.fromSubclass.map(c => new FilterItem({
-				item: `${c.class.name}: ${PageFilterSpells.getClassFilterItem(c.subclass).item}`,
-				nest: c.class.name,
-				userData: {
-					subClass: {
-						name: c.subclass.name,
-						source: c.subclass.source
-					},
-					class: {
-						name: c.class.name,
-						source: c.class.source
+		spell._fClasses = Renderer.spell.getCombinedClasses(spell, "fromClassList").map(PageFilterSpells.getClassFilterItem);
+		spell._fSubclasses = Renderer.spell.getCombinedClasses(spell, "fromSubclass")
+			.map(c => {
+				// if (c.subclass.name === "Land") debugger
+				return new FilterItem({
+					item: `${c.class.name}: ${PageFilterSpells.getClassFilterItem(c.subclass).item}${c.subclass.subSubclass ? `, ${c.subclass.subSubclass}` : ""}`,
+					nest: c.class.name,
+					userData: {
+						subClass: {
+							name: c.subclass.name,
+							source: c.subclass.source
+						},
+						class: {
+							name: c.class.name,
+							source: c.class.source
+						}
 					}
-				}
-			}))
-			: [];
+				});
+			});
 		spell._fVariantClasses = spell.classes && spell.classes.fromClassListVariant ? spell.classes.fromClassListVariant.map(PageFilterSpells.getClassFilterItem) : [];
 		spell._fRaces = spell.races ? spell.races.map(PageFilterSpells.getRaceFilterItem) : [];
 		spell._fBackgrounds = spell.backgrounds ? spell.backgrounds.map(bg => bg.name) : [];
+		spell._fEldritchInvocations = spell.eldritchInvocations ? spell.eldritchInvocations.map(ei => ei.name) : [];
 		spell._fTimeType = spell.time.map(t => t.unit);
 		spell._fDurationType = PageFilterSpells.getFilterDuration(spell);
 		spell._fRangeType = PageFilterSpells.getRangeType(spell.range);
-		if (!spell._fAreaTags && (spell.areaTags || spell.range.type === "line")) {
-			spell._fAreaTags = spell.areaTags || [];
-			if (spell.range.type === "line") spell._fAreaTags.push("L")
-		}
+
+		spell._fAreaTags = [...(spell.areaTags || [])];
+		if (spell.range.type === "line" && !spell._fAreaTags.includes("L")) spell._fAreaTags.push("L");
 	}
 
 	addToFilters (spell, isExcluded) {
@@ -475,6 +401,7 @@ class PageFilterSpells extends PageFilter {
 		this._sourceFilter.addItem(spell._fSources);
 		this._metaFilter.addItem(spell._fMeta);
 		this._backgroundFilter.addItem(spell._fBackgrounds);
+		this._eldritchInvocationFilter.addItem(spell._fEldritchInvocations);
 		spell._fClasses.forEach(c => this._classFilter.addItem(c));
 		spell._fSubclasses.forEach(sc => {
 			this._subclassFilter.addNest(sc.nest, {isHidden: true});
@@ -497,6 +424,7 @@ class PageFilterSpells extends PageFilter {
 			this._classAndSubclassFilter,
 			this._raceFilter,
 			this._backgroundFilter,
+			this._eldritchInvocationFilter,
 			this._metaFilter,
 			this._schoolFilter,
 			this._subSchoolFilter,
@@ -520,6 +448,7 @@ class PageFilterSpells extends PageFilter {
 			[s._fClasses, s._fSubclasses, s._fVariantClasses],
 			s._fRaces,
 			s._fBackgrounds,
+			s._fEldritchInvocations,
 			s._fMeta,
 			s.school,
 			s.subschools,
@@ -579,7 +508,7 @@ class ModalFilterSpells extends ModalFilter {
 	}
 
 	async _pInit () {
-		this._pageFilter.populateHomebrewClassLookup(BrewUtil.homebrew);
+		Renderer.spell.populateHomebrewClassLookup(BrewUtil.homebrew);
 	}
 
 	async _pLoadAllData () {
@@ -625,7 +554,7 @@ class ModalFilterSpells extends ModalFilter {
 				level: spell.level,
 				time,
 				school: Parser.spSchoolAbvToFull(spell.school),
-				classes: Parser.spClassesToFull(spell.classes, true),
+				classes: Parser.spClassesToFull(spell, true),
 				concentration,
 				normalisedTime: spell._normalisedTime,
 				normalisedRange: spell._normalisedRange

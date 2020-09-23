@@ -10,7 +10,7 @@ class PageFilter {
 
 	constructor (opts) {
 		opts = opts || {};
-		this._sourceFilter = SourceFilter.getInstance(opts.sourceFilterOpts);
+		this._sourceFilter = new SourceFilter(opts.sourceFilterOpts);
 		this._filterBox = null;
 	}
 
@@ -42,125 +42,6 @@ class ModalFilter {
 	}
 
 	/**
-	 * (Public method for Plutonium use)
-	 * Handle doing a checkbox-based selection toggle on a list.
-	 * @param list
-	 * @param item List item. Must have a "data" property with a "cbSel" (the checkbox).
-	 * @param evt Click event.
-	 * @param [opts] Options object.
-	 * @param [opts.isNoHighlightSelection] If highlighting selected rows should be skipped.
-	 * @param [opts.fnOnSelectionChange] Function to call when selection status of an item changes.
-	 * @param [opts.fnGetCb] Function which gets the checkbox from a list item.
-	 */
-	static handleSelectClick (list, item, evt, opts) {
-		opts = opts || {};
-		evt.preventDefault();
-		evt.stopPropagation();
-
-		if (evt && evt.shiftKey && list.__firstListSelection) {
-			if (list.__lastListSelection === item) {
-				// on double-tapping the end of the selection, toggle it on/off
-
-				const cb = this._getCb(item, opts);
-				this._updateCb(item, opts, !cb.checked);
-			} else if (list.__firstListSelection === item && list.__lastListSelection) {
-				// If the item matches the last clicked, clear all checkboxes from our last selection
-
-				const ix1 = list.visibleItems.indexOf(list.__firstListSelection);
-				const ix2 = list.visibleItems.indexOf(list.__lastListSelection);
-
-				const [ixStart, ixEnd] = [ix1, ix2].sort(SortUtil.ascSort);
-				for (let i = ixStart; i <= ixEnd; ++i) {
-					const it = list.visibleItems[i];
-					this._updateCb(it, opts, false);
-				}
-
-				this._updateCb(item, opts);
-			} else {
-				// on a shift-click, toggle all the checkboxes to true...
-
-				const ix1 = list.visibleItems.indexOf(list.__firstListSelection);
-				const ix2 = list.visibleItems.indexOf(item);
-				const ix2Prev = list.__lastListSelection ? list.visibleItems.indexOf(list.__lastListSelection) : null;
-
-				const [ixStart, ixEnd] = [ix1, ix2].sort(SortUtil.ascSort);
-				for (let i = ixStart; i <= ixEnd; ++i) {
-					const it = list.visibleItems[i];
-					this._updateCb(it, opts);
-				}
-
-				// ...except those between the last selection and this selection, set those to false
-				if (ix2Prev != null) {
-					if (ix2Prev > ixEnd) {
-						for (let i = ixEnd + 1; i <= ix2Prev; ++i) {
-							const it = list.visibleItems[i];
-							this._updateCb(it, opts, false);
-						}
-					} else if (ix2Prev < ixStart) {
-						for (let i = ix2Prev; i < ixStart; ++i) {
-							const it = list.visibleItems[i];
-							this._updateCb(it, opts, false);
-						}
-					}
-				}
-			}
-
-			list.__lastListSelection = item;
-		} else {
-			// on a normal click, or if there's been no initial selection, just toggle the checkbox
-
-			const cbMaster = this._getCb(item, opts);
-			if (cbMaster) {
-				cbMaster.checked = !cbMaster.checked;
-
-				if (opts.fnOnSelectionChange) opts.fnOnSelectionChange(item, cbMaster.checked);
-
-				if (!opts.isNoHighlightSelection) {
-					if (cbMaster.checked) item.ele.classList.add("list-multi-selected");
-					else item.ele.classList.remove("list-multi-selected");
-				}
-			} else {
-				if (!opts.isNoHighlightSelection) {
-					item.ele.classList.remove("list-multi-selected");
-				}
-			}
-
-			list.__firstListSelection = item;
-			list.__lastListSelection = null;
-		}
-	}
-
-	static _getCb (item, opts) { return opts.fnGetCb ? opts.fnGetCb(item) : item.data.cbSel; }
-
-	static _updateCb (item, opts, toVal = true) {
-		const cbSlave = this._getCb(item, opts);
-		if (cbSlave) {
-			cbSlave.checked = toVal;
-			if (opts.fnOnSelectionChange) opts.fnOnSelectionChange(item, toVal);
-		}
-
-		if (!opts.isNoHighlightSelection) {
-			if (toVal) item.ele.classList.add("list-multi-selected");
-			else item.ele.classList.remove("list-multi-selected");
-		}
-	}
-
-	/**
-	 * (Public method for Plutonium use)
-	 */
-	static bindSelectAllCheckbox ($cbAll, list) {
-		$cbAll.change(() => {
-			const isChecked = $cbAll.prop("checked");
-			list.visibleItems.forEach(it => {
-				if (it.data.cbSel) it.data.cbSel.checked = isChecked;
-
-				if (isChecked) it.ele.classList.add("list-multi-selected");
-				else it.ele.classList.remove("list-multi-selected");
-			});
-		});
-	}
-
-	/**
 	 * @param opts Options object.
 	 * @param opts.modalTitle
 	 * @param opts.fnSort
@@ -173,7 +54,107 @@ class ModalFilter {
 		this._pageFilter = opts.pageFilter;
 		this._namespace = opts.namespace;
 
+		this._list = null;
 		this._filterCache = null;
+		this._allData = null;
+	}
+
+	_$getWrpList () { return $(`<div class="list mb-2 h-100 min-h-0"></div>`); }
+
+	/**
+	 * @param $wrp
+	 * @param opts
+	 * @param opts.$iptSearch
+	 * @param opts.$btnReset
+	 * @param opts.$btnOpen
+	 * @param opts.$btnToggleSummaryHidden
+	 * @param opts.$wrpMiniPills
+	 * @param opts.isBuildUi If an alternate UI should be used, which has "send to right" buttons.
+	 */
+	async pPopulateWrapper ($wrp, opts) {
+		opts = opts || {};
+
+		await this._pInit();
+
+		const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($wrp);
+
+		const $iptSearch = opts.$iptSearch || $(`<input class="form-control" type="search" placeholder="Search...">`);
+		const $btnReset = opts.$btnReset || $(`<button class="btn btn-default">Reset</button>`);
+		const $wrpFormTop = $$`<div class="flex input-group btn-group w-100 lst__form-top">${$iptSearch}${$btnReset}</div>`;
+
+		const $wrpFormBottom = opts.$wrpMiniPills || $(`<div class="w-100"></div>`);
+
+		const $wrpFormHeaders = $(`<div class="sortlabel input-group input-group--bottom flex no-shrink"></div>`);
+		const $cbSelAll = opts.isBuildUi ? null : $(`<input type="checkbox">`);
+		const $btnSendAllToRight = opts.isBuildUi ? $(`<button class="btn btn-xxs btn-default col-1" title="Add All"><span class="glyphicon glyphicon-arrow-right"></span></button>`) : null;
+
+		if (!opts.isBuildUi) $$`<label class="btn btn-default col-1 flex-vh-center">${$cbSelAll}</label>`.appendTo($wrpFormHeaders);
+		this._$getColumnHeaders().forEach($ele => $wrpFormHeaders.append($ele));
+		if (opts.isBuildUi) $btnSendAllToRight.appendTo($wrpFormHeaders);
+
+		const $wrpForm = $$`<div class="flex-col w-100 mb-1">${$wrpFormTop}${$wrpFormBottom}${$wrpFormHeaders}</div>`;
+		const $wrpList = this._$getWrpList();
+
+		const $btnConfirm = opts.isBuildUi ? null : $(`<button class="btn btn-default">Confirm</button>`);
+
+		this._list = new List({
+			$iptSearch,
+			$wrpList,
+			fnSort: this._fnSort
+		});
+
+		if (!opts.isBuildUi) ListUiUtil.bindSelectAllCheckbox($cbSelAll, this._list);
+		SortUtil.initBtnSortHandlers($wrpFormHeaders, this._list);
+
+		this._allData = await this._pLoadAllData();
+
+		await this._pageFilter.pInitFilterBox({
+			$wrpFormTop,
+			$btnReset,
+			$wrpMiniPills: $wrpFormBottom,
+			namespace: this._namespace,
+			$btnOpen: opts.$btnOpen,
+			$btnToggleSummaryHidden: opts.$btnToggleSummaryHidden
+		});
+
+		this._allData.forEach((it, i) => {
+			this._pageFilter.mutateAndAddToFilters(it);
+			const filterListItem = this._getListItem(this._pageFilter, it, i);
+			this._list.addItem(filterListItem);
+			if (!opts.isBuildUi) filterListItem.ele.addEventListener("click", evt => ListUiUtil.handleSelectClick(this._list, filterListItem, evt));
+		});
+
+		this._list.init();
+		this._list.update();
+
+		const handleFilterChange = () => {
+			const f = this._pageFilter.filterBox.getValues();
+			this._list.filter(li => {
+				const it = this._allData[li.ix];
+				return this._pageFilter.toDisplay(f, it);
+			});
+		};
+
+		$(this._pageFilter.filterBox).on(FilterBox.EVNT_VALCHANGE, handleFilterChange);
+		this._pageFilter.filterBox.render();
+		handleFilterChange();
+
+		$ovlLoading.remove();
+
+		const $wrpInner = $$`<div class="flex-col h-100">
+			${$wrpForm}
+			${$wrpList}
+			${opts.isBuildUi ? null : $$`<div class="flex-vh-center">${$btnConfirm}</div>`}
+		</div>`.appendTo($wrp.empty());
+
+		return {
+			$wrpInner,
+			$btnConfirm,
+			pageFilter: this._pageFilter,
+			list: this._list,
+			$cbSelAll,
+			$btnSendAllToRight
+		}
 	}
 
 	async pGetUserSelection () {
@@ -188,82 +169,15 @@ class ModalFilter {
 					$wrpModalInner.detach();
 					if (!isDataEntered) resolve([]);
 				},
-				isUncappedHeight: true,
-				zIndex: 999
+				isUncappedHeight: true
 			});
 
 			if (this._filterCache) {
 				$wrpModalInner = this._filterCache.$wrpModalInner.appendTo($modalInner);
 			} else {
-				await this._pInit();
-
-				const $ovlLoading = $(`<div class="w-100 h-100 flex-vh-center"><i class="dnd-font ve-muted">Loading...</i></div>`).appendTo($modalInner);
-
-				const $iptSearch = $(`<input class="form-control" type="search" placeholder="Search...">`);
-				const $btnReset = $(`<button class="btn btn-default">Reset</button>`);
-				const $wrpFormTop = $$`<div class="flex input-group btn-group w-100 lst__form-top">${$iptSearch}${$btnReset}</div>`;
-
-				const $wrpFormBottom = $(`<div class="w-100"></div>`);
-
-				const $wrpFormHeaders = $(`<div class="sortlabel lst__form-bottom"></div>`);
-				const $cbSelAll = $(`<input type="checkbox">`);
-
-				$$`<label class="btn btn-default col-1 flex-vh-center">${$cbSelAll}</label>`.appendTo($wrpFormHeaders);
-				this._$getColumnHeaders().forEach($ele => $wrpFormHeaders.append($ele));
-
-				const $wrpForm = $$`<div class="flex-col w-100 mb-2">${$wrpFormTop}${$wrpFormBottom}${$wrpFormHeaders}</div>`;
-				const $wrpList = $(`<ul class="list mb-2 h-100"></ul>`);
-
-				const $btnConfirm = $(`<button class="btn btn-default">Confirm</button>`);
-
-				const list = new List({
-					$iptSearch,
-					$wrpList,
-					fnSort: this._fnSort
-				});
-
-				ModalFilter.bindSelectAllCheckbox($cbSelAll, list);
-				SortUtil.initBtnSortHandlers($wrpFormHeaders, list);
-
-				const allData = await this._pLoadAllData();
-				const pageFilter = this._pageFilter;
-
-				await pageFilter.pInitFilterBox({
-					$wrpFormTop,
-					$btnReset,
-					$wrpMiniPills: $wrpFormBottom,
-					namespace: this._namespace
-				});
-
-				allData.forEach((it, i) => {
-					pageFilter.mutateAndAddToFilters(it);
-					const filterListItem = this._getListItem(pageFilter, it, i);
-					list.addItem(filterListItem);
-					filterListItem.ele.addEventListener("click", evt => ModalFilter.handleSelectClick(list, filterListItem, evt));
-				});
-
-				list.init();
-				list.update();
-
-				const handleFilterChange = () => {
-					const f = pageFilter.filterBox.getValues();
-					list.filter(li => {
-						const it = allData[li.ix];
-						return pageFilter.toDisplay(f, it);
-					});
-				};
-
-				$(pageFilter.filterBox).on(FilterBox.EVNT_VALCHANGE, handleFilterChange);
-				pageFilter.filterBox.render();
-				handleFilterChange();
-
-				$ovlLoading.remove();
-
-				$wrpModalInner = $$`<div class="flex-col h-100">
-					${$wrpForm}
-					${$wrpList}
-					<div class="flex-vh-center">${$btnConfirm}</div>
-				</div>`.appendTo($modalInner);
+				const meta = await this.pPopulateWrapper($modalInner);
+				const {$btnConfirm, pageFilter, list, $cbSelAll} = meta;
+				$wrpModalInner = meta.$wrpInner;
 
 				this._filterCache = {$wrpModalInner, $btnConfirm, pageFilter, list, $cbSelAll};
 			}
@@ -319,6 +233,7 @@ class FilterBox extends ProxyBase {
 	 * @param [opts.$iptSearch] Search input associated with the "form" this filter is a part of. Only used for passing
 	 * through search terms in @filter tags.
 	 * @param [opts.$wrpMiniPills] Element to house mini pills.
+	 * @param [opts.$btnToggleSummaryHidden] Button which toggles the filter summary.
 	 * @param opts.filters Array of filters to be included in this box.
 	 * @param [opts.isCompact] True if this box should have a compact/reduced UI.
 	 * @param [opts.namespace] Namespace for this filter, to prevent collisions with other filters on the same page.
@@ -527,6 +442,8 @@ class FilterBox extends ProxyBase {
 		if (!this._$btnToggleSummaryHidden) {
 			this._$btnToggleSummaryHidden = $(`<button class="btn btn-default ${this._isCompact ? "p-2" : ""}" title="Toggle Filter Summary Display"><span class="glyphicon glyphicon-resize-small"></span></button>`)
 				.prependTo(this._$wrpFormTop);
+		} else if (!this._$btnToggleSummaryHidden.parent().length) {
+			this._$btnToggleSummaryHidden.prependTo(this._$wrpFormTop);
 		}
 		this._$btnToggleSummaryHidden
 			.click(() => {
@@ -543,6 +460,8 @@ class FilterBox extends ProxyBase {
 		if (!this._$btnOpen) {
 			this._$btnOpen = $(`<button class="btn btn-default ${this._isCompact ? "px-2" : ""}">Filter</button>`)
 				.prependTo(this._$wrpFormTop);
+		} else if (!this._$btnOpen.parent().length) {
+			this._$btnOpen.prependTo(this._$wrpFormTop);
 		}
 		this._$btnOpen.click(() => this.show());
 
@@ -1086,6 +1005,13 @@ class Filter extends FilterBase {
 		if (invalid) throw new Error(`Invalid nest: "${invalid.item}"`);
 	}
 
+	/** A single-item version of the above, for performance. */
+	static _validateItemNest (item, nests) {
+		if (!nests || !item.nest) return;
+		if (!nests[item.nest]) throw new Error(`Filter does not have matching nest: "${item.item}" (call addNest first)`);
+		if (!item.nest || !nests[item.nest]) throw new Error(`Invalid nest: "${item.item}"`);
+	}
+
 	/**
 	 * @param opts Options object.
 	 * @param opts.header Filter header (name)
@@ -1104,10 +1030,12 @@ class Filter extends FilterBase {
 	 * @param [opts.minimalUi] True if the filter should render with a reduced UI, false otherwise.
 	 * @param [opts.umbrellaItems] Items which should, when set active, show everything in the filter. E.g. "All".
 	 * @param [opts.umbrellaExcludes] Items which should ignore the state of any `umbrellaItems`
+	 * @param [opts.isSortByDisplayItems] If items should be sorted by their display value, rather than their internal value.
 	 */
 	constructor (opts) {
 		super(opts);
 		this._items = Filter._getAsFilterItems(opts.items || []);
+		this.__itemsSet = new Set(this._items.map(it => it.item)); // Cache the items as a set for fast exists checking
 		this._nests = opts.nests;
 		this._displayFn = opts.displayFn;
 		this._displayFnMini = opts.displayFnMini;
@@ -1121,6 +1049,7 @@ class Filter extends FilterBase {
 		this._minimalUi = opts.minimalUi;
 		this._umbrellaItems = Filter._getAsFilterItems(opts.umbrellaItems);
 		this._umbrellaExcludes = Filter._getAsFilterItems(opts.umbrellaExcludes);
+		this._isSortByDisplayItems = !!opts.isSortByDisplayItems;
 
 		Filter._validateItemNests(this._items, this._nests);
 
@@ -1383,14 +1312,14 @@ class Filter extends FilterBase {
 
 		const $wrpSummary = $(`<div class="flex-vh-center"></div>`).hideVe();
 
-		const $btnCombineBlue = $$`<button class="btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--blue fltr__h-btn-logic w-100" title="Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match."></button>`
-			.click(() => this._meta.combineBlue = this._meta.combineBlue === "or" ? "and" : "or");
+		const $btnCombineBlue = $$`<button class="btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--blue fltr__h-btn-logic w-100" title="Positive matches mode for this filter. AND requires all blues to match, OR requires at least one blue to match, XOR requires exactly one blue to match."></button>`
+			.click(() => this._meta.combineBlue = Filter._getNextCombineMode(this._meta.combineBlue));
 		const hookCombineBlue = () => $btnCombineBlue.text(`${this._meta.combineBlue}`.toUpperCase());
 		this._addHook("meta", "combineBlue", hookCombineBlue);
 		hookCombineBlue();
 
-		const $btnCombineRed = $$`<button class="btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--red fltr__h-btn-logic w-100" title="Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match."></button>`
-			.click(() => this._meta.combineRed = this._meta.combineRed === "or" ? "and" : "or");
+		const $btnCombineRed = $$`<button class="btn btn-default ${opts.isMulti ? "btn-xxs" : "btn-xs"} fltr__h-btn-logic--red fltr__h-btn-logic w-100" title="Negative match mode for this filter. AND requires all reds to match, OR requires at least one red to match, XOR requires exactly one red to match."></button>`
+			.click(() => this._meta.combineRed = Filter._getNextCombineMode(this._meta.combineRed));
 		const hookCombineRed = () => $btnCombineRed.text(`${this._meta.combineRed}`.toUpperCase());
 		this._addHook("meta", "combineRed", hookCombineRed);
 		hookCombineRed();
@@ -1519,7 +1448,8 @@ class Filter extends FilterBase {
 			const totalKey = v === 0 ? "ignored" : v === 1 ? "yes" : "no";
 			out._totals[totalKey]++;
 		});
-		out._andOr = {blue: this._meta.combineBlue, red: this._meta.combineRed};
+		out._combineBlue = this._meta.combineBlue;
+		out._combineRed = this._meta.combineRed;
 		return {[this.header]: out};
 	}
 
@@ -1535,7 +1465,7 @@ class Filter extends FilterBase {
 	resetShallow () { return this.reset(); }
 
 	_doRenderPills () {
-		if (this._itemSortFn) this._items.sort(this._itemSortFn);
+		if (this._itemSortFn) this._items.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => this._itemSortFn(this._displayFn(a.item), this._displayFn(b.item)) : this._itemSortFn);
 		this._items.forEach(it => {
 			if (!it.$rendered) {
 				it.$rendered = this._$getPill(it);
@@ -1548,46 +1478,55 @@ class Filter extends FilterBase {
 
 			if (this._groupFn) {
 				const group = this._groupFn(it);
-				if (!this._pillGroupsMeta[group]) {
-					this._pillGroupsMeta[group] = {
-						$hrDivider: $(`<hr class="fltr__dropdown-divider--sub">`).appendTo(this.__$wrpPills),
-						$wrpPills: $(`<div class="fltr__wrp-pills--sub"></div>`).appendTo(this.__$wrpPills)
-					};
-
-					Object.entries(this._pillGroupsMeta)
-						.sort((a, b) => SortUtil.ascSortLower(a[0], b[0]))
-						.forEach(([groupKey, groupMeta], i) => {
-							groupMeta.$hrDivider.appendTo(this.__$wrpPills);
-							groupMeta.$hrDivider.toggleVe(!(i === 0 && this._nests == null));
-							groupMeta.$wrpPills.appendTo(this.__$wrpPills);
-						});
-
-					if (this._nests) {
-						this._pillGroupsMeta[group].toggleDividerFromNestVisibility = () => {
-							const groupItems = this._items.filter(it => this._groupFn(it) === group);
-							const hiddenGroupItems = groupItems.filter(it => this._nestsHidden[it.nest]);
-							this._pillGroupsMeta[group].$hrDivider.toggleVe(groupItems.length !== hiddenGroupItems.length);
-						};
-
-						// bind group dividers to show/hide depending on nest visibility state
-						Object.keys(this._nests).forEach(nestName => {
-							const hook = () => this._pillGroupsMeta[group].toggleDividerFromNestVisibility();
-							this._addHook("nestsHidden", nestName, hook);
-							hook();
-							this._pillGroupsMeta[group].toggleDividerFromNestVisibility();
-						});
-					}
-				}
-
+				this._doRenderPills_doRenderWrpGroup(group);
 				this._pillGroupsMeta[group].$wrpPills.append(it.$rendered);
 			} else this.__$wrpPills.append(it.$rendered);
 		});
 	}
 
+	_doRenderPills_doRenderWrpGroup (group) {
+		if (!this._pillGroupsMeta[group]) {
+			this._pillGroupsMeta[group] = {
+				$hrDivider: this._doRenderPills_doRenderWrpGroup_$getHrDivider(group).appendTo(this.__$wrpPills),
+				$wrpPills: this._doRenderPills_doRenderWrpGroup_$getWrpPillsSub(group).appendTo(this.__$wrpPills)
+			};
+
+			Object.entries(this._pillGroupsMeta)
+				.sort((a, b) => SortUtil.ascSortLower(a[0], b[0]))
+				.forEach(([groupKey, groupMeta], i) => {
+					groupMeta.$hrDivider.appendTo(this.__$wrpPills);
+					groupMeta.$hrDivider.toggleVe(!(i === 0 && this._nests == null));
+					groupMeta.$wrpPills.appendTo(this.__$wrpPills);
+				});
+
+			if (this._nests) {
+				this._pillGroupsMeta[group].toggleDividerFromNestVisibility = () => {
+					const groupItems = this._items.filter(it => this._groupFn(it) === group);
+					const hiddenGroupItems = groupItems.filter(it => this._nestsHidden[it.nest]);
+					this._pillGroupsMeta[group].$hrDivider.toggleVe(groupItems.length !== hiddenGroupItems.length);
+				};
+
+				// bind group dividers to show/hide depending on nest visibility state
+				Object.keys(this._nests).forEach(nestName => {
+					const hook = () => this._pillGroupsMeta[group].toggleDividerFromNestVisibility();
+					this._addHook("nestsHidden", nestName, hook);
+					hook();
+					this._pillGroupsMeta[group].toggleDividerFromNestVisibility();
+				});
+			}
+		}
+	}
+
+	_doRenderPills_doRenderWrpGroup_$getHrDivider () { return $(`<hr class="fltr__dropdown-divider--sub hr-2 mx-3">`); }
+	_doRenderPills_doRenderWrpGroup_$getWrpPillsSub () { return $(`<div class="fltr__wrp-pills--sub"></div>`); }
+
 	_doRenderMiniPills () {
 		// create a list view so we can freely sort
 		const view = this._items.slice(0);
-		if (this._itemSortFnMini || this._itemSortFn) view.sort(this._itemSortFnMini || this._itemSortFn);
+		if (this._itemSortFnMini || this._itemSortFn) {
+			const fnSort = this._itemSortFnMini || this._itemSortFn;
+			view.sort(this._isSortByDisplayItems && this._displayFn ? (a, b) => fnSort(this._displayFn(a.item), this._displayFn(b.item)) : fnSort);
+		}
 		view.forEach(it => {
 			// re-append existing elements to sort them
 			(it.$mini = it.$mini || this._$getMini(it)).appendTo(this.__$wrpMini);
@@ -1668,13 +1607,16 @@ class Filter extends FilterBase {
 
 	addItem (item) {
 		if (item == null) return;
-		if (item instanceof Array) item.forEach(it => this.addItem(it));
-		else if (!this._items.find(it => Filter._isItemsEqual(it, item))) {
+		if (item instanceof Array) {
+			const len = item.length;
+			for (let i = 0; i < len; ++i) this.addItem(item[i]);
+		} else if (!this.__itemsSet.has(item.item || item)) {
 			item = item instanceof FilterItem ? item : new FilterItem({item});
-			Filter._validateItemNests([item], this._nests);
+			Filter._validateItemNest(item, this._nests);
 
 			this._isItemsDirty = true;
 			this._items.push(item);
+			this.__itemsSet.add(item.item);
 			if (this._state[item.item] == null) this._defaultItemState(item);
 		}
 	}
@@ -1744,23 +1686,54 @@ class Filter extends FilterBase {
 		let hide = false;
 		let display = false;
 
-		if (filterState._andOr.blue === "or") {
-			// default to displaying
-			if (totals.yes === 0) display = true;
+		switch (filterState._combineBlue) {
+			case "or": {
+				// default to displaying
+				if (totals.yes === 0) display = true;
 
-			// if any are 1 (blue) include if they match
-			display = display || entryVal.some(fi => filterState[fi.item] === 1 || isUmbrella());
-		} else {
-			const totalYes = entryVal.filter(fi => filterState[fi.item] === 1).length;
-			display = !totals.yes || totals.yes === totalYes;
+				// if any are 1 (blue) include if they match
+				display = display || entryVal.some(fi => filterState[fi.item] === 1 || isUmbrella());
+
+				break;
+			}
+			case "xor": {
+				// default to displaying
+				if (totals.yes === 0) display = true;
+
+				// if any are 1 (blue) include if precisely one matches
+				display = display || entryVal.filter(fi => filterState[fi.item] === 1 || isUmbrella()).length === 1;
+
+				break;
+			}
+			case "and": {
+				const totalYes = entryVal.filter(fi => filterState[fi.item] === 1).length;
+				display = !totals.yes || totals.yes === totalYes;
+
+				break;
+			}
+			default: throw new Error(`Unhandled combine mode "${filterState._combineBlue}"`);
 		}
 
-		if (filterState._andOr.red === "or") {
-			// if any are 2 (red) exclude if they match
-			hide = hide || entryVal.filter(fi => !fi.isIgnoreRed).some(fi => filterState[fi.item] === 2);
-		} else {
-			const totalNo = entryVal.filter(fi => !fi.isIgnoreRed).filter(fi => filterState[fi.item] === 2).length;
-			hide = totals.no && totals.no === totalNo;
+		switch (filterState._combineRed) {
+			case "or": {
+				// if any are 2 (red) exclude if they match
+				hide = hide || entryVal.filter(fi => !fi.isIgnoreRed).some(fi => filterState[fi.item] === 2);
+
+				break;
+			}
+			case "xor": {
+				// if exactl one is 2 (red) exclude if it matches
+				hide = hide || entryVal.filter(fi => !fi.isIgnoreRed).filter(fi => filterState[fi.item] === 2).length === 1;
+
+				break;
+			}
+			case "and": {
+				const totalNo = entryVal.filter(fi => !fi.isIgnoreRed).filter(fi => filterState[fi.item] === 2).length;
+				hide = totals.no && totals.no === totalNo;
+
+				break;
+			}
+			default: throw new Error(`Unhandled combine mode "${filterState._combineRed}"`);
 		}
 
 		return display && !hide;
@@ -1800,11 +1773,19 @@ class Filter extends FilterBase {
 
 		return visibleCount !== 0;
 	}
+
+	static _getNextCombineMode (combineMode) {
+		let ix = Filter._COMBINE_MODES.indexOf(combineMode);
+		if (ix === -1) ix = (Filter._COMBINE_MODES.length - 1);
+		if (++ix === Filter._COMBINE_MODES.length) ix = 0;
+		return Filter._COMBINE_MODES[ix];
+	}
 }
 Filter._DEFAULT_META = {
 	combineBlue: "or",
 	combineRed: "or"
 };
+Filter._COMBINE_MODES = ["or", "and", "xor"];
 
 class FilterTransientOptions {
 	/**
@@ -1829,8 +1810,16 @@ class SourceFilterItem extends FilterItem {
 
 class SourceFilter extends Filter {
 	constructor (opts) {
-		opts.itemSortFn = opts.itemSortFn || ((a, b) => SortUtil.ascSortLower(Parser.sourceJsonToFull(a.item), Parser.sourceJsonToFull(b.item)));
+		opts = opts || {};
+
+		opts.header = opts.header === undefined ? FilterBox.SOURCE_HEADER : opts.header;
+		opts.displayFn = opts.displayFn === undefined ? item => Parser.sourceJsonToFullCompactPrefix(item.item || item) : opts.displayFn;
+		opts.itemSortFn = opts.itemSortFn === undefined ? (a, b) => SortUtil.ascSortLower(Parser.sourceJsonToFull(a.item), Parser.sourceJsonToFull(b.item)) : opts.itemSortFn;
+		opts.groupFn = opts.groupFn === undefined ? SourceUtil.getFilterGroup : opts.groupFn;
+		opts.selFn = opts.selFn === undefined ? PageFilter.defaultSourceSelFn : opts.selFn
+
 		super(opts);
+
 		this.__tmpState = {ixAdded: 0};
 		this._tmpState = this._getProxy("tmpState", this.__tmpState);
 	}
@@ -1890,23 +1879,96 @@ class SourceFilter extends Filter {
 			.forEach(k => this._state[k] = SourceUtil.getFilterGroup(k) === 2 ? 1 : 0);
 	}
 
-	static getInstance (options) {
-		if (!options) options = {};
-
-		const baseOptions = {
-			header: FilterBox.SOURCE_HEADER,
-			displayFn: (item) => Parser.sourceJsonToFullCompactPrefix(item.item || item),
-			selFn: PageFilter.defaultSourceSelFn,
-			groupFn: SourceUtil.getFilterGroup
-		};
-		Object.assign(baseOptions, options);
-		return new SourceFilter(baseOptions);
-	}
-
 	static getCompleteFilterSources (ent) {
 		return ent.otherSources
 			? [ent.source].concat(ent.otherSources.map(src => new SourceFilterItem({item: src.source, isIgnoreRed: true, isOtherSource: true})))
 			: ent.source;
+	}
+
+	_doRenderPills_doRenderWrpGroup_$getHrDivider (group) {
+		if (group !== 1) return super._doRenderPills_doRenderWrpGroup_$getHrDivider(group);
+
+		const $wrpSlider = $(`<div class="fltr__slider fltr-src__slider mt-1 mb-2"></div>`);
+		const $wrpWrpSlider = $$`<div class="w-100 flex pt-2 pb-5 mb-2 mt-1 fltr-src__wrp-slider">${$wrpSlider}</div>`.hideVe();
+
+		const $btnCancel = $(`<button class="btn btn-xs btn-default px-1">Cancel</button>`)
+			.click(() => {
+				$grpBtnsInactive.showVe();
+				$wrpWrpSlider.hideVe();
+				$grpBtnsActive.hideVe();
+			});
+
+		const $btnConfirm = $(`<button class="btn btn-xs btn-default px-1">Confirm</button>`)
+			.click(() => {
+				$grpBtnsInactive.showVe();
+				$wrpWrpSlider.hideVe();
+				$grpBtnsActive.hideVe();
+
+				const [min, max] = $wrpSlider.slider("values");
+				const allowedDateSet = new Set(dates.slice(min, max + 1).map(it => it.str));
+				const nxtState = {};
+				Object.keys(this._state)
+					.filter(k => SourceUtil.isNonstandardSource(k))
+					.forEach(k => {
+						const sourceDate = Parser.sourceJsonToDate(k);
+						nxtState[k] = allowedDateSet.has(sourceDate) ? 1 : 0
+					});
+				this._proxyAssign("state", "_state", "__state", nxtState);
+			});
+
+		let isInit = false;
+		let dates;
+		const $btnShowSlider = $(`<button class="btn btn-xxs btn-default px-1">Select by Date</button>`)
+			.click(() => {
+				if (isInit) $wrpSlider.slider("destroy");
+				isInit = true;
+
+				$grpBtnsInactive.hideVe();
+				$wrpWrpSlider.showVe();
+				$grpBtnsActive.showVe();
+
+				dates = Object.keys(this._state)
+					.filter(it => SourceUtil.isNonstandardSource(it))
+					.map(it => Parser.sourceJsonToDate(it))
+					.filter(Boolean)
+					.unique()
+					.map(it => ({str: it, date: new Date(it)}))
+					.sort((a, b) => SortUtil.ascSortDate(a.date, b.date))
+					.reverse();
+
+				const optsSlider = {
+					labels: dates.map(it => it.str)
+				};
+
+				$wrpSlider
+					.empty()
+					.slider({
+						min: 0,
+						max: dates.length - 1,
+						range: true,
+						values: [0, dates.length - 1]
+					})
+					.slider("pips", optsSlider)
+					.slider("float", optsSlider);
+			});
+
+		const $btnClear = $(`<button class="btn btn-xxs btn-default px-1">Clear</button>`)
+			.click(() => {
+				const nxtState = {};
+				Object.keys(this._state)
+					.filter(k => SourceUtil.isNonstandardSource(k))
+					.forEach(k => nxtState[k] = 0);
+				this._proxyAssign("state", "_state", "__state", nxtState);
+			});
+
+		const $grpBtnsActive = $$`<div class="flex-v-center btn-group">${$btnCancel}${$btnConfirm}</div>`.hideVe();
+		const $grpBtnsInactive = $$`<div class="flex-v-center btn-group">${$btnClear}${$btnShowSlider}</div>`;
+
+		return $$`<div class="flex-col w-100">
+			${super._doRenderPills_doRenderWrpGroup_$getHrDivider()}
+			<div class="mb-1 flex-h-right">${$grpBtnsActive}${$grpBtnsInactive}</div>
+			${$wrpWrpSlider}
+		</div>`
 	}
 
 	_toDisplay_getMappedEntryVal (entryVal) {
@@ -2210,7 +2272,7 @@ class RangeFilter extends FilterBase {
 			})
 			.slider("pips", sliderOpts)
 			.slider("float", sliderOpts)
-			.slider().on("slidestop", () => { // triggered when the user stops sliding
+			.on("slidestop", () => { // triggered when the user stops sliding
 				const [min, max] = this._$slider.slider("values");
 				this._state.curMin = min;
 				this._state.curMax = max;
