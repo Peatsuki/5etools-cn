@@ -1523,7 +1523,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少25金币的金粉，在施法时消耗",
-					"cost": 25,
+					"cost": 2500,
 					"consume": true
 				}
 			},
@@ -1813,7 +1813,7 @@
 				"s": true,
 				"m": {
 					"text": "你必须为每个你使用此法术影响的生物各自提供一个价值至少1,000金币的红锆石，以及一个价值至少100金币的精雕银条，皆会在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -1877,7 +1877,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少25金币，有着特殊记号的细棍、骨头、或类似的标记物",
-					"cost": 25
+					"cost": 2500
 				}
 			},
 			"duration": [
@@ -2360,7 +2360,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,000金币的玛瑙，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -5142,7 +5142,7 @@
 				"s": true,
 				"m": {
 					"text": "一颗价值至少50金币的钻石",
-					"cost": 50
+					"cost": 5000
 				}
 			},
 			"duration": [
@@ -5229,7 +5229,7 @@
 				"s": true,
 				"m": {
 					"text": "一颗价值至少500金币的黑珍珠碾碎而成的粉末",
-					"cost": 500
+					"cost": 50000
 				}
 			},
 			"duration": [
@@ -5379,7 +5379,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少100金币的法器，聆听则为一个镶珠宝的号角、视觉用则为一个玻璃眼珠",
-					"cost": 100
+					"cost": 10000
 				}
 			},
 			"duration": [
@@ -5506,7 +5506,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,000金币的钻石和一块来自被克隆生物至少1立方吋的血肉，在施法时消耗；一个价值至少2,000金币的容器，具有密封盖和足以容纳一个中型生物的容量，例如巨型缸瓮、棺材、埋在地底的泥封囊舱、或装满盐水的水晶容器。",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -7891,7 +7891,7 @@
 				"s": true,
 				"m": {
 					"text": "一个你自己的小雕像，由象牙雕制而成，并装饰以价值至少1,500金币的珠宝",
-					"cost": 1500
+					"cost": 150000
 				}
 			},
 			"duration": [
@@ -7941,7 +7941,7 @@
 				"s": true,
 				"m": {
 					"text": "价值50金币的红宝石尘，在施法时消耗",
-					"cost": 50,
+					"cost": 5000,
 					"consume": true
 				}
 			},
@@ -8733,7 +8733,7 @@
 				"s": true,
 				"m": {
 					"text": "每具尸体各一个装满墓土的陶罐、一个装满苦咸水的陶罐、跟一个价值150金币的黑玛瑙石",
-					"cost": 150
+					"cost": 15000
 				}
 			},
 			"duration": [
@@ -11214,7 +11214,7 @@
 				"s": true,
 				"m": {
 					"text": "合计价值至少25金币焚香和一个与你信仰相称的祭物，在施法时消耗",
-					"cost": 25,
+					"cost": 2500,
 					"consume": true
 				}
 			},
@@ -11930,7 +11930,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值1,000金币的蓝宝石",
-					"cost": 1000
+					"cost": 100000
 				}
 			},
 			"duration": [
@@ -14265,7 +14265,7 @@
 				"s": true,
 				"m": {
 					"text": "价值10金币的木炭、焚香、和香草，必须在黄铜盆中用火消耗",
-					"cost": 10,
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -14373,7 +14373,7 @@
 				"s": true,
 				"m": {
 					"text": "一套价值至少100金币的占卜工具—像是骨头、象牙棍、卡片、牙齿、或雕刻符文—以及来自你想寻访地点的一个物体",
-					"cost": 100
+					"cost": 10000
 				}
 			},
 			"duration": [
@@ -15720,7 +15720,7 @@
 				"s": true,
 				"m": {
 					"text": "一点圣水、稀有焚香、和价值至少1,000金币的红宝石尘",
-					"cost": 1000
+					"cost": 100000
 				}
 			},
 			"duration": [
@@ -15782,7 +15782,7 @@
 				"s": true,
 				"m": {
 					"text": "价值1,500金币的红宝石尘",
-					"cost": 1500
+					"cost": 150000
 				}
 			},
 			"duration": [
@@ -16370,7 +16370,7 @@
 				"s": true,
 				"m": {
 					"text": "一颗价值至少5,000金币的钻石",
-					"cost": 5000
+					"cost": 500000
 				}
 			},
 			"duration": [
@@ -16868,7 +16868,7 @@
 				"s": true,
 				"m": {
 					"text": "薰香以及价值至少200金币的钻石粉，在施法时消耗",
-					"cost": 200,
+					"cost": 20000,
 					"consume": true
 				}
 			},
@@ -17401,7 +17401,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少100金币的钻石粉，在施法时消耗",
-					"cost": 100,
+					"cost": 10000,
 					"consume": true
 				}
 			},
@@ -17684,7 +17684,7 @@
 				"s": true,
 				"m": {
 					"text": "燃烧的焚香、少量的硫磺和油、一根打结的线、少量土巨怪的鲜血、以及一根价值至少10金币的银制小棍",
-					"cost": 10
+					"cost": 1000
 				}
 			},
 			"duration": [
@@ -18148,7 +18148,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少1,000金币的香草、油膏、和焚香，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -19002,7 +19002,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,000金币的宝石碗，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -19685,7 +19685,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,000金币，装有圣物的圣物匣，例如圣人衣袍的一片布、或取自圣典的一张羊皮纸",
-					"cost": 1000
+					"cost": 100000
 				}
 			},
 			"duration": [
@@ -20178,7 +20178,7 @@
 				"s": true,
 				"m": {
 					"text": "一颗价值至少100金币的珍珠和一根猫头鹰的羽毛",
-					"cost": 100
+					"cost": 10000
 				}
 			},
 			"duration": [
@@ -20280,7 +20280,7 @@
 				"s": true,
 				"m": {
 					"text": "一份价值至少10金币的含铅墨水，在施法时消耗",
-					"cost": 10,
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -20358,7 +20358,7 @@
 				"s": true,
 				"m": {
 					"text": "一张描绘着目标的羊皮纸或刻成目标外貌的小雕像，和一种根据你所选择法术版本而有所不同的特殊构材，价值至少为目标的每颗生命骰500金币",
-					"cost": 500
+					"cost": 50000
 				}
 			},
 			"duration": [
@@ -21023,7 +21023,7 @@
 				}
 			],
 			"entries": [
-				"You touch a creature. The creature's jump distance is tripled until the spell ends."
+				"你触碰一个生物。直到法术结束前，被施法生物的跳跃距离变为原本的三倍。"
 			],
 			"areaTags": [
 				"ST"
@@ -21144,10 +21144,10 @@
 				}
 			],
 			"entries": [
-				"Choose an object that you can see within range. The object can be a door, a box, a {@item chest|phb}, a set of {@item manacles|phb}, a padlock, or another object that contains a mundane or magical means that prevents access.",
-				"A target that is held shut by a mundane lock or that is stuck or barred becomes unlocked, unstuck, or unbarred. If the object has multiple locks, only one of them is unlocked.",
-				"If you choose a target that is held shut with {@spell arcane lock}, that spell is suppressed for 10 minutes, during which time the target can be opened and shut normally.",
-				"When you cast the spell, a loud knock, audible from as far away as 300 feet, emanates from the target object."
+				"选择一个射程内你所能看见的一个物体。这个物品可以是一扇门、一个盒子、一个 {@item chest|phb}、一副 {@item manacles|phb}、一个挂锁、或其他包含着以寻常或魔法方式阻止他人使用的物体。",
+                "一个被寻常锁关住、钉住、或闩住的物体将被解锁、解封、或被解闩。如果该物体被复数道锁给锁上，则只有其中一个会被解锁。",
+                "若你选择一个被{@spell 秘法锁 (arcane lock)}给关住的目标，则该法术将被压制10分钟，在这段时间内目标将可以被正常地打开或关上。",
+                "当你施放此法术时，一个距离300英尺内都能被听见的响亮敲击声将从目标物体上发出。"
 			],
 			"miscTags": [
 				"SGT"
@@ -21206,8 +21206,8 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "价值至少250金币的焚香，在施法时消耗，以及四块各自价值至少50金币的象牙长片",
-					"cost": 250,
+					"text": "价值至少250金币的焚香，在施法时消耗；以及四块各自价值至少50金币的象牙长片",
+					"cost": 25000,
 					"consume": true
 				}
 			},
@@ -21217,8 +21217,8 @@
 				}
 			],
 			"entries": [
-				"Name or describe a person, place, or object. The spell brings to your mind a brief summary of the significant lore about the thing you named. The lore might consist of current tales, forgotten stories, or even secret lore that has never been widely known. If the thing you named isn't of legendary importance, you gain no information. The more information you already have about the thing, the more precise and detailed the information you receive is.",
-				"The information you learn is accurate but might be couched in figurative language. For example, if you have a mysterious magic axe on hand, the spell might yield this information: \"Woe to the evildoer whose hand touches the axe, for even the haft slices the hand of the evil ones. Only a true Child of Stone, lover and beloved of Moradin, may awaken the true powers of the axe, and only with the sacred word Rudnogg on the lips.\""
+				"描述或指名一个人、地方、或物体。此法术将在你脑海中形成与你指定事物有关重大传说的简短概述。这些传说可能会包括当今流传的传闻、被遗忘的故事、或甚至尚未被广泛知晓的秘密学问。若你指定的事物并没有传奇性的地位，则你不会得到任何情报。你若已经掌握更多关于该事物的情报，你通过此法术得到的情报也会越准确而详细。",
+				"你得到的情报是准确的，但可能会被透过晦涩的语言表达。举例来说，若你手中持有一把神秘的魔法斧头，此法术可能会产生这段信息：“痛苦将赐予触碰此斧的恶者，就连斧柄都将切开恶者的手。只有真正的石之子，摩拉丁的爱人与挚爱，以双唇咏出圣言“鲁那格”，方能唤醒此斧的真正力量。”"
 			],
 			"classes": {
 				"fromClassList": [
@@ -21340,9 +21340,9 @@
 				}
 			],
 			"entries": [
-				"You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).",
-				"While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.",
-				"After 60 days, there is a cumulative 5 percent chance per day that the spell's effect ends. This effect ends if you cast this spell again, if the smaller replica chest is destroyed, or if you choose to end the spell as an action. If the spell ends and the larger chest is on the Ethereal Plane, it is irretrievably lost."
+				"你将一个箱子和其内容物藏在乙太位面。你必须触碰作为此法术材料构材的箱子和它的微型复制品。这个箱子可以容纳最多12立方呎的非活体物质（3呎x2呎x2呎）。",
+				"当这个箱子存在于乙太位面，你可以使用一个动作并触碰其复制品以唤回这个箱子。它将出现在一处距离你5英尺内的未被占据空间的地面。你可以借由使用一个动作并同时触碰这个箱子和其复制品以将它送回乙太位面。",
+				"在60天后，每一天此法术的效果都会有累积5%的机率就此结束。此法术会在你再次施放此法术时、箱子的小复制品被摧毁时、或是你选择以一个动作结束此法术时结束。若此法术结束时那个较大的那个箱子仍处在乙太位面，则它将就此遗失，无法挽回。"
 			],
 			"miscTags": [
 				"PRM"
@@ -21432,9 +21432,9 @@
 				"ritual": true
 			},
 			"entries": [
-				"A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.",
-				"Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can't extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.",
-				"Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside."
+				"一个10呎半径不可移动的半球形力场突然出现在你周围和上方，并在法术持续期间维持静止。此法术将在你离开它的范围时结束。",
+				"这个半球可以容纳你和九个体型为中型或更小的生物。若该区域内包括了一个大型生物或超过九个生物，则此法术失败。在你施放此法术时就处于半球内的生物和物体可以自由地移动穿过此半球。所有其他生物和物体都将被阻挡而无法穿过半球。法术和其他魔法效果无法延伸或被施放穿过半球。无论外侧的天候如何，半球内的空气永远舒适而干燥。",
+				"直到此法术结束前，你可以控制半球内部的照明变为微光或黑暗。从外侧看，这个半球是不透明且呈现任何你所选的颜色，但它从内侧看出去则是透明的。"
 			],
 			"areaTags": [
 				"H"
@@ -21489,7 +21489,7 @@
 				}
 			],
 			"entries": [
-				"You touch a creature and can end either one disease or one condition afflicting it. The condition can be {@condition blinded}, {@condition deafened}, {@condition paralyzed}, or {@condition poisoned}."
+				"你触碰一个生物，并结束影响着它的任一个疾病或状态。这些状态可以是 {@condition blinded}、{@condition deafened}、{@condition paralyzed}或{@condition poisoned}。"
 			],
 			"areaTags": [
 				"ST"
@@ -21621,9 +21621,9 @@
 				}
 			],
 			"entries": [
-				"One creature or loose object of your choice that you can see within range rises vertically, up to 20 feet, and remains suspended there for the duration. The spell can levitate a target that weighs up to 500 pounds. An unwilling creature that succeeds on a Constitution saving throw is unaffected.",
-				"The target can move only by pushing or pulling against a fixed object or surface within reach (such as a wall or a ceiling), which allows it to move as if it were climbing. You can change the target's altitude by up to 20 feet in either direction on your turn. If you are the target, you can move up or down as part of your move. Otherwise, you can use your action to move the target, which must remain within the spell's range.",
-				"When the spell ends, the target floats gently to the ground if it is still aloft."
+				"射程距离内你所选且你能看见的一个生物或未被固定的物体将垂直升起最多20呎，且在持续时间内维持漂浮的状态。此法术可以浮起一个重量最多500磅的目标。一个成功通过体质豁免的非自愿生物将不受影响。",
+				"目标只能借由推拉触及范围内固定的物体或表面来移动（像是墙壁或天花板），这让它能如同攀爬一样移动。你可以在你的回合改变目标的上下高度最多20呎。如果你自己就是目标，则你可以把上下移动当作你正常移动的一部分。除此之外，你可以使用你的动作去移动目标，而目标也必须待在法术的射程内。",
+				"当法术结束时，若目标仍在半空中，它将会缓缓的飘落到地面上。"
 			],
 			"savingThrow": [
 				"constitution"
@@ -21726,8 +21726,8 @@
 				}
 			],
 			"entries": [
-				"You touch one object that is no larger than 10 feet in any dimension. Until the spell ends, the object sheds bright light in a 20-foot radius and dim light for an additional 20 feet. The light can be colored as you like. Completely covering the object with something opaque blocks the light. The spell ends if you cast it again or dismiss it as an action.",
-				"If you target an object held or worn by a hostile creature, that creature must succeed on a Dexterity saving throw to avoid the spell."
+				"你碰触一个任一边都不大于10呎的物体。直到法术结束前，该物体将散发出20呎半径的明亮光照和再延伸20英尺的微光光照。光的颜色可以随你喜欢。用不透光的东西完全覆盖该物体将会遮住光线。此法术将会在你再次施放它或用一个动作解消时结束。",
+				"如果你以一个敌对生物穿戴或持握的物体为目标，则该生物必须成功通过一个敏捷豁免以回避此法术。"
 			],
 			"savingThrow": [
 				"dexterity"
@@ -21846,16 +21846,16 @@
 				}
 			],
 			"entries": [
-				"The next time you make a ranged weapon attack during the spell's duration, the weapon's ammunition, or the weapon itself if it's a thrown weapon, transforms into a bolt of lightning. Make the attack roll as normal. The target takes {@damage 4d8} lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.",
-				"Whether you hit or miss, each creature within 10 feet of the target must make a Dexterity saving throw. Each of these creatures takes {@damage 2d8} lightning damage on a failed save, or half as much damage on a successful one.",
-				"The piece of ammunition or weapon then returns to its normal form."
+				"在法术持续期间，下一次你进行远程武器攻击时，该武器的弹药、或若其为投掷武器的话则该武器本身，将转化成一束闪电。如常进行一次攻击检定。若命中则目标受到{@damage 4d8}闪电伤害，失手的话则只受到一半的伤害。此法术伤害取代原本的武器伤害。",
+				"无论你命中与否，每个距离该目标10呎内的生物都必须进行一次敏捷豁免。每个豁免失败的生物将受到{@damage 2d8}闪电伤害，豁免成功则只受到一半的伤害。",
+				"该发弹药或武器将接着回复它原本的型态。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage for both effects of the spell increases by {@scaledamage 4d8;2d8|3-9|1d8} for each slot level above 3rd."
+						"当你使用4环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，此法术的两个伤害都会再增加{@scaledamage 4d8;2d8|3-9|1d8}。"
 					]
 				}
 			],
@@ -21908,15 +21908,15 @@
 				}
 			],
 			"entries": [
-				"A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes {@damage 8d6} lightning damage on a failed save, or half as much damage on a successful one.",
-				"The lightning ignites flammable objects in the area that aren't being worn or carried."
+				"一道闪电从你向着你所选择的一个方向轰鸣而出，形成一束100呎长、5呎宽的直线。每个在这个直线内的生物必须进行一次敏捷豁免。豁免失败的生物将受到{@damage 8d6}闪电伤害，豁免成功则只受到一半的伤害。",
+				"这束闪电会点燃范围内所有未被穿戴或携带的可燃物体。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 8d6|3-9|1d6} for each slot level above 3rd."
+						"当你使用4环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，伤害便会再增加{@scaledamage 8d6|3-9|1d6}。"
 					]
 				}
 			],
@@ -22028,7 +22028,7 @@
 				"ritual": true
 			},
 			"entries": [
-				"Describe or name a specific kind of beast or plant. Concentrating on the voice of nature in your surroundings, you learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+				"描述或指名一种特定的野兽或植物。专注于你周遭环境的自然之语，若5哩以内存在该类生物或植物，则你得知距离你最近的该生物或植物所在的方向与距离。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -22108,9 +22108,9 @@
 				}
 			],
 			"entries": [
-				"Describe or name a creature that is familiar to you. You sense the direction to the creature's location, as long as that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
-				"The spell can locate a specific creature known to you, or the nearest creature of a specific kind (such as a human or a {@creature unicorn}), so long as you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as being under the effects of a {@spell polymorph} spell, this spell doesn't locate the creature.",
-				"This spell can't locate a creature if running water at least 10 feet wide blocks a direct path between you and the creature."
+				"描述或指名一个你所熟悉的生物。只要该生物距离你1,000呎以内，你就可以感知到该生物所在位置的方向。若该生物正在移动，你也能知道它移动的方向。",
+				"此法术可以定位一个你已知的特定生物，只要你曾在近距离——30呎距离内——至少看过它一次。或者，此法术可以定位特定种类中（像是一个人类或一只{@creature unicorn}）离你最近的一个生物。如果你所描述或指名的生物正处于另一种不同的形态，例如处于{@spell 变形术 (polymorph)}法术的效果下，则此法术将无法定位该生物。",
+				"若有至少10呎宽的流水阻挡在你和该生物之间的直线通路上，则此法术将无法定位该生物。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -22263,9 +22263,9 @@
 				}
 			],
 			"entries": [
-				"Describe or name an object that is familiar to you. You sense the direction to the object's location, as long as that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.",
-				"The spell can locate a specific object known to you, as long as you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
-				"This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object."
+				"描述或指名一个你所熟悉的物体。只要该物体距离你1,000呎以内，你就可以感知到该物体所在位置的方向。若该物体正在移动，你也能知道它移动的方向。",
+				"此法术可以定位一个你已知的特定物体，只要你曾在近距离——30呎距离内——至少看过它一次。或者，此法术可以定位特定种类中离你最近的一个物体，像是某一种服装、珠宝、家具、工具、或武器。",
+				"若有任意厚度的铅挡在你和物体之间的直线通路上，即使只是薄薄一层，则此法术将无法定位该物体。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -22366,14 +22366,14 @@
 				}
 			],
 			"entries": [
-				"You touch a creature. The target's speed increases by 10 feet until the spell ends."
+				"你触碰一个生物。直到法术结束前，目标的移动速度增加10呎。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st."
+						"当你使用2环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，你就可以再额外选择一个生物作为目标。"
 					]
 				}
 			],
@@ -22461,7 +22461,7 @@
 				}
 			],
 			"entries": [
-				"You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends. The target's base AC becomes 13 + its Dexterity modifier. The spell ends if the target dons armor or if you dismiss the spell as an action."
+				"你触碰一个没有穿戴护甲的自愿生物，直到法术结束前，一道防护性的魔法力场将环绕在它身边。目标的基本AC变为13+它的敏捷调整值。此法术将在目标穿戴护甲或你以一个动作解消此法术时结束。"
 			],
 			"areaTags": [
 				"ST"
@@ -22527,9 +22527,9 @@
 				}
 			],
 			"entries": [
-				"A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.",
-				"You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.",
-				"The hand can't attack, activate magic items, or carry more than 10 pounds."
+				"一只幽灵般的漂浮手掌在射程内你所选择的一点出现。这只手持续到法术的持续时间结束或直到你用一个动作解消它。这只手会在它跟你的距离超过30呎或你再次施放此法术时消失。",
+				"你可以使用你的动作去控制这只手。你可以使用这只手去操作一个物体、打开一扇未上锁的门或容器、或者倒出小瓶内的东西。你可以在你每次使用它的时候移动这只手最多30呎。",
+				"这只手不能攻击、启动魔法物品、或运载超过10磅的东西。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -22663,7 +22663,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少100金币的圣水或铁和银粉，在施法时消耗",
-					"cost": 100,
+					"cost": 10000,
 					"consume": true
 				}
 			},
@@ -22677,24 +22677,24 @@
 				}
 			],
 			"entries": [
-				"You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface.",
-				"Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:",
+				"你以射程内你所能看见地面上的一处为中心，创造出一个10呎半径、20呎高的魔法能量圆柱。闪烁的符文将出现在圆柱与地面或其他表面交界处的位置。",
+				"选择以下一个或多个生物类型：天界生物、元素、精类、邪魔、或不死生物。这个法阵将对所选类型的生物产生以下影响：",
 				{
 					"type": "list",
 					"items": [
-						"The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use teleportation or interplanar travel to do so, it must first succeed on a Charisma saving throw.",
-						"The creature has disadvantage on attack rolls against targets within the cylinder.",
-						"Targets within the cylinder can't be {@condition charmed}, {@condition frightened}, or possessed by the creature."
+						"该生物无法自愿地以非魔法手段进入圆柱区域。若该生物尝试使用传送或跨位面旅行这么做，则它必须先成功通过一次魅力豁免。",
+						"该生物对圆柱内的目标所进行的攻击检定具有劣势。",
+						"圆柱内的目标不会被该生物{@condition charmed}、{@condition frightened}、或附身。"
 					]
 				},
-				"When you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it."
+				"当你施放此法术时，你可以选择让这个魔法以相反的方向运作，避免指定类型的一个生物离开圆柱区域，并保护位于圆柱外面的目标。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd."
+						"当你使用4环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，法术的持续时间就会再增加1小时。"
 					]
 				}
 			],
@@ -22812,7 +22812,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少500金币的一个宝石、水晶、圣物匣、或其他装饰性容器",
-					"cost": 500
+					"cost": 50000
 				}
 			},
 			"duration": [
@@ -22824,13 +22824,13 @@
 				}
 			],
 			"entries": [
-				"Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or use reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a humanoids body.",
-				"You can attempt to possess any humanoid within 100 feet of you that you can see (creatures warded by a {@spell protection from evil and good} or {@spell magic circle} spell can't be possessed). The target must make a Charisma saving throw. On a failure, your soul moves into the target's body, and the target's soul becomes trapped in the container. On a success, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
-				"Once you possess a creature's body, you control it. Your game statistics are replaced by the statistics of the creature, though you retain your alignment and your Intelligence, Wisdom, and Charisma scores. You retain the benefit of your own class features. If the target has any class levels, you can't use any of its class features.",
-				"Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move or take actions at all.",
-				"While possessing a body, you can use your action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you must make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.",
-				"If the container is destroyed or the spell ends, your soul immediately returns to your body. If your body is more than 100 feet away from you or if your body is dead when you attempt to return to it, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.",
-				"When the spell ends, the container is destroyed."
+				"你的身体陷入僵直性状态，而你的灵魂离开身体并进入你用做此法术材料构材的容器中。当你的灵魂存在于该容器时，你能如同你处于该容器所在的空间一样察觉你周遭的环境。你无法移动或采取反应。你唯一能采取的动作是将你自己的灵魂投射到最远距离该容器的100呎范围内，选择回到你仍活着的身体内（并结束此法术），或尝试附身一个类人生物的身体。",
+				"你可以尝试附身任何距离你100呎内且你能看见的类人生物（被{@spell 防护善恶 (protection from evil and good)}或{@spell 防护法阵 (magic circle)}守护的生物无法被附身）。该目标必须进行一次魅力豁免。若豁免失败，你的灵魂将移进目标的身体，且目标的灵魂将被困在容器中。若豁免成功，目标将成功抵抗你附身它的尝试，且你在24小时内不能再附身它。",
+				"一旦你成功附身一个生物的身体，你将得以控制它。你的游戏数据将被该生物的数据取代，尽管你仍保有你的阵营，以及你的智力、感知、和魅力属性值。你保有你自己职业能力所带来的好处。如果目标具有任何职业等级，你无法使用它的任何职业能力。",
+				"在此同时，被附身生物的灵魂可以透过它自己的感官从容器察觉环境，但它无法移动或采取任何动作。",
+				"当附身于一具身体时，若该容器距离你100呎内，则你可以使用你的动作以从宿主的身体回到容器内，并让宿主生物的灵魂回到它自己的身体中。若宿主的身体在你处于其中时死亡，则该生物死亡，且你必须进行一次对抗你自己法术豁免DC的魅力豁免。若豁免成功且容器距离你100呎内，则你将回到容器内，否则你也会死亡。",
+				"若该容器被摧毁或此法术结束，则你的灵魂将立刻回到你的身体中。若你的身体距离你超过100呎、或你的身体在你尝试回到它时已经死亡，则你将死亡。若另一个生物的灵魂在容器被摧毁时处于其中，且若它的身体距离其100呎内且仍然活着，则该生物的灵魂将回到它的身体中，否则该生物将死亡。",
+				"当此法术结束时，容器将被摧毁。"
 			],
 			"savingThrow": [
 				"charisma"
@@ -22883,14 +22883,14 @@
 				}
 			],
 			"entries": [
-				"You create three glowing darts of magical force. Each dart hits a creature of your choice that you can see within range. A dart deals {@damage 1d4 + 1} force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
+				"你创造出三支发着光的魔法力场箭矢。每支箭矢各自命中射程内你所选且你能看见的一个生物。一支箭矢会对它的目标造成{@damage 1d4 + 1}力场伤害。所有箭矢都将同时击中，且你可以决定它们要命中同一个或复数个生物。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the spell creates one more dart for each slot level above 1st."
+						"当你使用2环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，此法术就可以再额外创造一支箭矢。"
 					]
 				}
 			],
@@ -22978,7 +22978,7 @@
 				"s": true,
 				"m": {
 					"text": "一小块蜂巢和价值至少10金币的翡翠尘，在施法时消耗",
-					"cost": 10,
+					"cost": 1000,
 					"consume": true
 				}
 			},
@@ -22994,9 +22994,9 @@
 				"ritual": true
 			},
 			"entries": [
-				"You implant a message within an object in range, a message that is uttered when a trigger condition is met. Choose an object that you can see and that isn't being worn or carried by another creature. Then speak the message, which must be 25 words or less, though it can be delivered over as long as 10 minutes. Finally, determine the circumstance that will trigger the spell to deliver your message.",
-				"When that circumstance occurs, a magical mouth appears on the object and recites the message in your voice and at the same volume you spoke. If the object you chose has a mouth or something that looks like a mouth (for example, the mouth of a statue), the magical mouth appears there so that the words appear to come from the object's mouth. When you cast this spell, you can have the spell end after it delivers its message, or it can remain and repeat its message whenever the trigger occurs.",
-				"The triggering circumstance can be as general or as detailed as you like, though it must be based on visual or audible conditions that occur within 30 feet of the object. For example, you could instruct the mouth to speak when any creature moves within 30 feet of the object or when a silver bell rings within 30 feet of it."
+				"你在射程内的一个物体注入一段讯息，这段讯息将在触发条件被满足时被说出。选择一个你所能看见且未被其他生物穿戴或携带的物体。接着说出一段讯息，这段信息的长度必须不超过25个字，但可以用最多10分钟的时间被传达。最后，决定一个将会触发此法术以传达你讯息的情境。",
+				"当该情境发生，一个魔法嘴将出现在物体上，并以你的声音和你述说时相同的音量复述该讯息。若你所选择的物体有一张嘴或看起来像嘴巴的东西（例如雕像的嘴），则魔法嘴会出现在该处，让其看起来像是从该物体的嘴巴说出话语。当你施放此法术时，你可以让此法术在传达该讯息后结束、或是让它继续存在并在每次被触发时都再一次重述这段讯息。",
+				"触发的情境可以很笼统也可以很具体，由你决定。但它必须要基于距离该物体30呎内所发生的视觉或声音状况。举例来说，你可以指示魔嘴在有任何生物移进该物体30呎范围内时、或当30呎内有银制铃铛响起时，让其说出讯息。"
 			],
 			"miscTags": [
 				"SGT"
@@ -23064,14 +23064,14 @@
 				}
 			],
 			"entries": [
-				"You touch a nonmagical weapon. Until the spell ends, that weapon becomes a magic weapon with a +1 bonus to attack rolls and damage rolls."
+				"你触碰一把非魔法武器。直到此法术结束前，该武器变成魔法武器，在攻击检定和伤害骰上具有+1加值。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the bonus increases to +2. When you use a spell slot of 6th level or higher, the bonus increases to +3."
+						"当你使用4环或更高的法术位施放此法术时，加值增加至+2。当你使用6环或更高的法术位施放此法术时，加值增加至+3。"
 					]
 				}
 			],
@@ -23232,16 +23232,16 @@
 				}
 			],
 			"entries": [
-				"You create the image of an object, a creature, or some other visible phenomenon that is no larger than a 20-foot cube. The image appears at a spot that you can see within range and lasts for the duration. It seems completely real, including sounds, smells, and temperature appropriate to the thing depicted. You can't create sufficient heat or cold to cause damage, a sound loud enough to deal thunder damage or deafen a creature, or a smell that might sicken a creature (like a {@creature troglodyte||troglodyte's} stench).",
-				"As long as you are within range of the illusion, you can use your action to cause the image to move to any other spot within range. As the image changes location, you can alter its appearance so that its movements appear natural for the image. For example, if you create an image of a creature and move it, you can alter the image so that it appears to be walking. Similarly, you can cause the illusion to make different sounds at different times, even making it carry on a conversation, for example.",
-				"Physical interaction with the image reveals it to be an illusion, because things can pass through it. A creature that uses its action to examine the image can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through the image, and its other sensory qualities become faint to the creature."
+				"你创造出一个物体、生物、或其他可见现象的幻影，必须不大于一个20呎边长的立方体。这个幻影会出现在射程内你所能看见的一处，并持续到法术的持续时间结束。它看起来是完全真实的，也具有合适于它所描绘事物的声音、气味、和温度。你无法创造出足以造成伤害的高热或寒冷、足以造成雷鸣伤害的巨大声响、或是能让一个生物恶心的气味（像是{@creature troglodyte}的恶臭）。",
+				"只要你还在幻影的射程内，你就可以使用你的动作以让幻影移动到射程内的任意一处。随着幻影改变它的位置，你可以修改它的外观以让幻影的移动显得比较自然。举例来说，如果你创造出一个生物的幻影并移动它，你可以修改该幻影以让它看起来像是在走路。同样的，你可以使这个幻影在不同时机发出不同的声音，甚至可以让它进行一场对话。",
+				"由于东西会穿过幻影，与幻影的任何物理性互动都将暴露它是幻象的事实。一个使用它的动作去检视幻影的生物，可以透过一个成功的智力（{@skill Investigation}）检定辨识出它是幻象，其难度等同于你的法术豁免DC。如果一个生物辨识出这是幻象，该生物的视线将可以穿透该影像，且它的其他感官效果对该生物而言将变得模糊黯淡。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the spell lasts until dispelled, without requiring your concentration."
+						"当你使用6环或更高的法术位施放此法术时，此法术将持续直到被解消，且不再需要你的专注。"
 					]
 				}
 			],
@@ -23310,14 +23310,14 @@
 				}
 			],
 			"entries": [
-				"A wave of healing energy washes out from a point of your choice within range. Choose up to six creatures in a 30-foot-radius sphere centered on that point. Each target regains hit points equal to {@dice 3d8} + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+				"一波治愈能量从射程内你所选择的一点冲刷而出。选择最多六个处于以该点为中心30呎半径球体内的生物。每个生物回复等同于{@dice 3d8}+你的施法属性调整值的生命值。此法术对不死生物或构装体没有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the healing increases by {@scaledice 3d8|5-9|1d8} for each slot level above 5th."
+						"当你使用6环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，治疗量便会再增加{@scaledice 3d8|5-9|1d8}。"
 					]
 				}
 			],
@@ -23417,7 +23417,7 @@
 				}
 			],
 			"entries": [
-				"A flood of healing energy flows from you into injured creatures around you. You restore up to 700 hit points, divided as you choose among any number of creatures that you can see within range. Creatures healed by this spell are also cured of all diseases and any effect making them {@condition blinded} or {@condition deafened}. This spell has no effect on undead or constructs."
+				"一阵治愈能量洪流从你流至你周围的重伤生物体内。你回复最多700点生命值，由你决定如何分配给射程内任意数量你所能看见的生物。且此法术所治愈的生物身上所有的疾病、以及任何使它们{@condition blinded}或{@condition deafened}的效果都将被痊愈。此法术对不死生物或构装体没有任何效果。"
 			],
 			"miscTags": [
 				"HL",
@@ -23464,14 +23464,14 @@
 				}
 			],
 			"entries": [
-				"As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to {@dice 1d4} + your spellcasting ability modifier. This spell has no effect on undead or constructs."
+				"随着你喊出回复真言，射程内你所选最多六个且你能看见的生物回复等同于{@dice 1d4}+你的施法属性调整值的生命值。此法术对不死生物或构装体没有任何效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the healing increases by {@scaledice 1d4|3-9|1d4} for each slot level above 3rd."
+						"当你使用4环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，治疗量便会再增加{@scaledice 1d4|3-9|1d4}。"
 					]
 				}
 			],
@@ -23571,17 +23571,17 @@
 				}
 			],
 			"entries": [
-				"You suggest a course of activity (limited to a sentence or two) and magically influence up to twelve creatures of your choice that you can see within range and that can hear and understand you. Creatures that can't be {@condition charmed} are immune to this effect. The suggestion must be worded in such a manner as to make the course of action sound reasonable. Asking the creature to stab itself, throw itself onto a spear, immolate itself, or do some other obviously harmful act automatically negates the effect of the spell.",
-				"Each target must make a Wisdom saving throw. On a failed save, it pursues the course of action you described to the best of its ability. The suggested course of action can continue for the entire duration. If the suggested activity can be completed in a shorter time, the spell ends when the subject finishes what it was asked to do.",
-				"You can also specify conditions that will trigger a special activity during the duration. For example, you might suggest that a group of soldiers give all their money to the first beggar they meet. If the condition isn't met before the spell ends, the activity isn't performed.",
-				"If you or any of your companions damage a creature affected by this spell, the spell ends for that creature."
+				"你提议一套行动（限制为一到两个句子），并魔法性地影响射程内最多十二个你所能看见，且它能听见和理解你的生物。不会被{@condition charmed}的生物免疫于这个效果。这项提议的措辞必须让这套行动听起来合情合理。要求该名生物刺自己、扑向长矛、自焚、或其他明显有害的行动将会使此法术结束。",
+				"每个目标都必须进行一次感知豁免。若豁免失败，则它会尽它的全力去实行你所描述的行动。这套行动可以在整个法术持续期间被持续。若被提议的行动在更短的时间内被完成，则法术将会在目标完成它被要求去做的事时结束。",
+				"你也可以指定一些在法术持续期间会触发特定行动的特定条件。举例来说，你可以暗示一群守卫将他们所有的钱财送给他们第一个遇见的乞丐。如果在法术时效结束前没有满足条件，则该行动不会被执行。",
+				"若你或你的任何同伴伤害了一个受此法术影响的生物，则该生物身上的法术效果结束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a 7th-level spell slot, the duration is 10 days. When you use an 8th-level spell slot, the duration is 30 days. When you use a 9th-level spell slot, the duration is a year and a day."
+						"当你使用7环法术位施放此法术时，此法术的持续时间变为10天。当你使用8环法术位施放此法术时，持续时间变为30天。当你使用9环法术位施放此法术时，持续时间变为1年又1天。"
 					]
 				}
 			],
@@ -23650,9 +23650,9 @@
 				}
 			],
 			"entries": [
-				"You banish a creature that you can see within range into a labyrinthine demiplane. The target remains there for the duration or until it escapes the maze.",
-				"The target can use its action to attempt to escape. When it does so, it makes a DC 20 Intelligence check. If it succeeds, it escapes, and the spell ends (a {@creature minotaur} or {@creature goristro} demon automatically succeeds).",
-				"When the spell ends, the target reappears in the space it left or, if that space is occupied, in the nearest unoccupied space."
+				"你将射程内一个你所能看见的生物放逐到一个迷宫似的半位面。目标将在法术持续期间内留在该处、或直到它从该迷宫中逃出。",
+				"目标可以使用它的动作以尝试逃脱。当它这么做时，它进行一次DC 20的智力检定。若它检定成功，则它成功逃脱，且此法术结束（{@creature minotaur}或{@creature goristro}将自动通过此检定）。",
+				"当此法术结束时，目标将重新出现在它离开时所在的空间，或若该空间已被占据，则出现在最近的一处未被占据空间。"
 			],
 			"miscTags": [
 				"SGT"
@@ -23711,9 +23711,9 @@
 				"ritual": true
 			},
 			"entries": [
-				"You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.",
-				"While merged with the stone, you can't see what occurs outside it, and any Wisdom ({@skill Perception}) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.",
-				"Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals {@damage 6d6} bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall {@condition prone} in an unoccupied space closest to where you first entered."
+				"你进入一个大小足以完全容纳你身体的石制物体或表面，在法术持续期间将你自己和你所携带的所有装备融入石头中。借由使用你的移动速度，你可以从一个你能碰触的位置进入石头中。任何非魔法感官都无法看见或察觉你的存在。",
+				"当与石头融合时，你无法看见外头发生的事，且你用于聆听外界声音所进行的感知（{@skill Perception}）豁免具有劣势。你仍能认知到时间的流逝，且可以在与石头融合时对自己施放法术。你可以使用你的移动速度从你进入石头的位置离开，这么做将结束法术。除此之外你无法移动。",
+				"石头受到的轻微物理损伤并不会伤害到你，但石头的部分毁损或者形状改变（改变到不再足以容纳你的程度）将把你从石头中逐出，并对你造成{@damage 6d6}钝击伤害。石头的完全毁损（或被转变成另一种不同的物质）将把你从石头中逐出，并对你造成50点钝击伤害。若被从中逐出，你将摔倒{@condition prone}于距离你进入石头处最近的一处未被占据的空间。"
 			],
 			"damageInflict": [
 				"bludgeoning"
@@ -23801,14 +23801,14 @@
 				}
 			],
 			"entries": [
-				"A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes {@damage 4d4} acid damage immediately and {@damage 2d4} acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn."
+				"一道闪烁的绿色箭矢袭向射程内的一个目标并爆散成酸雾。对目标进行一次远程法术攻击。若命中，目标将立刻受到{@damage 4d4}酸蚀伤害，并在它的下个回合结束时再受到{@damage 2d4}酸蚀伤害。若没有命中，则酸液箭矢将溅射到目标身上，造成初始伤害一半的伤害，且不会在它的下个回合结束时造成伤害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage (both initial and later) increases by {@scaledamage 4d4;2d4|2-9|1d4} for each slot level above 2nd."
+						"当你使用3环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，初始伤害和后续伤害都会再增加{@scaledamage 4d4;2d4|2-9|1d4}。"
 					]
 				}
 			],
@@ -23893,8 +23893,8 @@
 				}
 			],
 			"entries": [
-				"This spell repairs a single break or tear in an object you touch, such as broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage.",
-				"This spell can physically repair a magic item or construct, but the spell can't restore magic to such an object."
+				"此法术修复你所碰触的一个物体上的一处破损或裂缝，像是破掉的铁丝网、断成两半的钥匙、被撕裂的斗篷、漏水的酒袋等等。只要破损或裂缝的任一边不超过1呎，你就能修复它，不留下任何伤痕。",
+				"此法术可以物理性的修复魔法物品或构装体，但无法将这些物体的魔法给回复。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -23994,8 +23994,8 @@
 				}
 			],
 			"entries": [
-				"You point your finger toward a creature within range and whisper a message. The target (and only the target) hears the message and can reply in a whisper that only you can hear.",
-				"You can cast this spell through solid objects if you are familiar with the target and know it is beyond the barrier. Magical silence, 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood blocks the spell. The spell doesn't have to follow a straight line and can travel freely around corners or through openings."
+				"你用手指指向射程内的一个生物并低声说出一段讯息。目标（且只有目标）会听到这段讯息并能够以只有你能听到的低语回复。",
+				"如果你熟悉该目标且知道他正位于屏障后方，则你可以让此法术的效果穿透固体。这个法术并不需要沿着直线传播，而可以自由地绕过转角或穿过开口。"
 			],
 			"areaTags": [
 				"ST"
@@ -24087,8 +24087,8 @@
 				}
 			],
 			"entries": [
-				"Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point you choose must make a Dexterity saving throw. The sphere spreads around corners. A creature takes {@damage 20d6} fire damage and {@damage 20d6} bludgeoning damage on a failed save, or half as much damage on a successful one. A creature in the area of more than one fiery burst is affected only once.",
-				"The spell damages objects in the area and ignites flammable objects that aren't being worn or carried."
+				"炽烈的火焰球体轰炸射程内地面上你所能看见的四个点。每个位于以你所选各点为中心40呎半径球体范围内的生物都必须进行一次敏捷豁免。这个球体范围会绕过转角。一个豁免失败的生物将受到{@damage 20d6}火焰伤害和{@damage 20d6}钝击伤害，豁免成功则只受到一半的伤害。一个同时处于多个烈焰爆炸范围的生物只会被影响一次。",
+				"此法术会伤害范围内的物体，并点燃所有未被穿戴或携带的可燃物体。"
 			],
 			"damageInflict": [
 				"bludgeoning",
@@ -24149,7 +24149,7 @@
 				}
 			],
 			"entries": [
-				"Until the spell ends, one willing creature you touch is immune to psychic damage, any effect that would sense its emotions or read its thoughts, divination spells, and the {@condition charmed} condition. The spell even foils {@spell wish} spells and spells or effects of similar power used to affect the target's mind or to gain information about the target."
+				"直到此法术结束前，一个你碰触的自愿生物将免疫于精神伤害、任何能感知情绪或读取它思想的效果、预言系法术、以及{@condition charmed}状态。此法术甚至能够阻挡用于影响目标心灵或获得关于目标资讯的{@spell 祈愿术 (wish)}法术、以及其他类似效果的法术或力量。"
 			],
 			"damageImmune": [
 				"psychic"
@@ -24201,10 +24201,10 @@
 				}
 			],
 			"entries": [
-				"You create a sound or an image of an object within range that lasts for the duration. The illusion also ends if you dismiss it as an action or cast this spell again.",
-				"If you create a sound, its volume can range from a whisper to a scream. It can be your voice, someone else's voice, a lion's roar, a beating of drums, or any other sound you choose. The sound continues unabated throughout the duration, or you can make discrete sounds at different times before the spell ends.",
-				"If you create an image of an object—such as a chair, muddy footprints, or a small chest—it must be no larger than a 5-foot cube. The image can't create sound, light, smell, or any other sensory effect. Physical interaction with the image reveals it to be an illusion, because things can pass through it.",
-				"If a creature uses its action to examine the sound or image, the creature can determine that it is an illusion with a successful Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the illusion becomes faint to the creature."
+				"你在射程内创造一段声音或一个物体的影像，持续到法术的持续时间结束。这个幻象也会在你以一个动作解消它或再次施放此法术时消失。",
+				"如果你创造一段声音，它的音量可以小至低语，大致尖叫。它可以是你的声音、其他人的声音、狮子的吼叫声、击鼓声、或任何其他你所选择的声音。这个声音在持续时间内持续而不衰弱，或者你也可以在法术结束前于不同时机发出不相关的声音。",
+				"如果你创造出一个物体的影像——像是一张椅子、泥泞脚印、或一个小箱子——它必须不大于一个5呎边长的立方体。这个影像无法创造出声音、光照、气味、或其他感官效果。由于东西会穿过幻象，与影像的任何物理性互动都将暴露它是幻象的事实。",
+				"如果一个生物使用它的动作去检视该声音或影像，它可以透过一个成功的智力（{@skill Investigation}）检定辨识出它是幻象，难度等同于你的法术豁免DC。如果一个生物辨识出这是幻象，幻象对该生物而言将变得模糊黯淡。"
 			],
 			"opposedCheck": [
 				"intelligence"
@@ -24308,10 +24308,10 @@
 				}
 			],
 			"entries": [
-				"You make terrain in an area up to 1 mile square look, sound, smell, and even feel like some other sort of terrain. The terrain's general shape remains the same, however. Open fields or a road could be made to resemble a swamp, hill, crevasse, or some other difficult or impassable terrain. A pond can be made to seem like a grassy meadow, a precipice like a gentle slope, or a rock-strewn gully like a wide and smooth road.",
-				"Similarly, you can alter the appearance of structures, or add them where none are present. The spell doesn't disguise, conceal, or add creatures.",
-				"The illusion includes audible, visual, tactile, and olfactory elements, so it can turn clear ground into difficult terrain (or vice versa) or otherwise impede movement through the area. Any piece of the illusory terrain (such as a rock or stick) that is removed from the spell's area disappears immediately.",
-				"Creatures with {@sense truesight} can see through the illusion to the terrain's true form; however, all other elements of the illusion remain, so while the creature is aware of the illusion's presence, the creature can still physically interact with the illusion."
+				"你使一片最大1哩平方范围内的地形在视觉、听觉、嗅觉、和甚至触觉上都像是另一种地形。然而，地形的大致形状仍保持不变。一片开阔的平原或道路可以被变得像是一片沼泽、丘陵、裂谷或其他难以通过或者无法通过的地形。一个池塘可以被变得看起来像是一片草原，一个悬崖可以像是一段缓坡，或者让一条乱石溪谷变得像是一条宽阔平坦的道路。",
+				"同样的，你也可以改变建筑物的外观，或是在本来没有建筑物的位置上添加一栋。此法术并不能伪装、隐藏、或是添加生物。",
+				"这个幻象包括了听觉、视觉、触觉、和嗅觉要素，因此它可以将平整的地表变成困难地形（反之亦然），或阻碍通过这片区域的移动。一旦幻象地形中的任意部分（像是石头或树枝）被移出此法术区域外，它将会立即消失。",
+				"具有{@sense truesight}的生物可以看穿幻象，并看见这片地形的真实型态；然而，任何其他幻象的要素仍会保留，因此即使该生物能意识到幻象的存在，它仍然能够与这个幻象进行物理性的互动。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -24363,11 +24363,11 @@
 				}
 			],
 			"entries": [
-				"Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates.",
-				"Each time a creature targets you with an attack during the spell's duration, roll a {@dice d20} to determine whether the attack instead targets one of your duplicates.",
-				"If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.",
-				"A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.",
-				"A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with {@sense truesight}."
+				"三个你自己的幻影复制体出现在你的位置。直到法术结束前，复制体会跟着你移动、模仿你的动作、并变换位置，因此不可能追踪判断哪一个影像才是真身。你可以使用你的动作解消这些幻影复制体。",
+				"在法术持续期间，每当有一个生物以你为攻击的目标，骰一颗{@dice d20}以决定该攻击是否以你的其中一个复制体为目标。",
+				"若你有三个复制体，你必须骰出6或以上才能使该攻击改为以复制体为目标。当有二个复制体，你必须骰出8或以上。当有一个复制体，则你必须骰出11以上。",
+				"一个复制体的AC等同于10+你的敏捷调整值。若攻击命中一个复制体，则该复制体被摧毁。一个复制体只会被一次命中它的攻击摧毁，而无视所有其他伤害和效果。此法术会在所有复制体被摧毁时结束。",
+				"若一个生物无法视物，或依赖视觉以外的感知，像是盲视、或它可以察觉幻影的真伪，例如透过{@sense truesight}，则该生物将不会受此法术影响。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -24486,9 +24486,9 @@
 				}
 			],
 			"entries": [
-				"You become {@condition invisible} at the same time that an illusory double of you appears where you are standing. The double lasts for the duration, but the invisibility ends if you attack or cast a spell.",
-				"You can use your action to move your illusory double up to twice your speed and make it gesture, speak, and behave in whatever way you choose.",
-				"You can see through its eyes and hear through its ears as if you were located where it is. On each of your turns as a bonus action, you can switch from using its senses to using your own, or back again. While you are using its senses, you are {@condition blinded} and {@condition deafened} in regard to your own surroundings."
+				"你在变为{@condition invisible}的同时，一个你的幻象复制体出现在你所在的位置。这个复制体会在法术持续期间内持续存在，但隐形效果会在你攻击或施放法术时结束。",
+				"你可以使用你的动作移动你的幻象复制体至最多等同你移动速度两倍的距离，并让它以你选择的方式打手势、说话、并行动。",
+				"你可以透过它的眼睛视物并透过它的耳朵聆听，就如同你位于它所在的位置。在你的每个回合以一个附赠动作，你可以从在它的感官和你的感官之间切换。当你使用它的感官时，你对你自己的周遭环境视作{@condition blinded}和{@condition deafened}。"
 			],
 			"conditionInflict": [
 				"blinded",
@@ -24575,7 +24575,7 @@
 				}
 			],
 			"entries": [
-				"Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space that you can see."
+				"短暂的被一阵银色迷雾环绕，你传送到最多30呎距离的一处你所能看见的未被占据空间。"
 			],
 			"miscTags": [
 				"SGT"
@@ -24731,18 +24731,18 @@
 				}
 			],
 			"entries": [
-				"You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes {@condition charmed} by you for the duration. The {@condition charmed} target is {@condition incapacitated} and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.",
-				"While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.",
-				"You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.",
-				"A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.",
-				"A {@spell remove curse} or {@spell greater restoration} spell cast on the target restores the creature's true memory."
+				"你尝试重塑另一个生物的记忆。一个你所能看见的生物必须进行一次感知豁免。若你正在与该生物战斗，则它在该豁免检定中具有优势。若豁免失败，目标将在法术持续期间被你{@condition charmed}。被{@condition charmed}的生物将陷入{@condition incapacitated}状态，且无法意识到它的周遭环境，尽管它仍然能听见你。如果它受到任何伤害或成为其他法术的目标，则此法术结束，且目标的记忆不会受到任何修改。",
+				"在魅惑效果持续时，你可以影响目标关于它在过去24小时内经历，且持续不超过10分钟的一个事件的记忆。你可以永久消除关于这个事件的所有记忆、让目标能完美清晰地回忆起该事件的所有细节、改变它对该事件细节的记忆、或创造一段关于其他事件的记忆。",
+				"你必须对目标说话以描述它的记忆如何被影响，且它必须要能够理解你的语言好让你植入被修改的记忆。它的大脑将自动填补你描述中所有细节的漏洞。若此法术在你描述完被修改的记忆之前结束，该生物的记忆将不会被修改。否则被修改的记忆将在法术结束时根植于目标心中。",
+				"一段被修改的记忆不一定会影响生物的行为，尤其是若这段记忆与该生物的天性、阵营、或信仰相违背。一段不合逻辑的记忆，例如植入一段关于该生物是多么享受将自己浸泡在强酸中的记忆，可能会被忽视，被当作一场恶梦。DM可能会认定一段被修改的记忆太过荒谬，以至于无法显著影响该生物的行为。",
+				"一个施放于目标的{@spell 移除诅咒 (remove curse)}或{@spell 高等复原术 (greater restoration)}可以恢复该生物真正的记忆。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level)."
+						"当你使用6环或更高的法术位施放此法术时，你可以修改目标记忆中最多7天前(6环)、30天前(7环)、1年前(8环)、或在过去任何时候(9环)所发生事件的记忆。"
 					]
 				}
 			],
@@ -24863,17 +24863,17 @@
 				}
 			],
 			"entries": [
-				"A silvery beam of pale light shines down in a 5-foot-radius, 40-foot-high cylinder centered on a point within range. Until the spell ends, dim light fills the cylinder.",
-				"When a creature enters the spell's area for the first time on a turn or starts its turn there, it is engulfed in ghostly flames that cause searing pain, and it must make a Constitution saving throw. It takes {@damage 2d10} radiant damage on a failed save, or half as much damage on a successful one.",
-				"A shapechanger makes its saving throw with disadvantage. If it fails, it also instantly reverts to its original form and can't assume a different form until it leaves the spell's light.",
-				"On each of your turns after you cast this spell, you can use an action to move the beam up to 60 feet in any direction."
+				"一道闪烁着苍白光芒的银光在以射程内一点为中心的5呎半径、40呎高的圆柱空间内照下。直到法术结束前，微光光照充满该圆柱。",
+				"当一个生物在此法术区域中开始它的回合、或在一个回合中第一次进入该区域，则它将被幽灵般的火舌吞没并造成烧灼般的剧痛，且它必须进行一次体质豁免。若豁免失败，则它将受到{@damage 2d10}光耀伤害，豁免成功则只受到一半的伤害。",
+				"变形者(shapechanger)在进行此豁免检定时具有劣势。若它豁免失败，则它将立刻变回它原本的型态、且直到离开此法术的光照前都无法变换成不同的形态。",
+				"在你施放此法术之后的每个你的回合，你可以使用一个动作以移动这束光朝任意方向移动最多60呎。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 2d10|2-9|1d10} for each slot level above 2nd."
+						"当你使用3环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，伤害便会再增加{@scaledamage 2d10|2-9|1d10}。"
 					]
 				}
 			],
@@ -24952,9 +24952,9 @@
 				}
 			],
 			"entries": [
-				"You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.",
-				"The hound is {@condition invisible} to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees {@condition invisible} creatures and can see into the Ethereal Plane. It ignores illusions.",
-				"At the start of each of your turns, the hound attempts to bite one creature within 5 feet of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier + your proficiency bonus. On a hit, it deals {@damage 4d8} piercing damage."
+				"你在射程内你所能看见的一处未被占据空间召唤出一只幻影看门狗，它将在法术持续期间维持存在，直到你以一个动作将它解消、或直到你移动到距离它超过100呎外的地方。",
+				"这只猎犬对除了你以外的所有生物而言是{@condition invisible}的，且不会被伤害。当一个体型为小型或更大生物来到距离你30呎内的位置，而没有先说出你在施放此法术时指定的密语，则猎犬将开始大声吠叫。这只猎犬可以看见{@condition invisible}的生物，且可以看见乙太位面的事物。它无视幻象。",
+				"在每次你的回合开始时，这只猎犬会尝试啃咬一个距离它5呎内，且对你有敌意的生物。这只猎犬的攻击加值等同于你的施法属性调整值+你的熟练加值。若命中，则它造成{@damage 4d8}穿刺伤害。"
 			],
 			"damageInflict": [
 				"piercing"
@@ -25016,7 +25016,7 @@
 				"s": true,
 				"m": {
 					"text": "一个象牙雕刻而成的正门模型、一小块打磨过的大理石、和一根银制小汤匙，各自价值至少5金币",
-					"cost": 5
+					"cost": 500
 				}
 			},
 			"duration": [
@@ -25029,9 +25029,9 @@
 				}
 			],
 			"entries": [
-				"You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.",
-				"Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.",
-				"You can create any floor plan you like, but the space can't exceed 50 cubes, each cube being 10 feet on each side. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine course banquet for up to 100 people. A staff of 100 near-transparent servants attends all who enter. You decide the visual appearance of these servants and their attire. They are completely obedient to your orders. Each servant can perform any task a normal human servant could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can go anywhere in the mansion but can't leave it. Furnishings and other objects created by this spell dissipate into smoke if removed from the mansion. When the spell ends, any creatures inside the extradimensional space are expelled into the open spaces nearest to the entrance."
+				"你在射程内变出一座位于异次元的住处，并在法术持续期间持续存在。你决定它唯一的入口出现在何处。这个入口闪烁着微光，且为5呎宽和10呎高。只要传送门仍保持开启，你和任何你在施放此法术时指定的生物就可以进入这座异次元住处。你可以在你距离传送门30呎内时开启或关上这个传送门。当传送门被关上，它将变为隐形。",
+				"在传送门内，是一座连接着许多房间的华丽大厅。住处内的空气清新且温暖。",
+				"你可以创造出任何你想要楼层规划，但它的空间不能超过50个10呎边长立方体所构成的空间。这个场所的家具和装潢由你决定。它含有足够的食物以为最多100人提供九道菜的盛宴。100个近乎隐形的仆役组织而成的职员将招待所有进入住处的人。你决定这些仆役的视觉外观和衣着。它们将完全服从你的命令。每个仆役都能够执行任何寻常人类仆役可以执行的工作，但它们无法攻击、或采取任何会对其它生物有直接伤害的行动。这些仆役可以拿取东西、打扫、缝补、折衣服、点火、上菜、和倒酒等等。这些仆役可以在豪宅内四处移动，但不能离开豪宅。家具和其他由此法术创造的物体将在被移出豪宅时如烟消散。当此法术结束时，任何仍在异次元空间内的生物都将被逐出至最接近入口处的开放空间。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -25081,27 +25081,27 @@
 				}
 			],
 			"entries": [
-				"You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it.",
-				"When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:",
+				"你用魔法保护射程内一个区域的安全。该区域为一个立方体区域，各边长最小为5呎，最大为100呎。此法术持续到法术持续期间结束，或直到你使用一个动作将它解消。",
+				"当你施放此法术时，你决定此法术将提供怎样的安全防护，从以下特性中选择任意个或全部：",
 				{
 					"type": "list",
 					"items": [
-						"Sound can't pass through the barrier at the edge of the warded area.",
-						"The barrier of the warded area appears dark and foggy, preventing vision (including {@sense darkvision}) through it.",
-						"Sensors created by divination spells can't appear inside the protected area or pass through the barrier at its perimeter.",
-						"Creatures in the area can't be targeted by divination spells.",
-						"Nothing can teleport into or out of the warded area.",
-						"Planar travel is blocked within the warded area."
+						"声音不会穿过位于守护区域边缘的屏障。",
+						"守护区域的屏障看起来暗沉而朦胧，防止视觉（包括{@sense darkvision}）穿透它。",
+						"透过预言系法术创造的感应器无法出现在受保护的区域内，也无法穿过它边缘的屏障。",
+						"该区域内的生物无法被作为预言系法术的目标。",
+						"任何事物都无法传送进入或出去被守护的区域。",
+						"守护区域内进行的位面旅行将被阻挡。"
 					]
 				},
-				"Casting this spell on the same spot every day for a year makes this effect permanent."
+				"在一年内每天持续在同一个地方施放此法术，将会使此效果成为永久效果。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
 					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 5th level or higher, you can increase the size of the cube by 100 feet for each slot level beyond 4th. Thus you could protect a cube that can be up to 200 feet on one side by using a spell slot of 5th level."
+						"当你使用5环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，你就可以让立方体的大小再增加100呎。因此你可以借由使用5环法术位来保护一个各边长最多200呎的立方体区域。"
 					]
 				}
 			],
@@ -25165,7 +25165,7 @@
 				"s": true,
 				"m": {
 					"text": "一把白金制成，铜锌合金剑柄的宝剑模型，价值250金币",
-					"cost": 250
+					"cost": 25000
 				}
 			},
 			"duration": [
@@ -25179,8 +25179,8 @@
 				}
 			],
 			"entries": [
-				"You create a sword-shaped plane of force that hovers within range. It lasts for the duration.",
-				"When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes {@damage 3d10} force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
+				"你创造出一块剑形的力场平面，漂浮于射程内。它将在法术持续期间内持续存在。",
+				"当这把剑出现时，你可以对距离这把剑5呎内的一个目标进行一次近战法术攻击。若命中，则目标将受到{@damage 3d10}力场伤害。直到此法术结束前，你可以在你的每个回合以一个附赠动作移动该这把剑最多20呎距离到一处你所能看见的位置，并再对一个相同或不同的目标重复进行一次此攻击。"
 			],
 			"damageInflict": [
 				"force"
@@ -25243,11 +25243,11 @@
 				}
 			],
 			"entries": [
-				"Choose an area of terrain no larger than 40 feet on a side within range. You can reshape dirt, sand, or clay in the area in any manner you choose for the duration. You can raise or lower the area's elevation, create or fill in a trench, erect or flatten a wall, or form a pillar. The extent of any such changes can't exceed half the area's largest dimension. So, if you affect a 40-foot square, you can create a pillar up to 20 feet high, raise or lower the square's elevation by up to 20 feet, dig a trench up to 20 feet deep, and so on. It takes 10 minutes for these changes to complete.",
-				"At the end of every 10 minutes you spend concentrating on the spell, you can choose a new area of terrain to affect.",
-				"Because the terrain's transformation occurs slowly, creatures in the area can't usually be trapped or injured by the ground's movement.",
-				"This spell can't manipulate natural stone or stone construction. Rocks and structures shift to accommodate the new terrain. If the way you shape the terrain would make a structure unstable, it might collapse.",
-				"Similarly, this spell doesn't directly affect plant growth. The moved earth carries any plants along with it."
+				"选择射程内一处各边不超过40呎的地表区域。你可以在法术持续期间以任何你所选择的方式重塑该区域内的泥土、沙、或黏土。你可以升起或降低该区域的海拔高度、创造或填满一道沟壑，升起或移平一道墙、或形成一根立柱。任何这类变化的程度都不能超过这片区域最大边长的一半。因此，若你影响一块40呎平方的方形区域，你可以创造出一个最多20呎高的立柱、将这片方形区域的高度提升或降低最多20呎、或挖掘一道最多20呎深的沟壑，诸如此类。这些变化将会花费10分钟来完成。",
+				"每次你为此法术维持了10分钟的专注后，你都可以再选择影响一片新的地表区域。",
+				"由于地表的变化发生的相当缓慢，区域内的生物通常不会因为地表的变动而被困住或受伤。",
+				"此法术无法改变天然岩石或石制建筑。岩石和建筑物会被搬移以适应新的地形。若你重塑地形的方式可能会导致建筑结构不稳定，则它可能会因此崩塌。",
+				"同样的，此法术无法直接影响植物的生长。被影响的土壤会带着任何生长在上面的植物一起移动。"
 			],
 			"areaTags": [
 				"Q"
@@ -25293,7 +25293,7 @@
 				"s": true,
 				"m": {
 					"text": "一撮价值25金币的钻石尘撒在目标身上，在施法时消耗",
-					"cost": 25,
+					"cost": 2500,
 					"consume": true
 				}
 			},
@@ -26277,7 +26277,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,000金币的珠宝，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -26415,7 +26415,7 @@
 				"s": true,
 				"m": {
 					"text": "一根价值至少250金币，分叉的金属棒，调谐于一个特定的存在位面",
-					"cost": 250
+					"cost": 25000
 				}
 			},
 			"duration": [
@@ -27499,7 +27499,7 @@
 				"s": true,
 				"m": {
 					"text": "少许羊毛和价值至少25金币的翡翠尘",
-					"cost": 25
+					"cost": 2500
 				}
 			},
 			"duration": [
@@ -27557,7 +27557,7 @@
 				"s": true,
 				"m": {
 					"text": "一个由价值至少5金币的材料制成的一个你的小模型",
-					"cost": 5
+					"cost": 500
 				}
 			},
 			"duration": [
@@ -28212,7 +28212,7 @@
 				"s": true,
 				"m": {
 					"text": "一颗价值至少500金币的钻石，在施法时消耗",
-					"cost": 500,
+					"cost": 50000,
 					"consume": true
 				}
 			},
@@ -28848,7 +28848,7 @@
 				"s": true,
 				"m": {
 					"text": "价值至少1,000金币的稀有涂油和软膏，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -29184,7 +29184,7 @@
 				"s": true,
 				"m": {
 					"text": "一颗价值至少1,000金币的钻石，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -29303,7 +29303,7 @@
 				"s": true,
 				"m": {
 					"text": "价值300金币的钻石，在施法时消耗",
-					"cost": 300,
+					"cost": 30000,
 					"consume": true
 				}
 			},
@@ -29546,8 +29546,8 @@
 				}
 			],
 			"entries": [
-				"Flame-like radiance descends on a creature that you can see within range. The target must succeed on a Dexterity saving throw or take {@damage 1d8} radiant damage. The target gains no benefit from cover for this saving throw.",
-				"The spell's damage increases by {@dice 1d8} when you reach 5th level ({@damage 2d8}), 11th level ({@damage 3d8}), and 17th level ({@damage 4d8})."
+				"火焰般的光辉向射程内你所能看见的一个生物降下。目标必须成功通过一次敏捷豁免，否则受到{@damage 1d8}光耀伤害。目标在此豁免检定中并不会获得掩护所带来的好处。",
+				"此法术的伤害将在你的等级升至5级时增加{@dice 1d8}至({@damage 2d8}),11级时({@damage 3d8}), 17级时({@damage 4d8})."
 			],
 			"scalingLevelDice": {
 				"label": "radiant damage",
@@ -29874,7 +29874,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,000金币的法器，像是水晶球、银制镜子、或一个盛装圣水的圣水盆",
-					"cost": 1000
+					"cost": 100000
 				}
 			},
 			"duration": [
@@ -30517,7 +30517,7 @@
 				"s": true,
 				"m": {
 					"text": "钻石、绿宝石、红宝石、蓝宝石尘混合而成，价值至少5,000金币的粉末，在施法时消耗",
-					"cost": 5000,
+					"cost": 500000,
 					"consume": true
 				}
 			},
@@ -30573,7 +30573,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值至少1,500金币的玉质饰环，你必须在施放此法术前戴在头上",
-					"cost": 1500
+					"cost": 150000
 				}
 			},
 			"duration": [
@@ -31376,7 +31376,7 @@
 				"s": true,
 				"m": {
 					"text": "份量足以制作一个复制生物的活体尺寸复制体的雪或冰；放在冰或雪内的一些毛发、指甲屑、或其他该生物的身体部分；以及价值1,500金币的红宝石尘，用以洒在复制品上，且在施法时消耗",
-					"cost": 1500,
+					"cost": 150000,
 					"consume": true
 				}
 			},
@@ -32951,7 +32951,7 @@
 				"s": true,
 				"m": {
 					"text": "价值100金币的钻石尘，在施法时消耗",
-					"cost": 100,
+					"cost": 10000,
 					"consume": true
 				}
 			},
@@ -33517,7 +33517,7 @@
 				"s": true,
 				"m": {
 					"text": "总共价值至少1,000金币的水银、磷、和钻石与猫眼石的粉末，在施法时消耗",
-					"cost": 1000,
+					"cost": 100000,
 					"consume": true
 				}
 			},
@@ -34050,7 +34050,7 @@
 				"v": true,
 				"m": {
 					"text": "价值50金币，混有珍贵宝石的稀有粉笔和墨水，在施法时消耗",
-					"cost": 50,
+					"cost": 5000,
 					"consume": true
 				}
 			},
@@ -35046,7 +35046,7 @@
 				"s": true,
 				"m": {
 					"text": "少量圣水和价值至少25,000金币的钻石，在施法时消耗",
-					"cost": 25000,
+					"cost": 2500000,
 					"consume": true
 				}
 			},
@@ -35103,7 +35103,7 @@
 				"s": true,
 				"m": {
 					"text": "一个价值25金币，由蘑菇粉末、番红花、和油脂制成的眼药膏，在施法时消耗",
-					"cost": 25,
+					"cost": 2500,
 					"consume": true
 				}
 			},
@@ -36121,7 +36121,7 @@
 				"s": true,
 				"m": {
 					"text": "一对各自价值至少50金币的白金指环，你和目标必须在法术持续期间穿戴",
-					"cost": 50
+					"cost": 5000
 				}
 			},
 			"duration": [

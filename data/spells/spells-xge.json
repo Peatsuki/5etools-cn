@@ -1,7 +1,7 @@
 {
 	"spell": [
 		{
-			"name": "Abi-Dalzim's Horrid Wilting",
+			"name": "亚比达奇凋死术 (Abi-Dalzim's Horrid Wilting)",
 			"source": "XGE",
 			"page": 150,
 			"otherSources": [
@@ -28,7 +28,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of sponge"
+				"m": "一小块海绵"
 			},
 			"duration": [
 				{
@@ -68,7 +68,7 @@
 			}
 		},
 		{
-			"name": "Absorb Elements",
+			"name": "吸收元素 (Absorb Elements)",
 			"source": "XGE",
 			"page": 150,
 			"otherSources": [
@@ -110,7 +110,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, the extra damage increases by {@scaledamage 1d6|1-9|1d6} for each slot level above 1st."
 					]
@@ -153,7 +153,7 @@
 			}
 		},
 		{
-			"name": "Aganazzar's Scorcher",
+			"name": "阿迦纳萨喷火术 (Aganazzar's Scorcher)",
 			"source": "XGE",
 			"page": 150,
 			"otherSources": [
@@ -180,7 +180,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a red dragon's scale"
+				"m": "一片红龙的鳞片"
 			},
 			"duration": [
 				{
@@ -193,7 +193,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 3d8|2-9|1d8} for each slot level above 2nd."
 					]
@@ -222,7 +222,7 @@
 			}
 		},
 		{
-			"name": "Beast Bond",
+			"name": "野兽联结 (Beast Bond)",
 			"source": "XGE",
 			"page": 150,
 			"otherSources": [
@@ -248,7 +248,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a bit of fur wrapped in a cloth"
+				"m": "一小块被布包裹的毛皮"
 			},
 			"duration": [
 				{
@@ -286,7 +286,7 @@
 			}
 		},
 		{
-			"name": "Bones of the Earth",
+			"name": "大地之骨 (Bones of the Earth)",
 			"source": "XGE",
 			"page": 150,
 			"otherSources": [
@@ -327,7 +327,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 7th level or higher, you can create two additional pillars for each slot level above 6th."
 					]
@@ -362,7 +362,7 @@
 			}
 		},
 		{
-			"name": "Catapult",
+			"name": "弹射术 (Catapult)",
 			"source": "XGE",
 			"page": 150,
 			"otherSources": [
@@ -400,7 +400,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, the maximum weight of objects that you can target with this spell increases by 5 pounds, and the damage increases by {@scaledamage 3d8|1-9|1d8}, for each slot level above 1st."
 					]
@@ -437,7 +437,7 @@
 			}
 		},
 		{
-			"name": "Catnap",
+			"name": "休憩术 (Catnap)",
 			"source": "XGE",
 			"page": 151,
 			"level": 3,
@@ -457,7 +457,7 @@
 			},
 			"components": {
 				"s": true,
-				"m": "a pinch of sand"
+				"m": "一撮沙子"
 			},
 			"duration": [
 				{
@@ -474,7 +474,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, you can target one additional willing creature for each slot level above 3rd."
 					]
@@ -515,7 +515,7 @@
 			}
 		},
 		{
-			"name": "Cause Fear",
+			"name": "造成恐惧 (Cause Fear)",
 			"source": "XGE",
 			"page": 151,
 			"level": 1,
@@ -552,7 +552,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them."
 					]
@@ -594,7 +594,7 @@
 			}
 		},
 		{
-			"name": "Ceremony",
+			"name": "典礼术 (Ceremony)",
 			"source": "XGE",
 			"page": 151,
 			"level": 1,
@@ -615,7 +615,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "25 gp worth of powdered silver, which the spell consumes",
+					"text": "价值25金币的银粉，在施法时消耗",
 					"cost": 2500,
 					"consume": true
 				}
@@ -696,7 +696,7 @@
 			}
 		},
 		{
-			"name": "Chaos Bolt",
+			"name": "混乱箭 (Chaos Bolt)",
 			"source": "XGE",
 			"page": 151,
 			"otherSources": [
@@ -822,7 +822,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, each target takes {@scaledamage 2d8 + 1d6|1-9|1d6} extra damage of the type rolled for each slot level above 1st."
 					]
@@ -860,7 +860,7 @@
 			]
 		},
 		{
-			"name": "Charm Monster",
+			"name": "魅惑怪物 (Charm Monster)",
 			"source": "XGE",
 			"page": 151,
 			"level": 4,
@@ -897,7 +897,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
 					]
@@ -953,7 +953,7 @@
 			}
 		},
 		{
-			"name": "Control Flames",
+			"name": "控火 (Control Flames)",
 			"source": "XGE",
 			"page": 152,
 			"otherSources": [
@@ -1000,7 +1000,7 @@
 						"You instantaneously expand the flame 5 feet in one direction, provided that wood or other fuel is present in the new location.",
 						"You instantaneously extinguish the flames within the cube.",
 						"You double or halve the area of bright light and dim light cast by the flame, change its color, or both. The change lasts for 1 hour.",
-						"You cause simple shapes\u2014such as the vague form of a creature, an inanimate object, or a location\u2014to appear within the flames and animate as you like. The shapes last for 1 hour."
+						"You cause simple shapes—such as the vague form of a creature, an inanimate object, or a location—to appear within the flames and animate as you like. The shapes last for 1 hour."
 					]
 				},
 				"If you cast this spell multiple times, you can have up to three non-instantaneous effects created by it active at a time, and you can dismiss such an effect as an action."
@@ -1029,7 +1029,7 @@
 			}
 		},
 		{
-			"name": "Control Winds",
+			"name": "操控风相 (Control Winds)",
 			"source": "XGE",
 			"page": 152,
 			"otherSources": [
@@ -1121,7 +1121,7 @@
 			}
 		},
 		{
-			"name": "Create Bonfire",
+			"name": "创造篝火 (Create Bonfire)",
 			"source": "XGE",
 			"page": 152,
 			"otherSources": [
@@ -1216,7 +1216,7 @@
 			}
 		},
 		{
-			"name": "Create Homunculus",
+			"name": "创造荷蒙库鲁斯 (Create Homunculus)",
 			"source": "XGE",
 			"page": 152,
 			"level": 6,
@@ -1237,7 +1237,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "clay, ash, and mandrake root, all of which the spell consumes, and a jewel-encrusted dagger worth at least 1,000 gp",
+					"text": "黏土、灰烬、和曼德拉草根，以上材料皆会在施法时消耗，以及一个价值至少1,000金币的珠宝镶嵌匕首",
 					"cost": 100000,
 					"consume": true
 				}
@@ -1271,7 +1271,7 @@
 			}
 		},
 		{
-			"name": "Crown of Stars",
+			"name": "群星冠冕 (Crown of Stars)",
 			"source": "XGE",
 			"page": 152,
 			"level": 7,
@@ -1308,7 +1308,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 8th level or higher, the number of motes created increases by two for each slot level above 7th."
 					]
@@ -1341,7 +1341,7 @@
 			}
 		},
 		{
-			"name": "Danse Macabre",
+			"name": "骷髅之舞 (Danse Macabre)",
 			"source": "XGE",
 			"page": 153,
 			"level": 5,
@@ -1381,7 +1381,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, you animate up to two additional corpses for each slot level above 5th."
 					]
@@ -1405,7 +1405,7 @@
 			}
 		},
 		{
-			"name": "Dawn",
+			"name": "拂晓之光 (Dawn)",
 			"source": "XGE",
 			"page": 153,
 			"level": 5,
@@ -1427,7 +1427,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a sunburst pendant worth at least 100 gp",
+					"text": "一件价值至少100金币的旭日坠饰",
 					"cost": 10000
 				}
 			},
@@ -1479,7 +1479,7 @@
 			}
 		},
 		{
-			"name": "Dragon's Breath",
+			"name": "龙息术 (Dragon's Breath)",
 			"source": "XGE",
 			"page": 154,
 			"level": 2,
@@ -1499,7 +1499,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a hot pepper"
+				"m": "一根辣椒"
 			},
 			"duration": [
 				{
@@ -1517,7 +1517,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 3d6|2-9|1d6} for each slot level above 2nd."
 					]
@@ -1551,7 +1551,7 @@
 			}
 		},
 		{
-			"name": "Druid Grove",
+			"name": "德鲁伊林地 (Druid Grove)",
 			"source": "XGE",
 			"page": 154,
 			"level": 6,
@@ -1572,7 +1572,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "mistletoe, which the spell consumes, that was harvested with a golden sickle under the light of a full moon",
+					"text": "在满月月光照耀下使用黄金镰刀采收的槲寄生，在施法时消耗",
 					"consume": true
 				}
 			},
@@ -1645,7 +1645,7 @@
 			}
 		},
 		{
-			"name": "Dust Devil",
+			"name": "尘卷风 (Dust Devil)",
 			"source": "XGE",
 			"page": 154,
 			"otherSources": [
@@ -1672,7 +1672,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a pinch of dust"
+				"m": "一撮沙尘"
 			},
 			"duration": [
 				{
@@ -1692,7 +1692,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 1d8|2-9|1d8} for each slot level above 2nd."
 					]
@@ -1725,7 +1725,7 @@
 			}
 		},
 		{
-			"name": "Earth Tremor",
+			"name": "大地震颤 (Earth Tremor)",
 			"source": "XGE",
 			"page": 155,
 			"otherSources": [
@@ -1764,7 +1764,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 2nd level or higher, the damage increases by {@scaledamage 1d6|1-9|1d6} for each slot level above 1st."
 					]
@@ -1804,7 +1804,7 @@
 			}
 		},
 		{
-			"name": "Earthbind",
+			"name": "地缚术 (Earthbind)",
 			"source": "XGE",
 			"page": 154,
 			"otherSources": [
@@ -1875,7 +1875,7 @@
 			}
 		},
 		{
-			"name": "Elemental Bane",
+			"name": "元素灾祸 (Elemental Bane)",
 			"source": "XGE",
 			"page": 155,
 			"otherSources": [
@@ -1919,7 +1919,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, you can target one additional creature for each slot level above 4th. The creatures must be within 30 feet of each other when you target them."
 					]
@@ -1967,7 +1967,7 @@
 			}
 		},
 		{
-			"name": "Enemies Abound",
+			"name": "敌群环绕 (Enemies Abound)",
 			"source": "XGE",
 			"page": 155,
 			"level": 3,
@@ -2034,7 +2034,7 @@
 			}
 		},
 		{
-			"name": "Enervation",
+			"name": "汲能术 (Enervation)",
 			"source": "XGE",
 			"page": 155,
 			"level": 5,
@@ -2073,7 +2073,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledamage 4d8;2d8|5-9|1d8} for each slot level above 5th."
 					]
@@ -2122,7 +2122,7 @@
 			}
 		},
 		{
-			"name": "Erupting Earth",
+			"name": "土石爆发 (Erupting Earth)",
 			"source": "XGE",
 			"page": 155,
 			"otherSources": [
@@ -2149,7 +2149,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of obsidian"
+				"m": "一块黑曜石"
 			},
 			"duration": [
 				{
@@ -2162,7 +2162,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 3d12|3-9|1d12} for each slot level above 3rd."
 					]
@@ -2198,7 +2198,7 @@
 			}
 		},
 		{
-			"name": "Far Step",
+			"name": "渺远步 (Far Step)",
 			"source": "XGE",
 			"page": 155,
 			"level": 5,
@@ -2229,7 +2229,7 @@
 				}
 			],
 			"entries": [
-				"You teleport up to 60 feet to an unoccupied space you can see. On each of your turns before the spell ends, you can use a bonus action to teleport in this way again."
+				"你传送到最多60呎距离的一处你所能看见的未被占据空间。在此法术结束前你的每个回合，你都可以使用一个附赠动作以再次透过这个方式传送。"
 			],
 			"miscTags": [
 				"SGT"
@@ -2252,7 +2252,7 @@
 			}
 		},
 		{
-			"name": "Find Greater Steed",
+			"name": "寻获高等坐骑 (Find Greater Steed)",
 			"source": "XGE",
 			"page": 156,
 			"level": 4,
@@ -2280,11 +2280,11 @@
 				}
 			],
 			"entries": [
-				"You summon a spirit that assumes the form of a loyal, majestic mount. Appearing in an unoccupied space within range, the spirit takes on a form you choose: a {@creature griffon}, a {@creature pegasus}, a {@creature peryton}, a {@creature dire wolf}, a {@creature rhinoceros}, or a {@creature saber-toothed tiger}. The creature has the statistics provided in the Monster Manual for the chosen form, though it is a celestial, a fey, or a fiend (your choice) instead of its normal creature type. Additionally, if it has an Intelligence score of 5 or lower, its Intelligence becomes 6, and it gains the ability to understand one language of your choice that you speak.",
-				"You control the mount in combat. While the mount is within 1 mile of you, you can communicate with it telepathically. While mounted on it, you can make any spell you cast that targets only you also target the mount.",
-				"The mount disappears temporarily when it drops to 0 hit points or when you dismiss it as an action. Casting this spell again re-summons the bonded mount, with all its hit points restored and any conditions removed.",
-				"You can't have more than one mount bonded by this spell or {@spell find steed} at the same time. As an action, you can release a mount from its bond, causing it to disappear permanently.",
-				"Whenever the mount disappears, it leaves behind any objects it was wearing or carrying."
+				"你召唤出一只呈现忠诚、雄伟坐骑型态的精魂。精魂将出现在射程内一处未被占据的空间，并呈现你所选择的外型：一只{@creature griffon}、{@creature pegasus}、{@creature peryton}、{@creature dire wolf}、{@creature rhinoceros}或{@creature saber-toothed tiger}。该生物具有所选型态在怪物手册中记载的数据资料，然而它的类型为天界生物、精类、或邪魔（由你选择），而非原本的类型。此外，此外，若它的智力为5或更低，则它的智力将变为6，且获得理解一种你所说语言的能力。",
+				"你在战斗中控制此坐骑。当此坐骑距离你1哩内，你可以与它借由心灵感应沟通。当骑乘于此坐骑时，你可以让你施放的任何只以你为目标的法术同时也以你的坐骑为目标。",
+				"此坐骑将在它的生命值归零、或你以一个动作解消它时暂时消失。再次施放此法术会重新召唤出这只被连结的坐骑，将它的生命值回复到最大值并移除所有状态。",
+				"你不能同时拥有超过一只透过此法术或{@spell 寻获坐骑 (find steed)}法术连结的坐骑。以一个动作，你可以将该坐骑从它与你的连结中释放，使它永久消失。",
+				"每当坐骑消失，它将留下任何它正穿戴或携带的物体。"
 			],
 			"miscTags": [
 				"PRM",
@@ -2300,7 +2300,7 @@
 			}
 		},
 		{
-			"name": "Flame Arrows",
+			"name": "火焰箭矢 (Flame Arrows)",
 			"source": "XGE",
 			"page": 156,
 			"otherSources": [
@@ -2338,14 +2338,14 @@
 				}
 			],
 			"entries": [
-				"You touch a quiver containing arrows or bolts. When a target is hit by a ranged weapon attack using a piece of ammunition drawn from the quiver, the target takes an extra {@damage 1d6} fire damage. The spell's magic ends on a piece of ammunition when it hits or misses, and the spell ends when twelve pieces of ammunition have been drawn from the quiver."
+				"你触碰一个装有箭或弩矢的箭袋。当一个目标被从此箭袋抽出的一发弹药以一次远程武器攻击命中时，目标将受到额外{@damage 1d6}火焰伤害。此法术作用于一发弹药的魔法将在它命中或失手时结束，而此法术将在十二发弹药被从箭袋抽出后结束。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the number of pieces of ammunition you can affect with this spell increases by two for each slot level above 3rd."
+						"当你使用4环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，你可以用此法术影响的弹药数量便会再增加二发。"
 					]
 				}
 			],
@@ -2382,7 +2382,7 @@
 			}
 		},
 		{
-			"name": "Frostbite",
+			"name": "霜噬 (Frostbite)",
 			"source": "XGE",
 			"page": 156,
 			"otherSources": [
@@ -2416,8 +2416,8 @@
 				}
 			],
 			"entries": [
-				"You cause numbing frost to form on one creature that you can see within range. The target must make a Constitution saving throw. On a failed save, the target takes {@damage 1d6} cold damage, and it has disadvantage on the next weapon attack roll it makes before the end of its next turn.",
-				"The spell's damage increases by {@dice 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
+				"你让足以令人失去感觉的冰霜形成于在射程内你所能看见的一个生物身上。目标必须进行一次体质豁免。若豁免失败，目标将受到{@damage 1d6}寒冰伤害，且在它的下个回合结束前，它所进行的下一次武器攻击检定具有劣势。",
+				"此法术的伤害将在你的等级升至5级时增加{@dice 1d6}至{@damage 2d6}，11级时{@damage 3d6}，17级时{@damage 4d6}。"
 			],
 			"scalingLevelDice": {
 				"label": "cold damage",
@@ -2471,7 +2471,7 @@
 			}
 		},
 		{
-			"name": "Guardian of Nature",
+			"name": "自然守卫 (Guardian of Nature)",
 			"source": "XGE",
 			"page": 157,
 			"level": 4,
@@ -2502,37 +2502,37 @@
 				}
 			],
 			"entries": [
-				"A nature spirit answers your call and transforms you into a powerful guardian. The transformation lasts until the spell ends. You choose one of the following forms to assume: Primal Beast or Great Tree.",
+				"一个自然精魂回应了你的呼唤，并将你转变成一个强大的守卫。这个转变将会持续直到此法术结束。你选择呈现以下其中一个型态：原初野兽、或伟大巨树。",
 				{
 					"type": "entries",
-					"name": "Primal Beast",
+					"name": "原初野兽",
 					"entries": [
-						"Bestial fur covers your body, your facial features become feral, and you gain the following benefits:"
+						"野兽毛皮覆盖着你的身体，你的面部特征变得野性，且你获得下列好处："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"Your walking speed increases by 10 feet.",
-						"You gain {@sense darkvision} with a range of 120 feet.",
-						"You make Strength-based attack rolls with advantage.",
-						"Your melee weapon attacks deal an extra {@damage 1d6} force damage on a hit."
+						"你的步行速度增加10呎。",
+						"你获得120呎范围的{@sense darkvision}。",
+						"你在进行基于力量的攻击检定时具有优势。",
+						"你的近战武器攻击在命中时造成额外的{@damage 1d6}力场伤害。"
 					]
 				},
 				{
 					"type": "entries",
-					"name": "Great Tree",
+					"name": "伟大巨树",
 					"entries": [
-						"Your skin appears barky, leaves sprout from your hair, and you gain the following benefits:"
+						"你的肌肤变得如同树皮，树叶从你的头发长出，且你获得下列好处："
 					]
 				},
 				{
 					"type": "list",
 					"items": [
-						"You gain 10 temporary hit points.",
-						"You make Constitution saving throws with advantage.",
-						"You make Dexterity- and Wisdom-based attack rolls with advantage.",
-						"While you are on the ground, the ground within 15 feet of you is difficult terrain for your enemies."
+						"你获得10点临时生命值。",
+						"你在进行体质豁免时具有优势。",
+						"你在进行基于敏捷和感知的攻击检定时具有优势。",
+						"当你在地面上时，距离你15呎内的地面对你的敌人而言都视作困难地形。"
 					]
 				}
 			],
@@ -2559,7 +2559,7 @@
 			}
 		},
 		{
-			"name": "Gust",
+			"name": "舞风 (Gust)",
 			"source": "XGE",
 			"page": 157,
 			"otherSources": [
@@ -2601,13 +2601,13 @@
 				}
 			],
 			"entries": [
-				"You seize the air and compel it to create one of the following effects at a point you can see within range:",
+				"你攫起空气并迫使它在射程内你所能看见的一点创造出下列其中一个效果：",
 				{
 					"type": "list",
 					"items": [
-						"One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.",
-						"You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.",
-						"You create a harmless sensory effect using air, such as causing leaves to rustle, wind to slam shutters closed, or your clothing to ripple in a breeze."
+						"一个你所选择体型为中型或更小的生物必须成功通过一次力量豁免，否则被推离你最多5呎。",
+						"你创造出一阵小型狂风，力量足以推动一个未被持有或携带，且重量不超过5磅的物体。这个物体被推离你最多10呎。这个推动并不蕴含足够造成伤害的力量。",
+						"你使用空气创造出一个无害的感官效果，像是让树叶沙沙作响、吹阖窗板、或让你的衣物在微风中摆动。"
 					]
 				}
 			],
@@ -2646,7 +2646,7 @@
 			]
 		},
 		{
-			"name": "Healing Spirit",
+			"name": "治愈精魂 (Healing Spirit)",
 			"source": "XGE",
 			"page": 157,
 			"level": 2,
@@ -2679,16 +2679,16 @@
 				}
 			],
 			"entries": [
-				"You call forth a nature spirit to soothe the wounded. The intangible spirit appears in a space that is a 5-foot cube you can see within range. The spirit looks like a transparent beast or fey (your choice).",
-				"Until the spell ends, whenever you or a creature you can see moves into the spirit's space for the first time on a turn or starts its turn there, you can cause the spirit to restore {@dice 1d6} hit points to that creature (no action required). The spirit can't heal constructs or undead. The spirit can heal a number of times equal to 1 + your spellcasting ability modifier (minimum of twice). After healing that number of times, the spirit disappears.",
-				"As a bonus action on your turn, you can move the spirit up to 30 feet to a space you can see."
+				"你呼唤出一只自然精魂以抚慰伤员。这只无形的精魂将会出现在射程内一处未被占据且你能看见的的5呎边长立方体空间。这个精魂看起来像是透明的野兽或精类（由你决定）。",
+				"直到此法术结束前，每当你或一个你所能看见的生物在一个回合中第一次移动进入精魂所在的空间，或在该处开始它的回合，则你使精魂回复该生物{@dice 1d6}点生命值（不需要动作）。这个精魂无法治疗构装体或不死生物。这个精魂可以治疗最多等同1+你的施法属性调整值的次数（最少二次）。在治疗了该次数之后，这个精魂将会消失不见。",
+				"在你的回合以一个附赠动作，你可以移动这个精魂最多30呎到另一个你所能看见的空间。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 3rd level or higher, the healing increases by {@scaledice 1d6|2-9|1d6} for each slot level above 2nd."
+						"当你使用3环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，治疗量便会增加{@scaledice 1d6|2-9|1d6}。"
 					]
 				}
 			],
@@ -2710,7 +2710,7 @@
 			}
 		},
 		{
-			"name": "Holy Weapon",
+			"name": "神圣武器 (Holy Weapon)",
 			"source": "XGE",
 			"page": 157,
 			"level": 5,
@@ -2742,8 +2742,8 @@
 				}
 			],
 			"entries": [
-				"You imbue a weapon you touch with holy power. Until the spell ends, the weapon emits bright light in a 30-foot radius and dim light for an additional 30 feet. In addition, weapon attacks made with it deal an extra {@damage 2d8} radiant damage on a hit. If the weapon isn't already a magic weapon, it becomes one for the duration.",
-				"As a bonus action on your turn, you can dismiss this spell and cause the weapon to emit a burst of radiance. Each creature of your choice that you can see within 30 feet of the weapon must make a Constitution saving throw. On a failed save, a creature takes {@damage 4d8} radiant damage, and it is {@condition blinded} for 1 minute. On a successful save, a creature takes half as much damage and isn't {@condition blinded}. At the end of each of its turns, a {@condition blinded} creature can make a Constitution saving throw, ending the effect on itself on a success."
+				"你将神圣能量注入一把你所碰触的武器。直到此法术结束前，此武器会散发出30呎半径的明亮光照和再延伸30呎的微光光照。此外，使用此武器进行的武器攻击将在命中时造成额外的{@damage 2d8}光耀伤害。若此武器原本不是魔法武器，则它将在法术持续期间变成一把魔法武器。",
+				"在你的回合以一个附赠动作，你可以解消此法术以使武器迸发出一道光辉。每个距离该武器30呎内由你所选择的生物必须进行一次体质豁免。若豁免失败，则该生物将受到{@damage 4d8}光耀伤害，且陷入{@condition blinded}状态长达1分钟。若豁免成功，则该生物只受到一半的伤害，且不会被陷入{@condition blinded}。在它的每个回合结束时，{@condition blinded}生物可以进行一次体质豁免，若成功则结束这个效果对它的影响。"
 			],
 			"damageInflict": [
 				"radiant"
@@ -2774,7 +2774,7 @@
 			}
 		},
 		{
-			"name": "Ice Knife",
+			"name": "冰刃 (Ice Knife)",
 			"source": "XGE",
 			"page": 157,
 			"otherSources": [
@@ -2800,7 +2800,7 @@
 			},
 			"components": {
 				"s": true,
-				"m": "a drop of water or piece of ice"
+				"m": "一滴水或一小块冰"
 			},
 			"duration": [
 				{
@@ -2808,14 +2808,14 @@
 				}
 			],
 			"entries": [
-				"You create a shard of ice and fling it at one creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d10} piercing damage. Hit or miss, the shard then explodes. The target and each creature within 5 feet of it must succeed on a Dexterity saving throw or take {@damage 2d6} cold damage."
+				"你创造出一块寒冰碎片，并将其甩向射程内的一个生物。对目标进行一次远程法术攻击。若命中，目标将受到{@damage 1d10}穿刺伤害。无论命中与否，碎片都将爆裂。目标和距离它5呎内的每个生物都必须成功通过一次敏捷豁免，否则受到{@damage 2d6}寒冰伤害。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 2nd level or higher, the cold damage increases by {@scaledamage 2d6|1-9|1d6} for each slot level above 1st."
+						"当你使用2环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，寒冰伤害便会再增加{@scaledamage 2d6|1-9|1d6}。"
 					]
 				}
 			],
@@ -2850,7 +2850,7 @@
 			}
 		},
 		{
-			"name": "Illusory Dragon",
+			"name": "幻象巨龙 (Illusory Dragon)",
 			"source": "XGE",
 			"page": 157,
 			"level": 8,
@@ -2882,10 +2882,10 @@
 				}
 			],
 			"entries": [
-				"By gathering threads of shadow material from the Shadowfell, you create a Huge shadowy dragon in an unoccupied space that you can see within range. The illusion lasts for the spell's duration and occupies its space, as if it were a creature.",
-				"When the illusion appears, any of your enemies that can see it must succeed on a Wisdom saving throw or become {@condition frightened} of it for 1 minute. If a {@condition frightened} creature ends its turn in a location where it doesn't have line of sight to the illusion, it can repeat the saving throw, ending the effect on itself on a success.",
-				"As a bonus action on your turn, you can move the illusion up to 60 feet. At any point during its movement, you can cause it to exhale a blast of energy in a 60-foot cone originating from its space. When you create the dragon, choose a damage type: acid, cold, fire, lightning, necrotic, or poison. Each creature in the cone must make an Intelligence saving throw, taking {@damage 7d6} damage of the chosen damage type on a failed save, or half as much damage on a successful one.",
-				"The illusion is tangible because of the shadow stuff used to create it, but attacks miss it automatically, it succeeds on all saving throws, and it is immune to all damage and conditions. A creature that uses an action to examine the dragon can determine that it is an illusion by succeeding on an Intelligence ({@skill Investigation}) check against your spell save DC. If a creature discerns the illusion for what it is, the creature can see through it and has advantage on saving throws against its breath."
+				"借由收集来自堕影冥界的阴影线材，你在射程内你所能看见的一处未被占据空间创造出一个体型为巨型的阴影巨龙。这个幻象将在此法术的持续期间内持续存在，并占据它所在的空间，就如同它是一个真实存在的生物。",
+				"当这个幻象出现时，任何能够看见它的你的敌人都必须进行一次感知豁免，否则被它{@condition frightened}长达1分钟。若被{@condition frightened}的生物在一处它无法看见该幻象的位置结束它的回合，则它可以重复进行此豁免检定，若成功则结束此法术对它的效果。",
+				"在你的回合以一个附赠动作，你可以移动该幻象最多60呎距离。在它移动期间的任何时候，你可以使它喷吐出一道以它所在空间延伸而出的60呎锥形能量爆风。当你创造这个巨龙时，选择一种伤害类型：酸蚀、寒冰、火焰、闪电、死灵、或毒素。每个在锥形范围内的生物都必须进行一次智力豁免，若豁免失败将受到{@damage 7d6}所选类型的伤害，豁免成功则只受到一半的伤害。",
+				"由于该幻象是使用阴影物质所创造的，因此它是具有实体的。但对它进行的攻击将会自动失手，它能够成功通过所偶的豁免检定，且免疫所有伤害和状态。一个使用它的动作去检视幻象的生物，可以透过成功通过一个对抗你法术豁免DC的智力（{@skill Investigation}）检定以辨识出它是幻象。如果一个生物辨识出这是幻象，该生物的视线将可以穿透该影像，且在对抗它喷吐攻击的豁免检定中具有优势。"
 			],
 			"damageInflict": [
 				"acid",
@@ -2921,7 +2921,7 @@
 			}
 		},
 		{
-			"name": "Immolation",
+			"name": "燔焚术 (Immolation)",
 			"source": "XGE",
 			"page": 158,
 			"otherSources": [
@@ -2959,8 +2959,8 @@
 				}
 			],
 			"entries": [
-				"Flames wreathe one creature you can see within range. The target must make a Dexterity saving throw. It takes {@damage 8d6} fire damage on a failed save, or half as much damage on a successful one. On a failed save, the target also burns for the spell's duration. The burning target sheds bright light in a 30-foot radius and dim light for an additional 30 feet. At the end of each of its turns, the target repeats the saving throw. It takes {@damage 4d6} fire damage on a failed save, and the spell ends on a successful one. These magical flames can't be extinguished by nonmagical means.",
-				"If damage from this spell kills a target, the target is turned to ash."
+				"烈焰缠绕在射程内你所能看见的一个生物身上。目标必须进行一次敏捷豁免。它将在豁免失败时受到{@damage 8d6}火焰伤害，豁免成功则只受到一半的伤害。若豁免失败，目标同时将在法术持续期间被持续焚烧。被焚烧的目标将散发出30呎半径的明亮光照和再延伸30呎的微光光照。在它的每个回合结束时，目标将重复此豁免检定。它将在豁免失败时受到{@damage 4d6}火焰伤害，豁免成功则此法术结束。这团魔法火焰无法被任何非魔法的手段熄灭。",
+				"若此法术的伤害杀死了一个目标，目标将被化作灰烬。"
 			],
 			"damageInflict": [
 				"fire"
@@ -2994,7 +2994,7 @@
 			}
 		},
 		{
-			"name": "Infernal Calling",
+			"name": "炼狱呼唤 (Infernal Calling)",
 			"source": "XGE",
 			"page": 158,
 			"level": 5,
@@ -3016,7 +3016,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a ruby worth at least 999 gp",
+					"text": "一颗价值至少999金币的红宝石",
 					"cost": 99900
 				}
 			},
@@ -3031,18 +3031,18 @@
 				}
 			],
 			"entries": [
-				"Uttering a dark incantation, you summon a devil from the Nine Hells. You choose the devil's type, which must be one of {@filter challenge rating 6 or lower|bestiary|challenge rating=[&0;&6]|tag=devil|miscellaneous=!swarm}, such as a {@creature barbed devil} or a {@creature bearded devil}. The devil appears in an unoccupied space that you can see within range. The devil disappears when it drops to 0 hit points or when the spell ends.",
-				"The devil is unfriendly toward you and your companions. Roll initiative for the devil, which has its own turns. It is under the Dungeon Master's control and acts according to its nature on each of its turns, which might result in its attacking you if it thinks it can prevail, or trying to tempt you to undertake an evil act in exchange for limited service. The DM has the creature's statistics.",
-				"On each of your turns, you can try to issue a verbal command to the devil (no action required by you). It obeys the command if the likely outcome is in accordance with its desires, especially if the result would draw you toward evil. Otherwise, you must make a Charisma ({@skill Deception}, {@skill Intimidation}, or {@skill Persuasion}) check contested by its Wisdom ({@skill Insight}) check. You make the check with advantage if you say the devil's true name. If your check fails, the devil becomes immune to your verbal commands for the duration of the spell, though it can still carry out your commands if it chooses. If your check succeeds, the devil carries out your command\u2014such as \"attack my enemies,\" \"explore the room ahead,\" or \"bear this message to the queen\"\u2014until it completes the activity, at which point it returns to you to report having done so.",
-				"If your concentration ends before the spell reaches its full duration, the devil doesn't disappear if it has become immune to your verbal commands. Instead, it acts in whatever manner it chooses for {@dice 3d6} minutes, and then it disappears.",
-				"If you possess an individual devil's talisman, you can summon that devil if it is of the appropriate challenge rating plus 1, and it obeys all your commands, with no Charisma checks required."
+				"朗诵出黑暗的咒语，你从九层地狱中召唤出一个魔鬼。你选择该魔鬼的种类，且它必须是一种{@filter challenge rating 6 or lower|bestiary|challenge rating=[&0;&6]|tag=devil|miscellaneous=!swarm}，像是{@creature barbed devil}或{@creature bearded devil}。该魔鬼会出现在射程内你所能看见的一处未被占据空间，且该魔鬼会在它生命值归零或此法术结束时消失。",
+				"该魔鬼对你和你的同伴的态度为不友善。为该魔鬼骰先攻，且它拥有自己的回合。它处于DM的控制之下，并会在它的每个回合中根据它的天性行动，这可能会导致它在认为能战胜你时攻击你，或者它将尝试诱惑你进行一项邪恶行为来交换它有限的服务。这个生物的数据资料由DM掌控。",
+				"在你的每个回合，你可以尝试对该魔鬼下达一个口头命令（你不需要花费动作）。若该命令可能的结果符合它的渴望，特别是当其结果会使你倾向邪恶，则它将服从该命令。否则，你必须进行一次魅力({@skill Deception}、{@skill Intimidation}或{@skill Persuasion})检定以对抗它的感知({@skill Insight})检定。若你说出该魔鬼的真名，则你在此检定中具有优势。若你对抗失败，该恶魔将在法术持续期间免疫于你的口头命令，尽管它仍可能选择执行你的命令。若你对抗成功，则该恶魔将执行你的命令——像是「攻击我的敌人」、「探索前面的房间」、或「将这段信息带给女王」——直到它完成这项行动，并接着回到你身边以回报事情已经被完成。",
+				"若你在此法术到达它的完整持续时间之前中断对此法术的专注，且若该魔鬼已经免疫于你的口头命令，则它将不会消失。取而代之，它将以它所选的方式行动持续{@dice 3d6}分钟，然后才会消失。",
+				"若你拥有某个特定魔鬼的护符，且该魔鬼的挑战等级在此法术允许的挑战等级加1以内，则你可以召唤该魔鬼，且它将服从你的所有命令而无须你进行魅力检定。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 6th level or higher, the challenge rating increases by 1 for each slot level above 5th."
+						"当你使用6环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，你所能召唤生物的挑战等级便会再增加1。"
 					]
 				}
 			],
@@ -3064,7 +3064,7 @@
 			}
 		},
 		{
-			"name": "Infestation",
+			"name": "虫群孳生 (Infestation)",
 			"source": "XGE",
 			"page": 158,
 			"level": 0,
@@ -3085,7 +3085,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a living flea"
+				"m": "一只活跳蚤"
 			},
 			"duration": [
 				{
@@ -3093,8 +3093,8 @@
 				}
 			],
 			"entries": [
-				"You cause a cloud of mites, fleas, and other parasites to appear momentarily on one creature you can see within range. The target must succeed on a Constitution saving throw, or it takes {@damage 1d6} poison damage and moves 5 feet in a random direction if it can move and its speed is at least 5 feet. Roll a {@dice d4} for the direction: 1, north; 2, south; 3, east; or 4, west. This movement doesn't provoke opportunity attacks, and if the direction rolled is blocked, the target doesn't move.",
-				"The spell's damage increases by {@dice 1d6} when you reach 5th level ({@damage 2d6}), 11th level ({@damage 3d6}), and 17th level ({@damage 4d6})."
+				"你使一大群虱螨、跳蚤、或其他寄生虫暂时出现在一个射程内你所能看见的生物身上。目标必须成功通过一次体质豁免，否则受到{@damage 1d6}毒素伤害，且如果它能移动且移动速度至少5呎，它将朝随机方向移动5呎。掷一颗{@dice d4}决定方向：1，北方；2，南方；3，东方；4，西方。这个移动并不会引发借机攻击，且如果骰出来的方向被挡住，则目标将不会移动。",
+				"此法术的伤害将在你的等级升至5级时增加{@dice 1d6}至{@damage 2d6}，11级时{@damage 3d6}，17级时{@damage 4d6}。"
 			],
 			"scalingLevelDice": {
 				"label": "poison damage",
@@ -3140,7 +3140,7 @@
 			}
 		},
 		{
-			"name": "Investiture of Flame",
+			"name": "炽焰赋权 (Investiture of Flame)",
 			"source": "XGE",
 			"page": 159,
 			"otherSources": [
@@ -3178,13 +3178,13 @@
 				}
 			],
 			"entries": [
-				"Flames race across your body, shedding bright light in a 30-foot radius and dim light for an additional 30 feet for the spell's duration. The flames don't harm you. Until the spell ends, you gain the following benefits:",
+				"烈焰在你的身体间穿梭，在此法术持续期间散发出30呎半径的明亮光照和再延伸30呎的微光光照。这道火焰不会伤害。直到此法术结束前，你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You are immune to fire damage and have resistance to cold damage.",
-						"Any creature that moves within 5 feet of you for the first time on a turn or ends its turn there takes {@damage 1d10} fire damage.",
-						"You can use your action to create a line of fire 15 feet long and 5 feet wide extending from you in a direction you choose. Each creature in the line must make a Dexterity saving throw. A creature takes {@damage 4d8} fire damage on a failed save, or half as much damage on a successful one."
+						"你免疫于火焰伤害，且对寒冰伤害具有抗性。",
+						"任何在一个回合第一次移动到距离你5呎内或在该处结束它回合的生物将受到{@damage 1d10}火焰伤害。",
+						"你可以使用你的动作以创造一束15呎长、5呎宽的火焰直线，从你向一个你所选择方向延伸。每个在这个直线内的生物必须进行一次敏捷豁免。豁免失败的生物将受到{@damage 4d8}火焰伤害，豁免成功则只受到一半的伤害。"
 					]
 				}
 			],
@@ -3225,7 +3225,7 @@
 			}
 		},
 		{
-			"name": "Investiture of Ice",
+			"name": "寒冰赋权 (Investiture of Ice)",
 			"source": "XGE",
 			"page": 159,
 			"otherSources": [
@@ -3263,14 +3263,14 @@
 				}
 			],
 			"entries": [
-				"Until the spell ends, ice rimes your body, and you gain the following benefits:",
+				"直到此法术结束前，寒冰将霜覆于你的身体，且你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You are immune to cold damage and have resistance to fire damage.",
-						"You can move across difficult terrain created by ice or snow without spending extra movement.",
-						"The ground in a 10-foot radius around you is icy and is difficult terrain for creatures other than you. The radius moves with you.",
-						"You can use your action to create a 15-foot cone of freezing wind extending from your outstretched hand in a direction you choose. Each creature in the cone must make a Constitution saving throw. A creature takes {@damage 4d6} cold damage on a failed save, or half as much damage on a successful one. A creature that fails its save against this effect has its speed halved until the start of your next turn."
+						"你免疫于寒冰伤害，且对火焰伤害具有抗性。",
+						"你可以移动穿过冰或雪构成的困难地形，而无需消耗额外的移动速度。",
+						"距离你10呎半径的地面被冻结，且对你以外的生物而言视作困难地形。这个半径范围将会随着你移动。",
+						"你可以使用你的动作创造一道15呎锥形的寒冻之风，从你向一个你所选择方向延伸。每个锥形范围内的生物都必须进行一次体质豁免。豁免失败的生物将受到{@damage 4d6}寒冰伤害，豁免成功则只受到一半的伤害。在对抗此效果的豁免检定中失败的生物的移动速度将被减半直到你的下个回合开始。"
 					]
 				}
 			],
@@ -3312,7 +3312,7 @@
 			}
 		},
 		{
-			"name": "Investiture of Stone",
+			"name": "坚岩赋权 (Investiture of Stone)",
 			"source": "XGE",
 			"page": 159,
 			"otherSources": [
@@ -3350,13 +3350,13 @@
 				}
 			],
 			"entries": [
-				"Until the spell ends, bits of rock spread across your body, and you gain the following benefits:",
+				"直到此法术结束前，岩块遍布着你的身体，且你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"You have resistance to bludgeoning, piercing, and slashing damage from nonmagical attacks.",
-						"You can use your action to create a small earthquake on the ground in a 15-foot radius centered on you. Other creatures on that ground must succeed on a Dexterity saving throw or be knocked {@condition prone}.",
-						"You can move across difficult terrain made of earth or stone without spending extra movement. You can move through solid earth or stone as if it was air and without destabilizing it, but you can't end your movement there. If you do so, you are ejected to the nearest unoccupied space, this spell ends, and you are {@condition stunned} until the end of your next turn."
+						"你对非魔法攻击所造成钝击、穿刺、和劈砍伤害具有抗性。",
+						"你可以使用你的动作在以你为中心的15呎半径范围地面创造一阵小型地震。其他地面上的生物必须成功通过一次敏捷豁免，否则被击倒{@condition prone}。",
+						"你可以移动穿过泥土或岩石构成的困难地形，而无需消耗额外的移动速度。你也可以像穿透空气一样移穿固体泥土或岩石，且不会因此使之结构不稳定。但你无法在该处结束你的移动。若你这么做，则你将被排到最近的一处未被占据空间，此法术结束，且你被{@condition stunned}直到你的下个回合结束。"
 					]
 				}
 			],
@@ -3397,7 +3397,7 @@
 			}
 		},
 		{
-			"name": "Investiture of Wind",
+			"name": "清风赋权 (Investiture of Wind)",
 			"source": "XGE",
 			"page": 160,
 			"otherSources": [
@@ -3435,13 +3435,13 @@
 				}
 			],
 			"entries": [
-				"Until the spell ends, wind whirls around you, and you gain the following benefits:",
+				"直到此法术结束前，清风将在你身边环绕，且你获得以下好处：",
 				{
 					"type": "list",
 					"items": [
-						"Ranged weapon attacks made against you have disadvantage on the attack roll.",
-						"You gain a flying speed of 60 feet. If you are still flying when the spell ends, you fall, unless you can somehow prevent it.",
-						"You can use your action to create a 15-foot cube of swirling wind centered on a point you can see within 60 feet of you. Each creature in that area must make a Constitution saving throw. A creature takes {@damage 2d10} bludgeoning damage on a failed save, or half as much damage on a successful one. If a Large or smaller creature fails the save, that creature is also pushed up to 10 feet away from the center of the cube."
+						"对你进行的远程武器攻击将在攻击检定中具有劣势。",
+						"你获得60呎的飞行速度。若你在此法术结束时仍在飞行状态，则你将坠落，除非你有其他方式避免坠落。",
+						"你可以使用你的动作在以你60呎内所选一点为中心的15呎边长立方体区域内创造一阵旋风。每个在该区域内的生物都必须进行一次体质豁免。一个豁免失败的目标将受到{@damage 2d10}钝击伤害，豁免成功则只受到一半的伤害。若一个体型为大型或更小的生物在该豁免检定中失败，则该生物也会被推离立方体中心10呎距离。"
 					]
 				}
 			],
@@ -3479,7 +3479,7 @@
 			}
 		},
 		{
-			"name": "Invulnerability",
+			"name": "无敌术 (Invulnerability)",
 			"source": "XGE",
 			"page": 160,
 			"level": 9,
@@ -3500,7 +3500,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a small piece of adamantine worth at least 500 gp, which the spell consumes",
+					"text": "一小块价值至少500金币的精金，在施法时消耗",
 					"cost": 50000,
 					"consume": true
 				}
@@ -3516,7 +3516,7 @@
 				}
 			],
 			"entries": [
-				"You are immune to all damage until the spell ends."
+				"你免疫于所有伤害直到此法术结束。"
 			],
 			"classes": {
 				"fromClassList": [
@@ -3528,7 +3528,7 @@
 			}
 		},
 		{
-			"name": "Life Transference",
+			"name": "生命转换 (Life Transference)",
 			"source": "XGE",
 			"page": 160,
 			"level": 3,
@@ -3556,14 +3556,14 @@
 				}
 			],
 			"entries": [
-				"You sacrifice some of your health to mend another creature's injuries. You take {@damage 4d8} necrotic damage, which can't be reduced in any way, and one creature of your choice that you can see within range regains a number of hit points equal to twice the necrotic damage you take."
+				"你牺牲你一部份的健康以修复其他生物的伤口。你受到{@damage 4d8}死灵伤害，且射程内你所选择且你能看见的一个生物将回复等同于两倍你所受到死灵伤害的生命值。"
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
-						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 4d8|3-9|1d8} for each slot level above 3rd."
+						"当你使用4环或更高的法术位施放此法术时，你使用的法术位每比原本高一环，伤害便会再增加{@scaledamage 4d8|3-9|1d8}。"
 					]
 				}
 			],
@@ -3601,7 +3601,7 @@
 			}
 		},
 		{
-			"name": "Maddening Darkness",
+			"name": "发狂黑暗 (Maddening Darkness)",
 			"source": "XGE",
 			"page": 160,
 			"level": 8,
@@ -3621,7 +3621,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a drop of pitch mixed with a drop of mercury"
+				"m": "一滴沥青和一滴水银的混合物"
 			},
 			"duration": [
 				{
@@ -3660,7 +3660,7 @@
 			}
 		},
 		{
-			"name": "Maelstrom",
+			"name": "大漩涡 (Maelstrom)",
 			"source": "XGE",
 			"page": 160,
 			"otherSources": [
@@ -3687,7 +3687,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "paper or leaf in the shape of a funnel"
+				"m": "漏斗形状的纸张或树叶"
 			},
 			"duration": [
 				{
@@ -3724,7 +3724,7 @@
 			}
 		},
 		{
-			"name": "Magic Stone",
+			"name": "魔石术 (Magic Stone)",
 			"source": "XGE",
 			"page": 160,
 			"otherSources": [
@@ -3795,7 +3795,7 @@
 			}
 		},
 		{
-			"name": "Mass Polymorph",
+			"name": "群体变形术 (Mass Polymorph)",
 			"source": "XGE",
 			"page": 160,
 			"level": 9,
@@ -3816,7 +3816,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a caterpillar cocoon"
+				"m": "一个毛虫茧"
 			},
 			"duration": [
 				{
@@ -3869,7 +3869,7 @@
 			}
 		},
 		{
-			"name": "Maximilian's Earthen Grasp",
+			"name": "马克西米利安大地之攫 (Maximilian's Earthen Grasp)",
 			"source": "XGE",
 			"page": 161,
 			"otherSources": [
@@ -3896,7 +3896,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a miniature hand sculpted from clay"
+				"m": "黏土雕制而成的小型单手模型"
 			},
 			"duration": [
 				{
@@ -3946,7 +3946,7 @@
 			}
 		},
 		{
-			"name": "Melf's Minute Meteors",
+			"name": "马友夫微陨星 (Melf's Minute Meteors)",
 			"source": "XGE",
 			"page": 161,
 			"otherSources": [
@@ -3972,7 +3972,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "niter, sulfur, and pine tar formed into a bead"
+				"m": "硝石、硫磺、和松焦油形成的串珠"
 			},
 			"duration": [
 				{
@@ -3985,12 +3985,12 @@
 				}
 			],
 			"entries": [
-				"You create six tiny meteors in your space. They float in the air and orbit you for the spell's duration. When you cast the spell\u2014and as a bonus action on each of your turns thereafter\u2014you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes {@damage 2d6} fire damage on a failed save, or half as much damage on a successful one."
+				"You create six tiny meteors in your space. They float in the air and orbit you for the spell's duration. When you cast the spell—and as a bonus action on each of your turns thereafter—you can expend one or two of the meteors, sending them streaking toward a point or points you choose within 120 feet of you. Once a meteor reaches its destination or impacts against a solid surface, the meteor explodes. Each creature within 5 feet of the point where the meteor explodes must make a Dexterity saving throw. A creature takes {@damage 2d6} fire damage on a failed save, or half as much damage on a successful one."
 			],
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the number of meteors created increases by two for each slot level above 3rd."
 					]
@@ -4019,7 +4019,7 @@
 			}
 		},
 		{
-			"name": "Mental Prison",
+			"name": "心灵监狱 (Mental Prison)",
 			"source": "XGE",
 			"page": 161,
 			"level": 6,
@@ -4089,7 +4089,7 @@
 			}
 		},
 		{
-			"name": "Mighty Fortress",
+			"name": "宏伟堡垒 (Mighty Fortress)",
 			"source": "XGE",
 			"page": 161,
 			"level": 8,
@@ -4111,7 +4111,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a diamond worth at least 500 gp, which the spell consumes",
+					"text": "一个价值至少500金币的钻石，在施法时消耗",
 					"cost": 50000,
 					"consume": true
 				}
@@ -4148,7 +4148,7 @@
 			}
 		},
 		{
-			"name": "Mind Spike",
+			"name": "心灵探针 (Mind Spike)",
 			"source": "XGE",
 			"page": 162,
 			"level": 2,
@@ -4185,7 +4185,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 3d8|2-9|1d8} for each slot level above 2nd."
 					]
@@ -4227,7 +4227,7 @@
 			}
 		},
 		{
-			"name": "Mold Earth",
+			"name": "铸土 (Mold Earth)",
 			"source": "XGE",
 			"page": 162,
 			"otherSources": [
@@ -4302,7 +4302,7 @@
 			}
 		},
 		{
-			"name": "Negative Energy Flood",
+			"name": "负能量洪流 (Negative Energy Flood)",
 			"source": "XGE",
 			"page": 163,
 			"level": 5,
@@ -4322,7 +4322,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a broken bone and a square of black silk"
+				"m": "一根破碎的骨头和一块黑色丝绸"
 			},
 			"duration": [
 				{
@@ -4361,7 +4361,7 @@
 			}
 		},
 		{
-			"name": "Power Word Pain",
+			"name": "律令痛苦 (Power Word Pain)",
 			"source": "XGE",
 			"page": 163,
 			"level": 7,
@@ -4425,7 +4425,7 @@
 			}
 		},
 		{
-			"name": "Primal Savagery",
+			"name": "原始野性 (Primal Savagery)",
 			"source": "XGE",
 			"page": 163,
 			"level": 0,
@@ -4491,7 +4491,7 @@
 			}
 		},
 		{
-			"name": "Primordial Ward",
+			"name": "原初守护 (Primordial Ward)",
 			"source": "XGE",
 			"page": 163,
 			"otherSources": [
@@ -4556,7 +4556,7 @@
 			}
 		},
 		{
-			"name": "Psychic Scream",
+			"name": "精神尖啸 (Psychic Scream)",
 			"source": "XGE",
 			"page": 163,
 			"level": 9,
@@ -4624,7 +4624,7 @@
 			}
 		},
 		{
-			"name": "Pyrotechnics",
+			"name": "烟火表演 (Pyrotechnics)",
 			"source": "XGE",
 			"page": 163,
 			"otherSources": [
@@ -4713,7 +4713,7 @@
 			}
 		},
 		{
-			"name": "Scatter",
+			"name": "散射术 (Scatter)",
 			"source": "XGE",
 			"page": 164,
 			"level": 6,
@@ -4775,7 +4775,7 @@
 			}
 		},
 		{
-			"name": "Shadow Blade",
+			"name": "幽影刃 (Shadow Blade)",
 			"source": "XGE",
 			"page": 164,
 			"level": 2,
@@ -4813,7 +4813,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a 3rd- or 4th-level spell slot, the damage increases to {@dice 3d8}. When you cast it using a 5th- or 6th-level spell slot, the damage increases to {@dice 4d8}. When you cast it using a spell slot of 7th level or higher, the damage increases to {@dice 5d8}."
 					]
@@ -4840,7 +4840,7 @@
 			}
 		},
 		{
-			"name": "Shadow of Moil",
+			"name": "骚乱之影 (Shadow of Moil)",
 			"source": "XGE",
 			"page": 164,
 			"level": 4,
@@ -4861,7 +4861,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "an undead eyeball encased in a gem worth at least 150 gp",
+					"text": "一个封入价值至少150金币的宝石内的不死生物眼球",
 					"cost": 15000
 				}
 			},
@@ -4898,7 +4898,7 @@
 			}
 		},
 		{
-			"name": "Shape Water",
+			"name": "塑水 (Shape Water)",
 			"source": "XGE",
 			"page": 164,
 			"otherSources": [
@@ -4985,7 +4985,7 @@
 			]
 		},
 		{
-			"name": "Sickening Radiance",
+			"name": "致病光辉 (Sickening Radiance)",
 			"source": "XGE",
 			"page": 164,
 			"level": 4,
@@ -5051,7 +5051,7 @@
 			}
 		},
 		{
-			"name": "Skill Empowerment",
+			"name": "技能赋权 (Skill Empowerment)",
 			"source": "XGE",
 			"page": 165,
 			"level": 5,
@@ -5121,7 +5121,7 @@
 			}
 		},
 		{
-			"name": "Skywrite",
+			"name": "天空书写 (Skywrite)",
 			"source": "XGE",
 			"page": 165,
 			"otherSources": [
@@ -5193,7 +5193,7 @@
 			}
 		},
 		{
-			"name": "Snare",
+			"name": "圈套术 (Snare)",
 			"source": "XGE",
 			"page": 165,
 			"level": 1,
@@ -5213,7 +5213,7 @@
 			"components": {
 				"s": true,
 				"m": {
-					"text": "25 feet of rope, which the spell consumes",
+					"text": "25呎的绳索，在施法时消耗",
 					"consume": true
 				}
 			},
@@ -5271,7 +5271,7 @@
 			}
 		},
 		{
-			"name": "Snilloc's Snowball Swarm",
+			"name": "史尼洛雪球群 (Snilloc's Snowball Swarm)",
 			"source": "XGE",
 			"page": 165,
 			"otherSources": [
@@ -5298,7 +5298,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a piece of ice or a small white rock chip"
+				"m": "一块冰或一小片白色石片"
 			},
 			"duration": [
 				{
@@ -5311,7 +5311,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 3d6|2-9|1d6} for each slot level above 2nd."
 					]
@@ -5340,7 +5340,7 @@
 			}
 		},
 		{
-			"name": "Soul Cage",
+			"name": "灵魂囚笼 (Soul Cage)",
 			"source": "XGE",
 			"page": 165,
 			"level": 6,
@@ -5363,7 +5363,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a tiny silver cage worth 100 gp",
+					"text": "一个价值100金币的银制小笼子",
 					"cost": 10000
 				}
 			},
@@ -5425,7 +5425,7 @@
 			}
 		},
 		{
-			"name": "Steel Wind Strike",
+			"name": "钢风打击 (Steel Wind Strike)",
 			"source": "XGE",
 			"page": 166,
 			"level": 5,
@@ -5445,7 +5445,7 @@
 			},
 			"components": {
 				"s": true,
-				"m": "a melee weapon worth at least 1 sp"
+				"m": "一把价值至少1银币的近战武器"
 			},
 			"duration": [
 				{
@@ -5482,7 +5482,7 @@
 			}
 		},
 		{
-			"name": "Storm Sphere",
+			"name": "暴风法球 (Storm Sphere)",
 			"source": "XGE",
 			"page": 166,
 			"otherSources": [
@@ -5528,7 +5528,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, the damage for each of its effects increases by {@scaledamage 2d6;4d6|4-9|1d6} for each slot level above 4th."
 					]
@@ -5562,7 +5562,7 @@
 			}
 		},
 		{
-			"name": "Summon Greater Demon",
+			"name": "召唤高等恶魔 (Summon Greater Demon)",
 			"source": "XGE",
 			"page": 166,
 			"level": 4,
@@ -5583,7 +5583,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a vial of blood from a humanoid killed within the past 24 hours"
+				"m": "一小瓶来自在最近24小时内被杀死的类人生物的鲜血"
 			},
 			"duration": [
 				{
@@ -5604,7 +5604,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, the challenge rating increases by 1 for each slot level above 4th."
 					]
@@ -5631,7 +5631,7 @@
 			}
 		},
 		{
-			"name": "Summon Lesser Demons",
+			"name": "召唤次级恶魔 (Summon Lesser Demons)",
 			"source": "XGE",
 			"page": 167,
 			"level": 3,
@@ -5652,7 +5652,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a vial of blood from a humanoid killed within the past 24 hours"
+				"m": "一小瓶来自在最近24小时内被杀死的类人生物的鲜血"
 			},
 			"duration": [
 				{
@@ -5716,7 +5716,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th or 7th level, you summon twice as many demons. If you cast it using a spell slot of 8th or 9th level, you summon three times as many demons."
 					]
@@ -5740,7 +5740,7 @@
 			}
 		},
 		{
-			"name": "Synaptic Static",
+			"name": "突触噪乱 (Synaptic Static)",
 			"source": "XGE",
 			"page": 167,
 			"level": 5,
@@ -5803,7 +5803,7 @@
 			}
 		},
 		{
-			"name": "Temple of the Gods",
+			"name": "诸神殿堂 (Temple of the Gods)",
 			"source": "XGE",
 			"page": 167,
 			"level": 7,
@@ -5825,7 +5825,7 @@
 				"v": true,
 				"s": true,
 				"m": {
-					"text": "a holy symbol worth at least 5 gp",
+					"text": "一个价值至少5金币的圣徽",
 					"cost": 500
 				}
 			},
@@ -5866,7 +5866,7 @@
 			}
 		},
 		{
-			"name": "Tenser's Transformation",
+			"name": "谭森魔能转换术 (Tenser's Transformation)",
 			"source": "XGE",
 			"page": 168,
 			"level": 6,
@@ -5886,7 +5886,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a few hairs from a bull"
+				"m": "几根公牛的毛发"
 			},
 			"duration": [
 				{
@@ -5941,7 +5941,7 @@
 			}
 		},
 		{
-			"name": "Thunder Step",
+			"name": "雷霆步 (Thunder Step)",
 			"source": "XGE",
 			"page": 168,
 			"level": 3,
@@ -5974,7 +5974,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, the damage increases by {@scaledamage 3d10|3-9|1d10} for each slot level above 3rd."
 					]
@@ -6016,7 +6016,7 @@
 			}
 		},
 		{
-			"name": "Thunderclap",
+			"name": "鸣雷破 (Thunderclap)",
 			"source": "XGE",
 			"page": 168,
 			"otherSources": [
@@ -6107,7 +6107,7 @@
 			}
 		},
 		{
-			"name": "Tidal Wave",
+			"name": "潮涌浪 (Tidal Wave)",
 			"source": "XGE",
 			"page": 168,
 			"otherSources": [
@@ -6134,7 +6134,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of water"
+				"m": "一滴水"
 			},
 			"duration": [
 				{
@@ -6174,7 +6174,7 @@
 			}
 		},
 		{
-			"name": "Tiny Servant",
+			"name": "微型仆役 (Tiny Servant)",
 			"source": "XGE",
 			"page": 168,
 			"level": 3,
@@ -6212,7 +6212,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 4th level or higher, you can animate two additional objects for each slot level above 3rd."
 					]
@@ -6245,7 +6245,7 @@
 			}
 		},
 		{
-			"name": "Toll the Dead",
+			"name": "亡者丧钟 (Toll the Dead)",
 			"source": "XGE",
 			"page": 169,
 			"level": 0,
@@ -6327,7 +6327,7 @@
 			}
 		},
 		{
-			"name": "Transmute Rock",
+			"name": "转化岩石 (Transmute Rock)",
 			"source": "XGE",
 			"page": 169,
 			"otherSources": [
@@ -6354,7 +6354,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "clay and water"
+				"m": "泥土和水"
 			},
 			"duration": [
 				{
@@ -6428,7 +6428,7 @@
 			}
 		},
 		{
-			"name": "Vitriolic Sphere",
+			"name": "硫酸法球 (Vitriolic Sphere)",
 			"source": "XGE",
 			"page": 170,
 			"otherSources": [
@@ -6455,7 +6455,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of giant slug bile"
+				"m": "一滴巨蛞蝓的胆汁"
 			},
 			"duration": [
 				{
@@ -6468,7 +6468,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by {@scaledamage 10d4|4-9|2d4} for each slot level above 4th."
 					]
@@ -6501,7 +6501,7 @@
 			}
 		},
 		{
-			"name": "Wall of Light",
+			"name": "光墙术 (Wall of Light)",
 			"source": "XGE",
 			"page": 170,
 			"level": 5,
@@ -6522,7 +6522,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a hand mirror"
+				"m": "一面手镜"
 			},
 			"duration": [
 				{
@@ -6543,7 +6543,7 @@
 			"entriesHigherLevel": [
 				{
 					"type": "entries",
-					"name": "At Higher Levels",
+					"name": "升环效果",
 					"entries": [
 						"When you cast this spell using a spell slot of 6th level or higher, the damage increases by {@scaledamage 4d8|5-9|1d8} for each slot level above 5th."
 					]
@@ -6592,7 +6592,7 @@
 			}
 		},
 		{
-			"name": "Wall of Sand",
+			"name": "沙墙术 (Wall of Sand)",
 			"source": "XGE",
 			"page": 170,
 			"otherSources": [
@@ -6619,7 +6619,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a handful of sand"
+				"m": "一把沙子"
 			},
 			"duration": [
 				{
@@ -6659,7 +6659,7 @@
 			}
 		},
 		{
-			"name": "Wall of Water",
+			"name": "水墙术 (Wall of Water)",
 			"source": "XGE",
 			"page": 170,
 			"otherSources": [
@@ -6694,7 +6694,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a drop of water"
+				"m": "一滴水"
 			},
 			"duration": [
 				{
@@ -6740,7 +6740,7 @@
 			]
 		},
 		{
-			"name": "Warding Wind",
+			"name": "守护之风 (Warding Wind)",
 			"source": "XGE",
 			"page": 170,
 			"otherSources": [
@@ -6812,7 +6812,7 @@
 			}
 		},
 		{
-			"name": "Watery Sphere",
+			"name": "水体法球 (Watery Sphere)",
 			"source": "XGE",
 			"page": 170,
 			"otherSources": [
@@ -6839,7 +6839,7 @@
 			"components": {
 				"v": true,
 				"s": true,
-				"m": "a droplet of water"
+				"m": "一小滴水"
 			},
 			"duration": [
 				{
@@ -6889,7 +6889,7 @@
 			}
 		},
 		{
-			"name": "Whirlwind",
+			"name": "龙卷旋风 (Whirlwind)",
 			"source": "XGE",
 			"page": 171,
 			"otherSources": [
@@ -6915,7 +6915,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a piece of straw"
+				"m": "一根稻草"
 			},
 			"duration": [
 				{
@@ -6970,7 +6970,7 @@
 			}
 		},
 		{
-			"name": "Word of Radiance",
+			"name": "光耀祷词 (Word of Radiance)",
 			"source": "XGE",
 			"page": 171,
 			"level": 0,
@@ -6990,7 +6990,7 @@
 			},
 			"components": {
 				"v": true,
-				"m": "a holy symbol"
+				"m": "一个圣徽"
 			},
 			"duration": [
 				{
@@ -7033,7 +7033,7 @@
 			}
 		},
 		{
-			"name": "Wrath of Nature",
+			"name": "自然之怒 (Wrath of Nature)",
 			"source": "XGE",
 			"page": 171,
 			"level": 5,
@@ -7135,7 +7135,7 @@
 			}
 		},
 		{
-			"name": "Zephyr Strike",
+			"name": "西风打击 (Zephyr Strike)",
 			"source": "XGE",
 			"page": 171,
 			"level": 1,
